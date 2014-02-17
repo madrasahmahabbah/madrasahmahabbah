@@ -1,0 +1,161 @@
+$bgcolor: rgb(153,204,51);
+
+$duration: 0.5s;
+
+/* Overlay style */
+.overlay-mvmt {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background: transparent url(../images/naal-black.png) center center no-repeat;
+
+  .overlay-mvmt-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba($bgcolor,0.9);
+    z-index: 0;
+  }
+
+  /* Overlay closing cross */
+  .overlay-mvmt-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../images/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+
+    @include respond-xs {
+      background-size: 90% auto;
+      @include transform(scale(0.8));
+    }
+  }
+
+  /* Menu style */
+  nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    font-size: 54px;
+    // font-family: 'texgyreadventorregular';
+    @include transform(translateY(-50%));
+    z-index: 10;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  ul li {
+    display: block;
+    height: 20%;
+    height: calc(100% / 7);
+    min-height: 54px;
+  }
+
+  ul li a {
+    padding: 0.1em 1em;
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    @include transition(color 0.5s, background 0.5s);
+
+    span {
+      display: inline-block;
+      // font-family: 'texgyreadventorbold';
+      font-weight: 700;
+      color: saturate(lighten($bgcolor, 20%), 30%);
+      @include transition(color 0.5s);
+    }
+  }
+
+  ul li a:hover,
+  ul li a:focus {
+    color: rgba($bgcolor,1);
+    background: #fff;
+
+    span {
+      color: rgba($bgcolor,1);
+    }
+  }
+
+  @include respond-sm {
+    nav {
+      height: 70%;
+      font-size: 34px;
+    }
+    ul li {
+      min-height: 34px;
+    }
+  }
+
+  @include respond-xs {
+    background-size: 180% auto;
+    nav {
+      height: 65%;
+      font-size: 24px;
+      line-height: 1em;
+    }
+    ul li {
+      height: auto;
+      min-height: 24px;
+    }
+    ul li a {
+      padding: 0.5em 1em;
+    }
+  }
+}
+
+/* Effects */
+.overlay-mvmt-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity $duration, visibility 0s $duration;
+  -moz-transition: opacity $duration, visibility 0s $duration;
+  -ms-transition: opacity $duration, visibility 0s $duration;
+  -o-transition: opacity $duration, visibility 0s $duration;
+  transition: opacity $duration, visibility 0s $duration;
+
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity $duration);
+  }
+
+  nav {
+    @include perspective(1200px);
+  }
+
+  nav ul {
+    opacity: 0.4;
+    @include transform(translateY(-25%) rotateX(35deg));
+    @include transition(transform $duration, opacity $duration);
+  }
+
+  &.open nav ul {
+    opacity: 1;
+    @include transform(rotateX(0deg));
+  }
+
+  &.close nav ul {
+    @include transform(translateY(25%) rotateX(-35deg));
+  }
+}

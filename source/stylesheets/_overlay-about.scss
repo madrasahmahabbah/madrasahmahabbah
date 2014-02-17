@@ -1,0 +1,192 @@
+$bgcolor: $orange;
+$headercolor: saturate(darken($bgcolor, 10%), 5%);
+$emcolor: saturate(lighten($bgcolor,30%),50%);
+
+/* Overlay style */
+.overlay-about {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  // background
+  background: $bgcolor url(../images/M-orange.jpg) center 25% no-repeat;
+
+  @media only screen and (max-height: 960px) {
+    background-size: auto 60%;
+  }
+
+  @include respond-xs {
+    background: $bgcolor url(../images/M-orange-small.jpg) center center no-repeat;
+    background-size: auto;
+  }
+
+  /* Overlay closing cross */
+  .overlay-about-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../images/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+
+    @include respond-xs {
+      @include transform(scale(0.8));
+    }
+  }
+}
+
+/* Effects */
+
+.container {
+  overflow-x: hidden;
+  height: 100%;
+  @include transition(transform 0.5s);
+
+  &.overlay-about-open {
+    @include transform(translateX(50%));
+  }
+
+  &::after {
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#868375,0.9);
+    @include transition(opacity 0.5s, visibility 0s 0.5s);
+    z-index: 30;
+  }
+
+  &.overlay-about-open::after {
+    visibility: visible;
+    opacity: 1;
+    @include transition(opacity 0.5s);
+  }
+}
+
+.overlay-about-contentpush {
+  visibility: hidden;
+  @include backface-visibility(hidden);
+  @include transform(translateX(-100%));
+  @include transition(transform 0.5s, visibility 0s 0.5s);
+
+  &.open {
+    visibility: visible;
+    @include transform(translateX(0%));
+    @include transition(transform 0.5s);
+  }
+}
+
+.mahabbah-about {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  color: #fff;
+  background: rgba($bgcolor, 0.8);
+  padding: 0.5em 0;
+
+  .col {
+    float: left;
+    width: calc(100%/3);
+    padding: 0 0.7em;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+    min-height: 200px;
+  }
+
+  .col:nth-child(1) {
+  }
+
+  .col:nth-child(3) {
+    // padding-right: 0;
+    box-shadow: none;
+  }
+
+  a {
+    position: relative;
+    // background: rgba(#fff,0.2);
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  a h3 {
+    color: $headercolor;
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    font-family: 'AvantGardeBold', 'Lato', Arial, sans-serif;
+    font-size: 2em;
+    letter-spacing: -2px;
+    line-height: 1em;
+    padding-top: 0.2em;
+    @include transition(color 0.3s);
+  }
+
+  a p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1em;
+
+    em {
+      font-style: normal;
+      color: $emcolor;
+    }
+  }
+
+  a:hover h3, a:focus h3 {
+    color: lighten($headercolor, 3%);
+  }
+
+  @include respond-xs {
+    bottom: 0;
+    height: 100%;
+
+    .cols {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+
+    .col {
+      width: 100%;
+      font-size: 0.7em;
+      min-height: 0;
+      padding: 1em 0.5em;
+      // box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+      box-shadow: none;
+    }
+
+    // h3 {
+    //   // text-shadow: 0 1px 3px rgba(#fff, 0.2);
+    // }
+    // p {
+    //   text-shadow: 0 1px 1px rgba(#000, 0.3);
+    // }
+  }
+}
+
+
+@media screen and (max-height: 30.5em) {
+  .overlay-about nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay-about ul li {
+    min-height: 34px;
+  }
+}
