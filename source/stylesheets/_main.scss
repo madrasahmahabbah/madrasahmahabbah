@@ -107,13 +107,13 @@ a:hover, a:focus {
 
 section {
   position: relative;
-  padding: 4em 1em;
+  padding: 3em 1em;
   // background: #fff;
   text-align: center;
 
   @include respond-xs {
     padding: 2em 0.5em;
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 
@@ -262,7 +262,7 @@ section button {
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 400;
-      font-size: 0.8em;
+      font-size: 1em;
 
       line-height: 1.5em;
       @include perspective(1000px);
@@ -342,7 +342,7 @@ section button {
   }
 
   @include respond-xs {
-    font-size: 0.4em;
+    font-size: 0.5em;
   }
 }
 
