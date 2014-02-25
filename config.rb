@@ -3,8 +3,9 @@
 #   config.output_style = :compact
 # end
 
-proxy '/README.md', '/README.html', :layout => false
-ignore '/README.html'
+proxy '/README.md', '/README.txt', :layout => false
+ignore '/README.txt'
+# page '/README.md', :layout => false
 
 # Reload the browser automatically whenever files change
 activate :livereload

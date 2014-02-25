@@ -1,11 +1,12 @@
 (function() {
 	var verses = $('.mahabbah-quran blockquote');
-	verses.eq(Math.floor(Math.random() * verses.length)).show();
+	verses.eq(Math.floor(Math.random() * verses.length)).show('medium');
 
 	verses.click(function() {
-		verses.hide().eq(Math.floor(Math.random() * verses.length)).show();
+		verses.hide('medium').eq(Math.floor(Math.random() * verses.length)).show('medium');
 	});
 
+	// EXPERIMENTS: parallax scroll
 	// $(function() {
 	// 	var $window = $(window),
 	// 			$body = $('html > body');
