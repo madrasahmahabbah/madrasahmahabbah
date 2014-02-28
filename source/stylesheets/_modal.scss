@@ -1,6 +1,7 @@
 $bgcolor: #e74c3c;
 // $bgcolor: #112b6b;
 $overlay-bgcolor: $orange;
+$emcolor: saturate(lighten($bgcolor,20%),40%);
 
 .container {
   min-height: 100%;
@@ -56,7 +57,7 @@ $overlay-bgcolor: $orange;
   left: 0;
   z-index: 1000;
   opacity: 0;
-  background: rgba($overlay-bgcolor,0.8);
+  background: rgba($bgcolor,0.8);
   @include transition(all 0.3s);
 }
 
@@ -81,7 +82,7 @@ $overlay-bgcolor: $orange;
   text-align: center;
   font-size: 1.5em;
   font-weight: 300;
-  font-family: 'texgyreadventorbold', 'Lato';
+  font-family: $avant-font;
   opacity: 0.8;
   background: rgba(0,0,0,0.1);
   border-radius: 3px 3px 0 0;
@@ -116,9 +117,9 @@ $overlay-bgcolor: $orange;
 }
 
 .md-content > div p em {
-  font-style: normal;
+  // font-style: normal;
   font-weight: 500;
-  color: saturate(lighten($bgcolor,30%),50%);
+  color: $emcolor;
 }
 
 .md-content button {

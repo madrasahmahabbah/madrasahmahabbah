@@ -232,12 +232,12 @@ section button {
     }
 
     .cite {
-      font-style: normal;
-      font-weight: 700;
+      // font-style: normal;
+      // font-weight: 700;
       // padding-top: 1.2em;
       padding-bottom: 0;
       color: saturate(lighten($text-color, 30%), 15%);
-      letter-spacing: 1px;
+      // letter-spacing: 1px;
 
       &:before {
         content: '\2014';
