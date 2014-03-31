@@ -1,0 +1,550 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bor",
+				"border"
+			],
+			[
+				"par",
+				"partial"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"tex",
+				"text-color"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"he",
+				"heading-font"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"remov",
+				"removeClass"
+			],
+			[
+				"text",
+				"text-shadow"
+			],
+			[
+				"d",
+				"d:b	display:block"
+			],
+			[
+				"re",
+				"respond-xs"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"over",
+				"overlay-mvmt"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"sc",
+				"screen"
+			],
+			[
+				"scree",
+				"screen-sm-min"
+			],
+			[
+				"bgc",
+				"bgcolor"
+			],
+			[
+				"nt",
+				"nth-child"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"d:ib	display:inline-block"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"maha",
+				"mahabbah-header"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"lighte",
+				"lighten"
+			],
+			[
+				"word",
+				"word-spacing"
+			],
+			[
+				"mahab",
+				"mahabbah-footer"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"pro",
+				"propertyName"
+			],
+			[
+				"con",
+				"console"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/private/var/folders/7g/vxkcvnyj5kb18x5hwk65ds9c0000gn/T/428e9219-9de9-41a6-b7a4-95a449a9a688/etc/apt/sources.list.d/zodttd.list",
+		"/private/var/folders/7g/vxkcvnyj5kb18x5hwk65ds9c0000gn/T/428e9219-9de9-41a6-b7a4-95a449a9a688/etc/apt/sources.list.d/cydia.list",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_overlays.html.erb",
+		"/Volumes/WDG Media/Torrents/Almost Human - 01x12 - Beholder.DIMENSION.English.C.updated.Addic7ed.com.srt",
+		"/Users/wan/Desktop/sorted.list",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_main.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_modal.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-about.scss",
+		"/Users/wan/.zshrc",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/config.rb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/404.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/layout.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/javascripts/others.js",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/sitemap.xml.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/README.html",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/robots.txt",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/README.md",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_quran.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_fonts.scss",
+		"/Users/wan/Desktop/rootkey.csv",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Tests/s3/index.html",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/Gemfile",
+		"/Users/wan/.zlogin",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_vars.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/fonts/ff-enzo-web-lite.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/README.html.erb",
+		"/Users/wan/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/ff-enzo-web.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/javascripts/all.js",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/CNAME",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/CNAME",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/__DREAMHOST__.txt",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-movement.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/fonts/huge_agb_v5-webfont.svg",
+		"/private/etc/hosts",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_responsive.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/build/index.html",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_overlay-about.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_overlay-movement.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_main.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/images/arabdots-brown.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/images/arabdots.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/all.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/config.rb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/layouts/layout.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_vars.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_fonts.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/javascripts/others.js",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/build/stylesheets/all.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/javascripts/random.js",
+		"/Users/wan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_responsive.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_links.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/all.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/normalize.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/js/overlay.js",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/_vars.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/_fonts.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/_mixins.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/style.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/Build/css/style.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/_overlay-about.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/_overlay-movement.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MM2/js/overlay.js",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_icon.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/style.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_btn.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_cta.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_example.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/partials/_header.html",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/index.html",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/index2.html",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/javascript/main.js",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_nav.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/partials/_footer.html",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/partials/_head.html",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_hero.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/_base.scss",
+		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/MM/MM/index.html",
+		"/Users/wan/Library/Application Support/Google/Chrome/Local State",
+		"/Library/Preferences/com.box.sync.plist",
+		"/Users/wan/.bashrc",
+		"/private/var/folders/7g/vxkcvnyj5kb18x5hwk65ds9c0000gn/T/428e9219-9de9-41a6-b7a4-95a449a9a688/var/mobile/Library/LibHide/hidden.plist",
+		"/Users/wan/.zshrc-e",
+		"/Users/wan/.oh-my-zsh/plugins/sublime/sublime.plugin.zsh",
+		"/Volumes/WDG Media/Torrents/_Music/Updates/Waves.All.Plugins.Bundle.v9r14.MacOSX-R2R/R2R.nfo"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css",
+			"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"em",
+			"h2",
+			"src=\"/",
+			"url",
+			"url(/images",
+			"url",
+			"url('/",
+			"url(/",
+			"rl(/",
+			"href=\"/",
+			"/",
+			"url('../",
+			"images/",
+			"...",
+			"e74c3c",
+			"\" class=\"",
+			"font-fam",
+			"'Lato', 'Avenir Next', Arial, sans-serif",
+			"heading-font",
+			"font-fam",
+			"span",
+			" md-show",
+			"close",
+			"webkit",
+			"list",
+			"-webki",
+			"webkit",
+			"<a ",
+			"a ",
+			"button",
+			"weig",
+			".md-effect-3",
+			"getAttribute",
+			"$(this)",
+			"el.",
+			"if(",
+			"document.querySelectorAll",
+			"document.querySelector",
+			" )",
+			"( ",
+			"build",
+			"bgcolor",
+			"A4CE39",
+			", background 0.5s",
+			"</span>",
+			"Mahabbah ",
+			"radius",
+			"صلى الله عليه وسلم",
+			"item",
+			"em",
+			"+",
+			"#85b91e",
+			"small-screen",
+			"mid-screen",
+			"small-screen",
+			"mid-screen",
+			"small-screen",
+			"@media",
+			"'",
+			"<!-- @path ",
+			"url(../img/",
+			"url(",
+			"url('fonts/",
+			"url('fonts/h",
+			"\"",
+			"  ",
+			"AvantGardeBold",
+			"url('",
+			"HUGEAvantGardeBold",
+			"bgcolor",
+			"mid-screen",
+			"24px",
+			"HUGEAvantGardeBold",
+			"Al ",
+			"90deg",
+			", color 0.3s",
+			"91deg",
+			"70deg",
+			"90deg",
+			"5em",
+			".cl-effect-2 ",
+			"nav a",
+			"h3",
+			"span",
+			".cl-effect-2",
+			".cl-effect-2 ",
+			"200",
+			"nav",
+			"3deg",
+			"2deg",
+			"#868375",
+			"3deg",
+			"2deg",
+			"z-in",
+			"z-",
+			" ss-doublediagonal",
+			".ss-style-doublediagonal:",
+			"nav a",
+			"a:",
+			".l-circle ",
+			".cl-effect-12",
+			".l-slide a",
+			".l-slide a ",
+			".cl-effect-5",
+			" scale(0.9)",
+			"228,152,184",
+			"26",
+			".mahabbah-main",
+			"0.9",
+			", letter-spacing 0.5s",
+			"26px",
+			"blockquote",
+			"section",
+			"section button",
+			"ev.propertyName",
+			"\"transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd\"",
+			".off(",
+			".on(",
+			"rgba(228,152,184,0.9)",
+			"0.8s",
+			".overlay-mvmt-hugeinc",
+			".container",
+			".overlay-mvmt ",
+			".overlay-about ",
+			".overlay-mvmt-hugeinc.",
+			"small-screen",
+			"mahabbah-icon",
+			".related"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "mm.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 163.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
