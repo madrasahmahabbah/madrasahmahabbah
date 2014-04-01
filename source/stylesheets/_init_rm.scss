@@ -14,7 +14,7 @@ html, body {
 
 body {
   background: $bgcolor;
-  background: $bgcolor url(../images/rm/bg.jpg) center center no-repeat fixed;
+  background: $bgcolor url(../images/rm/bg.jpg) center bottom no-repeat fixed;
   color: $text-color;
   font-weight: 300;
   font-size: 26px; //28px
@@ -22,7 +22,7 @@ body {
   font-family: $main-font;
 
   @include respond-xs {
-    background-size: 180% auto;
+    background-size: 150% auto;
   }
 }
 
@@ -46,14 +46,52 @@ a, button {
 }
 
 a {
-  color: $green;
+  color: $init-color;
   text-decoration: none;
   outline: none;
 }
 
 a:hover, a:focus {
-  color: darken($green, 10%);
+  color: $init-color;
 }
+
+// Top Navigation Style
+.mahabbah-top {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.6em;
+  line-height: 2.2;
+  background: $green;
+
+  a {
+    display: inline-block;
+    padding: 0 0.7em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    @include transition(box-shadow 0.2s);
+
+    &:hover {
+      box-shadow: inset 0 3px 0 $init-color;
+    }
+  }
+
+  span.right {
+    float: right;
+  }
+
+  span.right a {
+    display: block;
+    float: left;
+  }
+
+  @include respond-xs {
+    .icon span {
+      display: none;
+    }
+  }
+}
+
 
 .mahabbah-header {
   background: $init-color url(../images/rm/headerbg.jpg) center bottom no-repeat;
@@ -104,7 +142,6 @@ a:hover, a:focus {
 
   @include respond-xs {
     padding: 2em 0;
-
     h1 {
       font-size: 2em;
       span.sub {
@@ -124,27 +161,22 @@ header button {
   border: none;
   display: inline-block;
   background: $text-color;
-  // color: #fff;
-  // color: rgba(#000,0.4);
   font-weight: 400;
   font-family: $texgyre-font;
-  // padding: 15px 30px;
   padding: 0;
   margin: 5px;
   text-transform: uppercase;
   border-radius: 3px;
   letter-spacing: 3px;
-  // border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(#fff, 0.2);
+  box-shadow: 0 -4px 0 rgba(#000, 0.1);
   opacity: 1;
   @include transition(opacity 0.5s);
 
   a, a:hover {
-    display: inline-block;
+    display: block;
     padding: 15px 30px;
     color: rgba(#000,0.4);
     @include respond-xs {
-      // display: inline;
       padding: 5px 8px;
       // line-height: 1.5em;
       font-size: 0.8em;
@@ -159,15 +191,16 @@ header button {
     opacity: .7;
   }
 
-  &.trigger-tumblr {
+  &.btn-tumblr {
     $tumblr-color: #32506d;
-    background: saturate(lighten($tumblr-color, 50%), 30%);
+    $tumblr-color: $green;
+    background: saturate(lighten($tumblr-color, 50%), 50%);
     a, a:hover {
       color: $tumblr-color;
     }
   }
 
-  &.trigger-home {
+  &.btn-home {
     background: desaturate(lighten($init-color, 50%), 10%);
     a, a:hover {
       color: $init-color;
@@ -216,19 +249,64 @@ section p {
   }
 }
 
+.mahabbah-hero {
+  height: 450px;
+  background: #fff url(../images/rm/hero.jpg) center top no-repeat;
+  background-size: 100% auto;
+  box-shadow: 0 -4px 0 rgba(#000, 0.1);
+  position: relative;
+
+  .logo {
+    background: #fff url(../images/rm/logo.png) center center no-repeat;
+    background-size: 100% auto;
+    width: 130px;
+    height: 150px;
+    // border-radius: 10px 10px 0 0;
+    // margin-left: 20%;
+
+    @include respond-xs {
+      width: 100px;
+      height: 110px;
+    }
+  }
+
+  .word {
+    position: absolute;
+    bottom: 00px;
+    right: 0;
+    color: #fff;
+    margin-left: 20%;
+
+    p {
+      // display: inline-block;
+      background: rgba($green, 0.8);
+      padding: 0.5em 0.7em;
+      margin: 0;
+      // margin: 0 0 0.5em;
+    }
+
+    em {
+      color: saturate(lighten($green, 40%), 60%);
+    }
+
+    @include respond-sm {
+      font-size: 0.9em;
+    }
+
+    @include respond-xs {
+      margin-left: 10%;
+      font-size: 0.7em;
+    }
+  }
+
+  @include respond-xs {
+    background-size: auto 150%;
+  }
+}
+
 .mahabbah-welcome {
   z-index: 10;
   background: transparent;
-
-  .rm-logo {
-    background: url(../images/rm/logo.png) center center no-repeat;
-    height: 220px;
-    width: 220px;
-    margin: 0 auto;
-    // position: relative;
-    // top: -120px;
-    // border-radius: 100%;
-  }
 
   p strong.rm {
     background: transparent url(../images/rm/arabdots.svg) center top no-repeat;
@@ -254,119 +332,12 @@ section p {
   }
 }
 
-.mahabbah-related {
-  z-index: 10;
-  // padding-top: 2em;
-  // background: #fff;
-
-  h2 {
-    background: none;
-    margin-top: 0;
-    font-family: $avant-font;
-    color: $green;
-    letter-spacing: -3px;
-    line-height: 0.8em;
-    border: none;
-
-    span {
-      display: inline-block;
-      background: transparent url(../images/rm/arabdots.svg) center top no-repeat;
-      background-size: auto 45%;
-      padding-top: 0.5em;
-      color: lighten($green, 10%);
-    }
-  }
-
-  nav {
-    /* Effect: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
-    a {
-      position: relative;
-      display: inline-block;
-      margin: 0.5em 0.3em;
-      outline: none;
-      color: #fff;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 400;
-      font-size: 1em;
-
-      line-height: 1.5em;
-      @include perspective(1000px);
-
-      &:hover,
-      &:focus {
-        outline: none;
-      }
-    }
-
-    a .lg {
-      margin: 0 auto 0.5em;
-      background: #fff url(../images/MT_Darul_Murtadza_edit.png) center center no-repeat;
-      border-radius: 100%;
-      width: 150px;
-      height: 150px;
-      opacity: 0.9;
-    }
-
-    a span {
-      color: $text-color;
-      font-size: 0.8em;
-      position: relative;
-      display: block;
-      padding: 0 14px;
-      background: saturate(lighten($text-color, 40%), 25%);
-      @include transition(transform 0.3s);
-      @include transform-origin(50%, 0);
-      @include transform-style(preserve-3d);
-    }
-
-    .csstransforms3d & a span::before {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $text-color;
-      color: #fff;
-      font-size: 0.8em;
-      letter-spacing: 3px;
-      opacity: 1;
-      content: attr(data-hover);
-      @include transition(background 0.3s);
-      @include transform(rotateX(-90deg));
-      @include transform-origin(50%, 0);
-    }
-
-    a:hover span,
-    a:focus span {
-      @include transform(rotateX(92deg) translateY(-33px));
-    }
-
-    .csstransforms3d & a:hover span::before,
-    .csstransforms3d & a:focus span::before {
-      // background: saturate(lighten($text-color, 40%), 25%);
-    }
-
-    @include respond-xs {
-      a {
-        display: block;
-        width: 100%;
-        margin: 0.5em 0;
-      }
-      a span {
-        width: 100%;
-      }
-    }
-  }
-}
-
 .mahabbah-footer {
   padding: 1em 2em 2em;
   text-align: center;
   font-size: 0.6em;
   color: $text-color;
-  background: rgba(#fff,0.4);
+  // background: rgba(#fff,0.4);
 
   a {
     color: $text-color;
@@ -401,15 +372,5 @@ section p {
       background: $bgcolor;
       opacity: 1;
     }
-  }
-}
-
-.md-modal .lailahaillallah {
-  min-height: 126px;
-  margin: 10px 0 0;
-  background: transparent url(../images/lailahaillallah.png) center center no-repeat;
-
-  @include respond-xs {
-    background-size: 100%;
   }
 }
