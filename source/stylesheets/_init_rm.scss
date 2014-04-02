@@ -52,7 +52,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: $init-color;
+  // color: $green;
 }
 
 // Top Navigation Style
@@ -72,7 +72,7 @@ a:hover, a:focus {
     @include transition(box-shadow 0.2s);
 
     &:hover {
-      box-shadow: inset 0 3px 0 $init-color;
+      @include box-shadow(inset 0 3px 0 $init-color);
     }
   }
 
@@ -91,7 +91,6 @@ a:hover, a:focus {
     }
   }
 }
-
 
 .mahabbah-header {
   background: $init-color url(../images/rm/headerbg.jpg) center bottom no-repeat;
@@ -140,6 +139,10 @@ a:hover, a:focus {
     }
   }
 
+  nav {
+    padding-top: 1em;
+  }
+
   @include respond-xs {
     padding: 2em 0;
     h1 {
@@ -153,63 +156,43 @@ a:hover, a:focus {
   }
 }
 
-header nav {
-  padding-top: 1em;
-}
-
-header button {
+// Button style
+.btn {
   border: none;
   display: inline-block;
-  background: $text-color;
+  background: #fff;
   font-weight: 400;
   font-family: $texgyre-font;
-  padding: 0;
+  padding: 0.6em 2em;
   margin: 5px;
   text-transform: uppercase;
-  border-radius: 3px;
   letter-spacing: 3px;
-  box-shadow: 0 -4px 0 rgba(#000, 0.1);
-  opacity: 1;
-  @include transition(opacity 0.5s);
+  border-radius: 2em;
+  border: 3px solid $text-color;
+  color: $text-color;
+  @include transition(background 0.2s, color 0.2s, border-color 0.2s);
 
-  a, a:hover {
-    display: block;
-    padding: 15px 30px;
-    color: rgba(#000,0.4);
-    @include respond-xs {
-      padding: 5px 8px;
-      // line-height: 1.5em;
-      font-size: 0.8em;
-    }
+  &:hover {
+    color: darken($text-color, 10%);
+    border-color: darken($text-color, 10%);
+  }
+
+  @include respond-xs {
+    font-size: 0.7em;
   }
 
   span {
     font-family: $texgyrebold-font;
   }
 
-  &:hover {
-    opacity: .7;
-  }
-
   &.btn-tumblr {
-    $tumblr-color: #32506d;
-    $tumblr-color: $green;
-    background: saturate(lighten($tumblr-color, 50%), 50%);
-    a, a:hover {
-      color: $tumblr-color;
+    background: rgba($init-color, 0.6);
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 2em;
+    &:hover {
+      background: $init-color;
     }
-  }
-
-  &.btn-home {
-    background: desaturate(lighten($init-color, 50%), 10%);
-    a, a:hover {
-      color: $init-color;
-    }
-  }
-
-  &.facebook {
-    background: #3b5999;
-    color: rgba(#fff, 0.5);
   }
 }
 
@@ -228,15 +211,15 @@ section {
 }
 
 section h2 {
-  background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
+  background: transparent url(../images/rm/arabdots.svg) center top no-repeat;
   background-size: auto 50%;
-  padding-top: 0.6em;
+  padding-top: 0.7em;
   margin-top: 0;
   font-family: $avant-font;
   letter-spacing: -3px;
   line-height: 0.8em;
   display: inline-block;
-  border-bottom: 2px solid rgba($text-color, 0.5);
+  // border-bottom: 2px solid rgba($text-color, 0.5);
 }
 
 section p {
@@ -253,7 +236,7 @@ section p {
   height: 450px;
   background: #fff url(../images/rm/hero.jpg) center top no-repeat;
   background-size: 100% auto;
-  box-shadow: 0 -4px 0 rgba(#000, 0.1);
+  @include box-shadow(0 -4px 0 rgba(#000, 0.1));
   position: relative;
 
   .logo {
@@ -279,7 +262,7 @@ section p {
 
     p {
       // display: inline-block;
-      background: rgba($green, 0.8);
+      background: rgba($green, 0.9);
       padding: 0.5em 0.7em;
       margin: 0;
       // margin: 0 0 0.5em;
@@ -304,36 +287,79 @@ section p {
   }
 }
 
-.mahabbah-welcome {
+.mahabbah-aside {
   z-index: 10;
   background: transparent;
-
-  p strong.rm {
-    background: transparent url(../images/rm/arabdots.svg) center top no-repeat;
-    background-size: auto 38%;
-
-    font-family: $avant-font;
-    letter-spacing: -2px;
-    padding: 0.6em 0.1em 0 0;
-
-    span {
-      color: lighten(saturate($text-color, 10%), 15%);
-    }
-  }
 
   p em {
     color: lighten(saturate($text-color, 10%), 15%);
     font-weight: 400;
     font-style: normal;
   }
+}
 
-  .error {
-    color: lighten($orange, 10%);
+.mahabbah-links {
+  display: none;
+  .row {
+    padding: 3em 1em;
+  }
+
+  h3 {
+    // color: #fff;
+  }
+
+  nav {
+    .btn {
+      font-size: 0.7em;
+      padding: 0.5em 1.2em;
+      margin-right: -2px;
+      border-width: 2px;
+      font-family: $main-font;
+      // font-weight: 700;
+      text-transform: none;
+      letter-spacing: 1px;
+
+      // margin: 15px 30px;
+      // padding: 25px 80px;
+      // border-radius: 0;
+    }
+
+    .btn-mm {
+      $mm-color: #176dc2;
+      border-color: $mm-color;
+      color: $mm-color;
+    }
+    .btn-mf {
+      $mf-color: #8b3aaf;
+      border-color: $mf-color;
+      color: $mf-color;
+    }
+    .btn-mfb {
+      $mfb-color: #fc5630;
+      border-color: $mfb-color;
+      color: $mfb-color;
+    }
+    .btn-mtc {
+      $mtc-color: #fa9e1e;
+      border-color: $mtc-color;
+      color: $mtc-color;
+    }
+    .btn-mtt {
+      $mtt-color: #1b59b0;
+      border-color: $mtt-color;
+      color: $mtt-color;
+    }
+    .btn-mb {
+      $mb-color: #bd383d;
+      border-color: $mb-color;
+      color: $mb-color;
+    }
+
   }
 }
 
 .mahabbah-footer {
-  padding: 1em 2em 2em;
+  padding: 2em 1em;
   text-align: center;
   font-size: 0.6em;
   color: $text-color;
