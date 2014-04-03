@@ -301,31 +301,4 @@ section p {
   }
 }
 
-.instagram-float {
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-  // @inc
-
-  a {
-    @include box-shadow(0 0 5px rgba(#000,0.2));
-    display: block;
-    padding: 0.3em 0.6em;
-    border: 1px solid $text-color;
-    border-bottom: none;
-    border-radius: 3px 3px 0 0;
-    color: $text-color;
-    background: #fff;
-    font-size: 0.5em;
-    font-weight: 500;
-    opacity: 0.8;
-    @include transition(opacity 0.2s, background 0.2s);
-
-    &:hover {
-      background: $bgcolor;
-      opacity: 1;
-    }
-  }
-}
-
 @import 'init_links';

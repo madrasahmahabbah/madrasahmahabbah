@@ -8,7 +8,7 @@
   background: #fff;
   position: absolute;
 
-  body.home & .icon-home {
+  body.home & .toplink-home {
     display: none;
   }
 
@@ -34,7 +34,7 @@
   }
 
   @include respond-xs {
-    .icon span {
+    .toplink span {
       display: none;
     }
   }

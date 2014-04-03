@@ -4,8 +4,52 @@
 		"selected_items":
 		[
 			[
+				"bord",
+				"border"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
 				"font",
-				"font-size"
+				"font-family"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"init",
+				"init-color"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"inl",
+				"include"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"pa",
+				"pos:a	position:absolute"
+			],
+			[
+				"ba",
+				"background-size"
 			],
 			[
 				"pad",
@@ -24,32 +68,16 @@
 				"background"
 			],
 			[
-				"ba",
-				"background"
-			],
-			[
 				"box",
 				"box-shadow"
-			],
-			[
-				"padd",
-				"padding"
 			],
 			[
 				"ini",
 				"init-color"
 			],
 			[
-				"bor",
-				"border"
-			],
-			[
 				"par",
 				"partial"
-			],
-			[
-				"back",
-				"background-size"
 			],
 			[
 				"trans",
@@ -66,10 +94,6 @@
 			[
 				"tex",
 				"text-color"
-			],
-			[
-				"bord",
-				"border"
 			],
 			[
 				"he",
@@ -94,10 +118,6 @@
 			[
 				"d",
 				"d:b	display:block"
-			],
-			[
-				"re",
-				"respond-xs"
 			],
 			[
 				"po",
@@ -236,19 +256,31 @@
 	},
 	"file_history":
 	[
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_rm.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/raudhatulmuhibbain/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/initiatives.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/mabkhoormusic/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/init_mm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/init_rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/index.html.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/layout.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_topnav.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_topnav.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_mm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/raudhatulmuhibbain/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_main.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_links.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_links.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_footer.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/mm/arabdots.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all_rm.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_overlays.html.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/rm.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/raudhatulmuhibbain/index.html.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/raudhatulmuhibbin/index.html.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/rm/arabdots.svg",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/arabdots-rm.svg",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all_rm.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/init_rm.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/arabdots-green.svg",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/initiatives.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/index.html.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/initiatives.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/Gemfile",
 		"/Users/wan/.zshrc",
@@ -256,7 +288,6 @@
 		"/private/var/folders/7g/vxkcvnyj5kb18x5hwk65ds9c0000gn/T/428e9219-9de9-41a6-b7a4-95a449a9a688/etc/apt/sources.list.d/cydia.list",
 		"/Volumes/WDG Media/Torrents/Almost Human - 01x12 - Beholder.DIMENSION.English.C.updated.Addic7ed.com.srt",
 		"/Users/wan/Desktop/sorted.list",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_main.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_modal.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-about.scss",
@@ -355,6 +386,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"p",
+			"span",
+			"0.6",
+			"0.8",
+			".initiative-",
+			".initiative",
+			".initiative-",
+			".btn-",
+			".init-",
+			"btn",
+			".btn",
+			"mm",
+			"%);",
+			"$green",
+			"/rm",
+			"rm",
+			"$green",
+			"h2",
+			"p",
+			"border-color",
+			"mm",
+			"tc",
+			"mm",
+			"20",
+			"box-sha",
+			"box-shadow:",
+			".mahabbah-top ",
+			"mahabbah-icon",
+			"a h",
+			"codrops",
+			"trigger",
 			"src=\"",
 			"tumble",
 			"arabdots-rm.",
@@ -451,38 +513,7 @@
 			"2deg",
 			"#868375",
 			"3deg",
-			"2deg",
-			"z-in",
-			"z-",
-			" ss-doublediagonal",
-			".ss-style-doublediagonal:",
-			"nav a",
-			"a:",
-			".l-circle ",
-			".cl-effect-12",
-			".l-slide a",
-			".l-slide a ",
-			".cl-effect-5",
-			" scale(0.9)",
-			"228,152,184",
-			"26",
-			".mahabbah-main",
-			"0.9",
-			", letter-spacing 0.5s",
-			"26px",
-			"blockquote",
-			"section",
-			"section button",
-			"ev.propertyName",
-			"\"transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd\"",
-			".off(",
-			".on(",
-			"rgba(228,152,184,0.9)",
-			"0.8s",
-			".overlay-mvmt-hugeinc",
-			".container",
-			".overlay-mvmt ",
-			".overlay-about "
+			"2deg"
 		],
 		"highlight": true,
 		"in_selection": false,
