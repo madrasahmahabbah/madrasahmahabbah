@@ -51,6 +51,8 @@ a:hover, a:focus {
   color: darken($green, 10%);
 }
 
+@import 'topnav';
+
 .mahabbah-header {
   background: #fff;
   margin: 0 auto;

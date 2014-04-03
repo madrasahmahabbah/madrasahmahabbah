@@ -1,38 +1,12 @@
 ---
-layout: rm
+layout: initiatives
 title: Raudhatul Muhibbain
+initiative: rm
 ---
 
     <div class="container">
 
-      <!-- Top Nav -->
-      <div class="mahabbah-top clearfix">
-        <a class="icon" href="/">
-          <i class="fa fa-home"></i>
-          <span>Back to Madrasah Mahabbah</span></a>
-
-        <span class="right">
-          <a class="icon" href="http://www.mahabbah.biz/">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Shop</span></a>
-
-          <a class="icon" href="https://www.facebook.com/pages/Madrasah-Mahabbah/116562355135100">
-            <i class="fa fa-facebook"></i>
-            <span>Facebook</span></a>
-
-          <a class="icon" href="https://twitter.com/MaMahabbah">
-            <i class="fa fa-twitter"></i>
-            <span>Twitter</span></a>
-
-          <a class="icon" href="http://instagram.com/madrasahmahabbah">
-            <i class="fa fa-instagram"></i>
-            <span>Instagram</span></a>
-
-          <a class="icon" href="http://www.youtube.com/user/TheMuhibbains">
-            <i class="fa fa-youtube-play"></i>
-            <span>YouTube</span></a>
-          </span>
-      </div>
+<%= partial 'topnav' %>
 
       <!-- Header -->
       <div class="wrapper mahabbah-header">
@@ -53,6 +27,7 @@ title: Raudhatul Muhibbain
       <div class="wrapper mahabbah-hero">
         <div class="word">
           <div class="logo"></div>
+          <div class="clearfix"></div>
           <p>
             As the human heart is only truly alive <em>only with the remembrance of Allah SWT and His Beloved SAW</em>, so too is the case for <em>Madrasah Mahabbah</em>.
           <br>
@@ -72,20 +47,7 @@ title: Raudhatul Muhibbain
         </section>
       </div>
 
-      <!-- Links -->
-      <div class="wrapper mahabbah-links">
-        <section class="row">
-          <h3>Other initiatives</h3>
-          <nav>
-            <a class="btn btn-mm" href="/mabkhoormusic">Mabkhoor Music</a>
-            <a class="btn btn-mf" href="#">Mahabbah Fashion</a>
-            <a class="btn btn-mfb" href="#">Mahabbah Food &amp; Beverages</a>
-            <a class="btn btn-mtc" href="#">Mahabbah Training &amp; Consultancy</a>
-            <a class="btn btn-mtt" href="#">Mahabbah Travel &amp; Tours</a>
-            <a class="btn btn-mb" href="#">Mahabbah Books</a>
-          </nav>
-        </section>
-      </div>
+<%= partial 'links' %>
 
       <div class="wrapper">
         <footer class="mahabbah-footer">

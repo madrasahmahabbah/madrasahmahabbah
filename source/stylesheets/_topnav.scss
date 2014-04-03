@@ -1,0 +1,41 @@
+// Top Navigation Style
+.mahabbah-top {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.5em;
+  line-height: 2.2;
+  background: #fff;
+  position: absolute;
+
+  body.home & .icon-home {
+    display: none;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 0.7em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: lighten($text-color, 20%);
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  span.right {
+    float: right;
+  }
+
+  span.right a {
+    display: block;
+    float: left;
+  }
+
+  @include respond-xs {
+    .icon span {
+      display: none;
+    }
+  }
+}
