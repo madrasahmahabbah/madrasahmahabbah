@@ -1,7 +1,7 @@
 $bgcolor: #e74c3c;
 // $bgcolor: #112b6b;
-$overlay-bgcolor: $orange;
-$emcolor: saturate(lighten($bgcolor,20%),40%);
+$overlay-bgcolor: $alt-color;
+$emcolor: saturate(lighten($bgcolor, 20%), 40%);
 
 .container {
   min-height: 100%;

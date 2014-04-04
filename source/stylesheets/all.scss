@@ -6,57 +6,24 @@
   'vars',
   'responsive';
 
+$text-color: #868375;
+$main-color: #85b91e;
+$alt-color: #ad3629;
+$init-color: $main-color;
 $bgcolor: saturate(lighten($text-color, 35%), 20%);
 
-*, *:after, *:before { @include box-sizing(border-box); }
-.clearfix:before, .clearfix:after { content: ''; display: table; }
-.clearfix:after { clear: both; }
-
-html, body {
-  overflow-x: hidden;
-}
+@import 'base';
 
 body {
-  background: $bgcolor;
   background: $bgcolor url(../images/naal-bg.jpg) center center no-repeat fixed;
-  color: $text-color;
-  font-weight: 300;
-  font-size: 26px; //28px
-  line-height: 1.25;
-  font-family: $main-font;
-
-  @include respond-xs {
-    background-size: 180% auto;
-  }
-}
-
-// basic grid system
-.wrapper {
-  width: 100%;
-}
-
-.row {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-}
-
-a, button {
-  outline: none;
 }
 
 a {
-  color: $green;
-  text-decoration: none;
-  outline: none;
+  color: $main-color;
 }
 
 a:hover, a:focus {
-  color: darken($green, 10%);
+  color: darken($main-color, 10%);
 }
 
 @import 'topnav';
@@ -64,7 +31,7 @@ a:hover, a:focus {
 .mahabbah-header {
   background: #fff;
   margin: 0 auto;
-  padding: 5em 0 4.2em;
+  padding: 4em 0;
   text-align: center;
 
   h1 {
@@ -75,8 +42,9 @@ a:hover, a:focus {
     font-size: 2.5em;
     font-family: $avant-font;
     line-height: 0.8em;
-    color: $green;
+    color: $main-color;
     letter-spacing: -5px;
+    -webkit-text-stroke: 0.8px rgba(#000, 0.001);
 
     a {
       display: block;
@@ -85,7 +53,7 @@ a:hover, a:focus {
 
     span {
       display: inline-block;
-      color: lighten($green, 10%);
+      color: lighten($main-color, 10%);
     }
 
     span.sub {
@@ -119,39 +87,16 @@ a:hover, a:focus {
 }
 
 // sections
-
-section {
-  position: relative;
-  padding: 3em 1em;
-  // background: #fff;
-  text-align: center;
-
-  @include respond-xs {
-    padding: 2em 0.5em;
-    font-size: 0.8em;
-  }
-}
-
 section h2 {
   background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
   background-size: auto 50%;
-  padding-top: 0.6em;
+  // padding-top: 0.6em;
   margin-top: 0;
   font-family: $avant-font;
   letter-spacing: -3px;
   line-height: 0.8em;
   display: inline-block;
   border-bottom: 2px solid rgba($text-color, 0.5);
-}
-
-section p {
-  // max-width: 700px;
-  margin: 0 auto;
-  padding: 1.2em 0;
-
-  @include respond-xs {
-    padding: 0.5em 0 1em;
-  }
 }
 
 section button {
@@ -183,11 +128,11 @@ section button {
   }
 
   &.trigger-about {
-    background: lighten($orange, 10%);
+    background: lighten($alt-color, 10%);
   }
 
   &.trigger-mvmt {
-    background: $green;
+    background: $main-color;
   }
 
   &.facebook {
@@ -199,6 +144,10 @@ section button {
 .mahabbah-welcome {
   z-index: 10;
   background: transparent;
+
+  p {
+    padding-top: 0;
+  }
 
   p strong.mm {
     background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
@@ -220,7 +169,7 @@ section button {
   }
 
   .error {
-    color: lighten($orange, 10%);
+    color: lighten($alt-color, 10%);
   }
 }
 
@@ -272,7 +221,7 @@ section button {
     background: none;
     margin-top: 0;
     font-family: $avant-font;
-    color: $green;
+    color: $main-color;
     letter-spacing: -3px;
     line-height: 0.8em;
     border: none;
@@ -282,7 +231,7 @@ section button {
       background: transparent url(../images/arabdots-green.svg) center top no-repeat;
       background-size: auto 45%;
       padding-top: 0.5em;
-      color: lighten($green, 10%);
+      color: lighten($main-color, 10%);
     }
   }
 

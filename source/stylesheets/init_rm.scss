@@ -12,58 +12,13 @@ $main-color: desaturate(lighten($init-color, 20%), 5%);
 $text-color: $main-color;
 $bgcolor: #fff;
 
-*, *:after, *:before { @include box-sizing(border-box); }
-.clearfix:before, .clearfix:after { content: ''; display: table; }
-.clearfix:after { clear: both; }
-
-html, body {
-  overflow-x: hidden;
-}
+@import 'base';
 
 body {
   background: $bgcolor url(../images/rm/bg.jpg) center bottom no-repeat fixed;
-  color: $text-color;
-  font-weight: 300;
-  font-size: 26px; //28px
-  line-height: 1.25;
-  font-family: $main-font;
-
-  @include respond-xs {
-    background-size: 150% auto;
-  }
-}
-
-// basic grid system
-.wrapper {
-  width: 100%;
-}
-
-.row {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-}
-
-a, button {
-  outline: none;
-}
-
-a {
-  color: $init-color;
-  text-decoration: none;
-  outline: none;
-}
-
-a:hover, a:focus {
-  // color: $main-color;
 }
 
 // Button style
-
 .btn {
   border: none;
   display: inline-block;
@@ -102,42 +57,6 @@ a:hover, a:focus {
   }
 }
 
-// sections
-
-section {
-  position: relative;
-  padding: 2em 1em;
-  // background: #fff;
-  text-align: center;
-
-  @include respond-xs {
-    padding: 1.5em 0.5em;
-    font-size: 0.8em;
-  }
-}
-
-section h2 {
-  background: transparent url(../images/rm/arabdots.svg) center top no-repeat;
-  background-size: auto 50%;
-  padding-top: 0.7em;
-  margin-top: 0;
-  font-family: $avant-font;
-  letter-spacing: -3px;
-  line-height: 0.8em;
-  display: inline-block;
-  // border-bottom: 2px solid rgba($text-color, 0.5);
-}
-
-section p {
-  // max-width: 700px;
-  margin: 0 auto;
-  padding: 1.2em 0;
-
-  @include respond-xs {
-    padding: 0.5em 0 1em;
-  }
-}
-
 @import 'topnav';
 
 // Top Navigation Style
@@ -170,6 +89,7 @@ section p {
     color: $main-color;
     letter-spacing: -5px;
     text-shadow: 0 0 30px rgba($main-color, 0.3), 0 -5px 0 rgba(#000, 0.1);
+    -webkit-text-stroke: 0.8px rgba(#000, 0.001);
 
     a {
       display: block;
@@ -220,12 +140,12 @@ section p {
 .mahabbah-hero {
   height: 450px;
   background: #fff url(../images/rm/hero.jpg) center top no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   @include box-shadow(0 -4px 0 rgba(#000, 0.1));
   position: relative;
 
   @include respond-xs {
-    background-size: auto 150%;
+    // background-size: auto 150%;
     height: 400px;
   }
 
