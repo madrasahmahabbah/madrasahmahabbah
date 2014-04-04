@@ -193,7 +193,7 @@ section p {
     width: auto;
     color: #fff;
     // padding: 0.3em 1em;
-    margin: 0.5em 0;
+    margin: 0.5em 0.5em;
     // text-shadow: 0 0 30px rgba($main-color, 0.3), 0 -4px 0 rgba(#000, 0.1);
 
     > span {
@@ -215,24 +215,15 @@ section p {
 
 .mahabbah-hero {
   height: 450px;
-  background: #fff url(../images/mm/hero.jpg) center bottom no-repeat;
-  background-size: 100% auto;
+  background: #fff url(../images/mm/hero.jpg) left bottom no-repeat;
+  background-size: auto 100%;
   @include box-shadow(0 -4px 0 rgba(#000, 0.1));
   position: relative;
 
-  .logo {
-    background: #fff url(../images/mm/logo.png) center center no-repeat;
-    background-size: 100% auto;
-    width: 130px;
-    height: 150px;
-    // border-radius: 10px 10px 0 0;
-    // margin-left: 20%;
-
-    @include respond-xs {
-      width: 100px;
-      height: 110px;
-      float: right;
-    }
+  @include respond-xs {
+    height: 400px;
+    background-size: auto 100%;
+    background-position: -150px bottom;
   }
 
   .word {
@@ -262,12 +253,21 @@ section p {
       margin-left: 10%;
       font-size: 0.7em;
     }
-  }
 
-  @include respond-xs {
-    height: 350px;
-    background-size: auto 100%;
-    background-position: -100px bottom;
+    .logo {
+      background: #fff url(../images/mm/logo.png) center center no-repeat;
+      background-size: 100% auto;
+      width: 130px;
+      height: 150px;
+      // border-radius: 10px 10px 0 0;
+      // margin-left: 20%;
+
+      @include respond-xs {
+        width: 100px;
+        height: 110px;
+        float: right;
+      }
+    }
   }
 }
 
@@ -282,20 +282,4 @@ section p {
   }
 }
 
-.mahabbah-footer {
-  padding: 2em 1em;
-  text-align: center;
-  font-size: 0.6em;
-  color: $text-color;
-  // background: rgba(#fff,0.4);
-
-  a {
-    color: $text-color;
-  }
-
-  @include respond-xs {
-    font-size: 0.5em;
-  }
-}
-
-@import 'init_links';
+@import 'footer', 'init_links';

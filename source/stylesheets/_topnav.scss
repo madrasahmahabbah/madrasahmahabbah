@@ -18,6 +18,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     color: lighten($text-color, 20%);
+    @include transition(color 0.2s);
 
     &:hover {
       color: $text-color;

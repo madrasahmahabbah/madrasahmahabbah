@@ -1,0 +1,41 @@
+.mahabbah-footer {
+  $color: desaturate(lighten($text-color, 10%), 20%);
+  padding: 2em 1em;
+  text-align: center;
+  font-size: 0.55em;
+  font-weight: 700;
+  color: $color;
+  // color: $text-color;
+  // letter-spacing: 1px;
+  line-height: 1.5em;
+
+  @include respond-xs {
+    font-size: 0.5em;
+  }
+
+  a {
+    color: $color;
+    // color: $text-color;
+  }
+
+  .contact {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0;
+
+    &.phone {
+      letter-spacing: -1px;
+      word-spacing: 3px;
+    }
+  }
+
+  .col {
+    float: left;
+    text-align: left;
+  }
+
+  .col:last-child {
+    float: right;
+    text-align: right;
+  }
+}
