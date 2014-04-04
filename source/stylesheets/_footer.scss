@@ -9,10 +9,6 @@
   // letter-spacing: 1px;
   line-height: 1.5em;
 
-  @include respond-xs {
-    font-size: 0.5em;
-  }
-
   a {
     color: $color;
     // color: $text-color;
@@ -38,4 +34,20 @@
     float: right;
     text-align: right;
   }
+
+  @include respond-xs {
+    font-size: 0.45em;
+
+    .col {
+      text-align: center;
+      float: none;
+    }
+
+    .col:last-child {
+      text-align: center;
+      float: none;
+      margin-top: 1.5em;
+    }
+  }
+
 }
