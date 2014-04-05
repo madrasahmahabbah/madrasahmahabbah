@@ -48,9 +48,16 @@ $duration: 0.5s;
     top: 50%;
     height: 60%;
     font-size: 54px;
-    // font-family: 'texgyreadventorregular';
+    font-family: $texgyre-font;
+    letter-spacing: -3px;
+    word-spacing: -5px;
     @include transform(translateY(-50%));
     z-index: 10;
+
+    @include respond-xs {
+      letter-spacing: -1px;
+      word-spacing: -3px;
+    }
   }
 
   ul {
@@ -79,21 +86,33 @@ $duration: 0.5s;
 
     span {
       display: inline-block;
-      // font-family: 'texgyreadventorbold';
+      font-family: $avant-font;
       font-weight: 700;
       color: saturate(lighten($bgcolor, 20%), 30%);
       @include transition(color 0.5s);
     }
-  }
 
-  ul li a:hover,
-  ul li a:focus {
-    color: rgba($bgcolor,1);
-    background: #fff;
-
-    span {
-      color: rgba($bgcolor,1);
+    &:hover,
+    &:focus {
+      color: $bgcolor;
+      background: #fff;
+      span {
+        color: $bgcolor;
+      }
     }
+
+    &.i-rm:hover,
+    &.i-rm:focus {
+      color: $rm-color;
+      span { color: $rm-color; }
+    }
+
+    &.i-mm:hover,
+    &.i-mm:focus {
+      color: $mm-color;
+      span { color: $mm-color; }
+    }
+
   }
 
   @include respond-sm {

@@ -6,10 +6,10 @@
   'vars',
   'responsive';
 
-$text-color: #868375;
 $main-color: #85b91e;
 $alt-color: #ad3629;
 $init-color: $main-color;
+$text-color: #868375;
 $bgcolor: saturate(lighten($text-color, 35%), 20%);
 
 @import 'base';
@@ -318,11 +318,9 @@ section button {
 @import 'footer';
 
 .mahabbah-footer {
-  color: #aca784;
-  background: rgba(#fff,0.4);
-
+  color: saturate(lighten($text-color, 10%), 5%);
   a {
-    color: #aca784;
+    color: saturate(lighten($text-color, 10%), 5%);
   }
 }
 
@@ -364,6 +362,6 @@ section button {
 }
 
 @import
-	'overlay-movement',
+	'overlay-init',
   'overlay-about',
   'modal';

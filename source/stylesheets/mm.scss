@@ -1,3 +1,7 @@
+//
+// MABKHOOR MUSIC
+//
+
 @charset "utf-8";
 
 @import
@@ -7,7 +11,7 @@
   'responsive';
 
 // initiative specific
-$init-color: #208eca; // initiative color
+$init-color: $mm-color; // initiative color
 $main-color: saturate(lighten($init-color, 35%), 30%);
 $text-color: lighten($init-color, 20%);
 $bgcolor: #fff;
@@ -62,13 +66,11 @@ body {
 
 // Top Navigation Style
 .mahabbah-top {
-  background: $main-color;
-
   a {
-    color: $init-color;
+    color: #fff;
 
     &:hover {
-      color: lighten($init-color, 5%);
+      color: $main-color;
     }
   }
 }
