@@ -19,6 +19,8 @@ set :build_dir, '../madrasahmahabbah.github.io'
 # Build-specific configuration
 configure :build do
 
+	activate :imageoptim
+
   activate :minify_css
 
   activate :minify_javascript

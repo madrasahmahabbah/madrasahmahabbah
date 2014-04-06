@@ -13,3 +13,4 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "middleman-s3_sync"
 
 # gem "ceaser-easing"
+gem "middleman-imageoptim"
