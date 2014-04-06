@@ -98,7 +98,6 @@ body {
     color: $main-color;
     letter-spacing: -5px;
     text-shadow: 1px 1px 10px rgba(#000, 0.15);
-    -webkit-text-stroke: 0.8px rgba(#000, 0.001);
 
     a {
       display: block;
@@ -143,7 +142,8 @@ body {
 }
 
 .mahabbah-hero {
-  background: rgba($bgcolor, 0.6);
+  background: rgba($bgcolor, 0.75);
+
   .row {
     padding: 0;
     color: #fff;
