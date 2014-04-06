@@ -1,17 +1,14 @@
 .mahabbah-footer {
   $color: $text-color;//desaturate(lighten($text-color, 5%), 10%);
-  padding: 2em 1em;
+  padding: 2em 1em 5em;
   text-align: center;
   font-size: 0.55em;
   font-weight: 700;
   color: $color;
-  // color: $text-color;
-  // letter-spacing: 1px;
   line-height: 1.5em;
 
   a {
     color: $color;
-    // color: $text-color;
   }
 
   ul.contact {

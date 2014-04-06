@@ -147,7 +147,6 @@ body {
   .row {
     padding: 0;
     color: #fff;
-    font-size: 1.1em;
     text-align: left;
 
     .logo {
@@ -187,8 +186,7 @@ body {
     }
 
     @include respond-xs {
-      font-size: 0.72em;
-      // text-align: center;
+      font-size: 0.7em;
     }
   }
 }
