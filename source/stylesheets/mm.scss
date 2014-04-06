@@ -152,10 +152,11 @@ body {
 
   .word {
     position: absolute;
-    bottom: 00px;
+    bottom: 0;
     right: 0;
     color: #fff;
     margin-left: 40%;
+    font-size: 1.1em;
 
     p {
       // display: inline-block;
@@ -174,8 +175,9 @@ body {
     }
 
     @include respond-xs {
-      margin-left: 10%;
-      font-size: 0.7em;
+      margin-left: 0;
+      font-size: 0.75em;
+      text-align: center;
     }
 
     .logo {
