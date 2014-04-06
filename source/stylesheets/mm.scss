@@ -139,15 +139,15 @@ body {
 
 .mahabbah-hero {
   height: 450px;
-  background: #fff url(../images/mm/hero.jpg) left bottom no-repeat;
-  background-size: auto 100%;
+  background: #fff url(../images/mm/hero.jpg) left center no-repeat;
+  background-size: cover;
   @include box-shadow(0 -4px 0 rgba(#000, 0.1));
   position: relative;
 
   @include respond-xs {
     height: 400px;
     background-size: cover;
-    background-position: -100px bottom;
+    background-position: -100px center;
   }
 
   .word {
@@ -160,7 +160,7 @@ body {
 
     p {
       // display: inline-block;
-      background: rgba($text-color, 0.95);
+      background: rgba($text-color, 0.8);
       padding: 0.5em 0.7em;
       margin: 0;
       // margin: 0 0 0.5em;
@@ -168,6 +168,7 @@ body {
 
     em {
       color: saturate(lighten($text-color, 20%), 50%);
+      font-weight: 600;
     }
 
     @include respond-sm {
