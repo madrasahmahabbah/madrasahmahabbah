@@ -15,7 +15,7 @@
 $init-color: $rm-color; // initiative color
 $main-color: desaturate(lighten($init-color, 20%), 5%);
 $text-color: $main-color;
-$bgcolor: #fff;
+$bgcolor: saturate(lighten($init-color, 20%), 10%);
 
 @import 'base';
 
@@ -94,7 +94,7 @@ body {
     line-height: 0.8em;
     color: $main-color;
     letter-spacing: -5px;
-    text-shadow: 0 0 20px rgba(#000, 0.4);
+    text-shadow: 1px 1px 20px rgba(#000, 0.4);
     -webkit-text-stroke: 0.8px rgba(#000, 0.001);
 
     a {
@@ -118,7 +118,7 @@ body {
       width: auto;
       color: saturate(lighten($main-color, 40%), 40%);
       padding: 0 1em;
-      text-shadow: 0 0 5px rgba(#000, 0.4);
+      text-shadow: 1px 1px 4px rgba(#000, 0.3);
 
       > span {
         color: saturate(lighten($main-color, 20%), 20%);
@@ -144,36 +144,43 @@ body {
 }
 
 .mahabbah-hero {
-  // height: 450px;
-  // background: #fff url(../images/rm/hero.jpg) center top no-repeat;
-  // background-size: cover;
-  // @include box-shadow(0 -4px 0 rgba(#000, 0.1));
-  // position: relative;
-
-  // @include respond-xs {
-  //   // background-size: auto 150%;
-  //   height: 400px;
-  // }
-
-  .word {
-    // position: absolute;
-    // bottom: 0;
-    // right: 0;
+  background: rgba($bgcolor, 0.75);
+  .row {
+    padding: 0;
     color: #fff;
-    // margin-left: 20%;
     font-size: 1.1em;
+    text-align: left;
 
-    p {
-      // display: inline-block;
-      $bgcolor: saturate(lighten($init-color, 20%), 10%);
-      background: rgba($bgcolor, 0.9);
-      padding: 0.5em 0.7em;
-      margin: 0;
-      // margin: 0 0 0.5em;
+    .logo {
+      width: 200px;
+      float: right;
+      background: rgba(#fff, 0.9);
+      text-align: center;
+      margin: 0 1em 1em;
+      border-radius: 0 0 0.4em 0.4em;
+
+      @include respond-xs {
+        width: 100px;
+        img.logoimg {
+          width: 100%;
+        }
+      }
     }
 
-    em {
-      color: saturate(lighten($main-color, 25%), 50%);
+    .word {
+      margin: 0.5em 0;
+    }
+
+    p {
+      padding: 0.5em 0.7em;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(#000, 0.2);
+
+      em {
+        color: saturate(lighten($main-color, 25%), 50%);
+        font-weight: 600;
+        font-style: normal;
+      }
     }
 
     @include respond-sm {
@@ -181,24 +188,7 @@ body {
     }
 
     @include respond-xs {
-      margin-left: 0;
       font-size: 0.72em;
-      text-align: center;
-    }
-
-    .logo {
-      background: #fff url(../images/rm/logo.png) center center no-repeat;
-      background-size: 100% auto;
-      width: 130px;
-      height: 150px;
-      // border-radius: 10px 10px 0 0;
-      // margin-left: 20%;
-
-      @include respond-xs {
-        width: 100px;
-        height: 110px;
-        float: right;
-      }
     }
   }
 }
@@ -214,12 +204,11 @@ body {
   }
 }
 
-@import 'footer', 'links', 'animations';
+// @import 'footer', 'links', 'animations';
+@import 'footer', 'links';
 
 .mahabbah-links {
-  $bgcolor: saturate(lighten($init-color, 20%), 10%);
-  background: rgba($bgcolor, 0.9);
-  // background: transparent url(../images/mf/bgpattern.png) repeat;
+  background: rgba($bgcolor, 0.75);
 }
 
 .mahabbah-footer {
