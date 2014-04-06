@@ -20,7 +20,7 @@ $bgcolor: #fff;
 
 body {
   background-image: url(../images/mf/bg.jpg);
-  background: #fff url(../images/mf/hero.jpg) center 40% no-repeat fixed;
+  background: #fff url(../images/mf/hero.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -151,10 +151,10 @@ body {
   // @include box-shadow(0 -4px 0 rgba(#000, 0.1));
   // position: relative;
 
-  @include respond-xs {
-    // background-size: auto 150%;
-    height: 400px;
-  }
+  // @include respond-xs {
+  //   // background-size: auto 150%;
+  //   height: 400px;
+  // }
 
   .word {
     // position: absolute;
@@ -166,7 +166,8 @@ body {
 
     p {
       // display: inline-block;
-      background: rgba($main-color, 0.8);
+      $bgcolor: saturate(lighten($init-color, 20%), 10%);
+      background: rgba($bgcolor, 0.9);
       padding: 0.5em 0.7em;
       margin: 0;
       // margin: 0 0 0.5em;

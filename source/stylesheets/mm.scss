@@ -12,7 +12,7 @@
 
 // initiative specific
 $init-color: $mm-color; // initiative color
-$main-color: saturate(lighten($init-color, 35%), 30%);
+$main-color: saturate(lighten($init-color, 30%), 60%);
 $text-color: lighten($init-color, 20%);
 $bgcolor: #fff;
 
@@ -21,6 +21,12 @@ $bgcolor: #fff;
 
 body {
   background-image: url(../images/mm/bg.jpg);
+  background: #fff url(../images/mm/hero.jpg) center center no-repeat;
+  background-size: cover;
+
+  @include respond-xs {
+    background-position: -300px center;
+  }
 }
 
 // Button style
@@ -53,7 +59,7 @@ body {
   }
 
   &.btn-tumblr {
-    background: rgba($init-color, 0.6);
+    background: rgba($init-color, 0.8);
     color: #fff;
     border: 3px solid #fff;
     &:hover {
@@ -76,7 +82,7 @@ body {
 }
 
 .mahabbah-header {
-  background: $init-color url(../images/mm/headerbg.jpg) center bottom no-repeat;
+  // background: $init-color url(../images/mm/headerbg.jpg) center bottom no-repeat;
   margin: 0 auto;
   padding: 3em 0 2em;
   text-align: center;
@@ -92,7 +98,7 @@ body {
     line-height: 0.8em;
     color: $main-color;
     letter-spacing: -5px;
-    text-shadow: 0 0 30px rgba($main-color, 0.3), 0 -5px 0 rgba(#000, 0.1);
+    text-shadow: 0 0 10px rgba(#000, 0.15);
     -webkit-text-stroke: 0.8px rgba(#000, 0.001);
 
     a {
@@ -138,29 +144,30 @@ body {
 }
 
 .mahabbah-hero {
-  height: 450px;
-  background: #fff url(../images/mm/hero.jpg) left center no-repeat;
-  background-size: cover;
-  @include box-shadow(0 -4px 0 rgba(#000, 0.1));
-  position: relative;
+  // height: 450px;
+  // background: #fff url(../images/mm/hero.jpg) left center no-repeat;
+  // background-size: cover;
+  // @include box-shadow(0 -4px 0 rgba(#000, 0.1));
+  // position: relative;
 
-  @include respond-xs {
-    height: 400px;
-    background-size: cover;
-    background-position: -100px center;
-  }
+  // @include respond-xs {
+  //   height: 400px;
+  //   background-size: cover;
+  //   background-position: -100px center;
+  // }
 
   .word {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    // position: absolute;
+    // bottom: 0;
+    // right: 0;
     color: #fff;
-    margin-left: 40%;
+    // margin-left: 40%;
     font-size: 1.1em;
 
     p {
       // display: inline-block;
-      background: rgba($text-color, 0.8);
+      $bgcolor: saturate(lighten($init-color, 20%), 10%);
+      background: rgba($bgcolor, 0.8);
       padding: 0.5em 0.7em;
       margin: 0;
       // margin: 0 0 0.5em;
@@ -210,3 +217,13 @@ body {
 }
 
 @import 'footer', 'links', 'animations';
+
+.mahabbah-links {
+  $bgcolor: saturate(lighten($init-color, 20%), 10%);
+  background: rgba($bgcolor, 0.8);
+  // background: transparent url(../images/mf/bgpattern.png) repeat;
+}
+
+.mahabbah-footer {
+  background: #fff;
+}

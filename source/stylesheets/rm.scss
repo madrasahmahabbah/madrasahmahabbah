@@ -21,6 +21,8 @@ $bgcolor: #fff;
 
 body {
   background-image: url(../images/rm/bg.jpg);
+  background: #fff url(../images/rm/hero.jpg) center center no-repeat;
+  background-size: cover;
 }
 
 // Button style
@@ -53,7 +55,7 @@ body {
   }
 
   &.btn-tumblr {
-    background: rgba($init-color, 0.6);
+    background: rgba($init-color, 0.8);
     color: #fff;
     border: 3px solid #fff;
     &:hover {
@@ -77,6 +79,7 @@ body {
 
 .mahabbah-header {
   background: $init-color url(../images/rm/headerbg.jpg) center bottom no-repeat;
+  background: transparent;
   margin: 0 auto;
   padding: 3em 0 2em;
   text-align: center;
@@ -91,7 +94,7 @@ body {
     line-height: 0.8em;
     color: $main-color;
     letter-spacing: -5px;
-    text-shadow: 0 0 30px rgba($main-color, 0.3), 0 -5px 0 rgba(#000, 0.1);
+    text-shadow: 0 0 20px rgba(#000, 0.4);
     -webkit-text-stroke: 0.8px rgba(#000, 0.001);
 
     a {
@@ -115,7 +118,7 @@ body {
       width: auto;
       color: saturate(lighten($main-color, 40%), 40%);
       padding: 0 1em;
-      text-shadow: 0 0 30px rgba($main-color, 0.3), 0 -4px 0 rgba(#000, 0.1);
+      text-shadow: 0 0 5px rgba(#000, 0.4);
 
       > span {
         color: saturate(lighten($main-color, 20%), 20%);
@@ -141,28 +144,29 @@ body {
 }
 
 .mahabbah-hero {
-  height: 450px;
-  background: #fff url(../images/rm/hero.jpg) center top no-repeat;
-  background-size: cover;
-  @include box-shadow(0 -4px 0 rgba(#000, 0.1));
-  position: relative;
+  // height: 450px;
+  // background: #fff url(../images/rm/hero.jpg) center top no-repeat;
+  // background-size: cover;
+  // @include box-shadow(0 -4px 0 rgba(#000, 0.1));
+  // position: relative;
 
-  @include respond-xs {
-    // background-size: auto 150%;
-    height: 400px;
-  }
+  // @include respond-xs {
+  //   // background-size: auto 150%;
+  //   height: 400px;
+  // }
 
   .word {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    // position: absolute;
+    // bottom: 0;
+    // right: 0;
     color: #fff;
-    margin-left: 20%;
+    // margin-left: 20%;
     font-size: 1.1em;
 
     p {
       // display: inline-block;
-      background: rgba($main-color, 0.95);
+      $bgcolor: saturate(lighten($init-color, 20%), 10%);
+      background: rgba($bgcolor, 0.9);
       padding: 0.5em 0.7em;
       margin: 0;
       // margin: 0 0 0.5em;
@@ -211,3 +215,13 @@ body {
 }
 
 @import 'footer', 'links', 'animations';
+
+.mahabbah-links {
+  $bgcolor: saturate(lighten($init-color, 20%), 10%);
+  background: rgba($bgcolor, 0.9);
+  // background: transparent url(../images/mf/bgpattern.png) repeat;
+}
+
+.mahabbah-footer {
+  background: #fff;
+}
