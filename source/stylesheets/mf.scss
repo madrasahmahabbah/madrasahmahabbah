@@ -1,0 +1,211 @@
+//
+// RAUDHATUL MUHIBBAIN
+//
+
+@charset "utf-8";
+
+@import
+  'fonts',
+  'compass/css3',
+  'vars',
+  'responsive';
+
+// initiative specific
+$init-color: $mf-color; // initiative color
+$main-color: saturate(lighten($init-color, 30%), 20%);
+$text-color: $main-color;
+$bgcolor: #fff;
+
+@import 'base';
+
+body {
+  background-image: url(../images/mf/bg.jpg);
+}
+
+// Button style
+.btn {
+  border: none;
+  display: inline-block;
+  background: #fff;
+  font-weight: 400;
+  font-family: $texgyre-font;
+  padding: 0.6em 2em;
+  margin: 5px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 2em;
+  border: 3px solid $text-color;
+  color: $text-color;
+  @include transition(background 0.2s, color 0.2s, border-color 0.2s);
+
+  &:hover {
+    color: darken($text-color, 10%);
+    border-color: darken($text-color, 10%);
+  }
+
+  @include respond-xs {
+    font-size: 0.6em;
+  }
+
+  span {
+    font-family: $texgyrebold-font;
+  }
+
+  &.btn-tumblr {
+    background: rgba($init-color, 0.6);
+    color: #fff;
+    border: 3px solid #fff;
+    &:hover {
+      background: $init-color;
+    }
+  }
+}
+
+@import 'topnav';
+
+// Top Navigation Style
+.mahabbah-top {
+  a {
+    color: #fff;
+
+    &:hover {
+      color: saturate(lighten($main-color, 10%), 20%);
+    }
+  }
+}
+
+.mahabbah-header {
+  background: $init-color url(../images/mf/headerbg.jpg) center bottom no-repeat;
+  margin: 0 auto;
+  padding: 3em 0 2em;
+  text-align: center;
+
+  h1 {
+    background: transparent url(../images/mf/arabdots.svg) center top no-repeat;
+    margin: 0;
+    padding-top: 0.6em;
+    margin-top: 0.2em;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: $avant-font;
+    line-height: 0.8em;
+    color: $main-color;
+    letter-spacing: -5px;
+    text-shadow: 0 0 30px rgba($main-color, 0.3), 0 -5px 0 rgba(#000, 0.1);
+    -webkit-text-stroke: 0.8px rgba(#000, 0.001);
+
+    a {
+      display: block;
+      @include transition(color 0.2s);
+    }
+
+    span {
+      display: inline-block;
+      color: saturate(lighten($main-color, 20%), 40%);
+    }
+
+    span.sub {
+      display: block;
+      padding: 0;
+      font-size: 0.45em;
+      font-weight: 400;
+      font-family: $texgyre-font;
+      letter-spacing: 0;
+      line-height: 1em;
+      width: auto;
+      color: saturate(lighten($main-color, 15%), 10%);
+      padding: 0 1em;
+      text-shadow: 0 0 30px rgba($main-color, 0.3), 0 -4px 0 rgba(#000, 0.1);
+
+      > span {
+        color: saturate(lighten($main-color, 30%), 40%);
+      }
+    }
+  }
+
+  nav {
+    padding-top: 1em;
+  }
+
+  @include respond-xs {
+    padding: 2em 0;
+    h1 {
+      font-size: 2em;
+      span.sub {
+        font-size: 0.4em;
+        letter-spacing: 1px;
+        word-spacing: normal;
+      }
+    }
+  }
+}
+
+.mahabbah-hero {
+  height: 450px;
+  background: #fff url(../images/mf/hero.jpg) center 40% no-repeat;
+  background-size: cover;
+  @include box-shadow(0 -4px 0 rgba(#000, 0.1));
+  position: relative;
+
+  @include respond-xs {
+    // background-size: auto 150%;
+    height: 400px;
+  }
+
+  .word {
+    position: absolute;
+    bottom: 00px;
+    right: 0;
+    color: #fff;
+    margin-left: 20%;
+
+    p {
+      // display: inline-block;
+      background: rgba($main-color, 0.95);
+      padding: 0.5em 0.7em;
+      margin: 0;
+      // margin: 0 0 0.5em;
+    }
+
+    em {
+      color: saturate(lighten($main-color, 25%), 50%);
+    }
+
+    @include respond-sm {
+      font-size: 0.9em;
+    }
+
+    @include respond-xs {
+      margin-left: 10%;
+      font-size: 0.7em;
+    }
+
+    .logo {
+      background: #fff url(../images/mf/logo.png) center center no-repeat;
+      background-size: 100% auto;
+      width: 130px;
+      height: 150px;
+      // border-radius: 10px 10px 0 0;
+      // margin-left: 20%;
+
+      @include respond-xs {
+        width: 100px;
+        height: 110px;
+        float: right;
+      }
+    }
+  }
+}
+
+.mahabbah-aside {
+  z-index: 10;
+  background: transparent;
+
+  p em {
+    color: lighten(saturate($text-color, 10%), 15%);
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+@import 'footer', 'links', 'animations';

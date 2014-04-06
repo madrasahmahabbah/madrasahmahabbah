@@ -14,10 +14,6 @@ $bgcolor: saturate(lighten($text-color, 35%), 20%);
 
 @import 'base';
 
-body {
-  background: $bgcolor url(../images/naal-bg.jpg) center center no-repeat fixed;
-}
-
 a {
   color: $main-color;
 }
@@ -364,4 +360,5 @@ section button {
 @import
 	'overlay-init',
   'overlay-about',
-  'modal';
+  'modal',
+  'animations';

@@ -92,6 +92,7 @@ $duration: 0.5s;
       @include transition(color 0.5s);
     }
 
+    // initiative colors
     &:hover,
     &:focus {
       color: $bgcolor;
@@ -111,6 +112,12 @@ $duration: 0.5s;
     &.i-mm:focus {
       color: $mm-color;
       span { color: $mm-color; }
+    }
+
+    &.i-mf:hover,
+    &.i-mf:focus {
+      color: $mf-color;
+      span { color: $mf-color; }
     }
 
   }

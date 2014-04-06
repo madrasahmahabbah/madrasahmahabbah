@@ -20,7 +20,17 @@
 
   <body class="initiative-<%= current_page.data.initiative %> <%= page_classes %>">
 
+    <div class="container">
+
+<%= partial 'topnav' %>
+
 <%= yield %>
+
+<%= partial 'links' %>
+
+<%= partial 'footer' %>
+
+    </div><!-- /container -->
 
     <!-- <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="/javascripts/main.js"></script> -->

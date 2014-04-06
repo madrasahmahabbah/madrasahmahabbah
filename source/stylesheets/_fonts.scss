@@ -1,11 +1,5 @@
 @import url(../fonts/ff-enzo-web-lite.css);
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-// @import url(../fonts/mm/mm.css);
-
-// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic);
-// @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic);
-// @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:500,700,800);
-// @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 @font-face {
   font-family: 'AvantGardeBold';
@@ -14,6 +8,8 @@
        url('../fonts/huge_agb_v5-webfont.ttf') format('truetype'),
        url('../fonts/huge_agb_v5-webfont.svg#svgFontName') format('svg')
 }
+
+// TEXGY ADVENTOR
 
 @font-face {
   font-family: 'texgyreadventorregular';
@@ -25,18 +21,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-// @font-face {
-//   font-family: 'texgyreadventoritalic';
-//   src: url('../fonts/texgyreadventor-italic-webfont.eot');
-//   src: url('../fonts/texgyreadventor-italic-webfont.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/texgyreadventor-italic-webfont.woff') format('woff'),
-//        url('../fonts/texgyreadventor-italic-webfont.ttf') format('truetype'),
-//        url('../fonts/texgyreadventor-italic-webfont.svg#texgyreadventoritalic') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
 @font-face {
   font-family: 'texgyreadventorbold';
   src: url('../fonts/texgyreadventor-bold-webfont.eot');
@@ -47,7 +31,16 @@
   font-weight: normal;
   font-style: normal;
 }
-
+// @font-face {
+//   font-family: 'texgyreadventoritalic';
+//   src: url('../fonts/texgyreadventor-italic-webfont.eot');
+//   src: url('../fonts/texgyreadventor-italic-webfont.eot?#iefix') format('embedded-opentype'),
+//        url('../fonts/texgyreadventor-italic-webfont.woff') format('woff'),
+//        url('../fonts/texgyreadventor-italic-webfont.ttf') format('truetype'),
+//        url('../fonts/texgyreadventor-italic-webfont.svg#texgyreadventoritalic') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 // @font-face {
 //   font-family: 'texgyreadventorbold_italic';
 //   src: url('../fonts/texgyreadventor-bolditalic-webfont.eot');
@@ -55,6 +48,39 @@
 //        url('../fonts/texgyreadventor-bolditalic-webfont.woff') format('woff'),
 //        url('../fonts/texgyreadventor-bolditalic-webfont.ttf') format('truetype'),
 //        url('../fonts/texgyreadventor-bolditalic-webfont.svg#texgyreadventorbold_italic') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+// GOTHAM
+
+// @font-face {
+//   font-family: 'gotham_bold';
+//   src: url('../fonts/Gotham-Bold.eot');
+//   src: local('?'), url('../fonts/Gotham-Bold.woff') format('woff'),
+//                    url('../fonts/Gotham-Bold.ttf') format('truetype'),
+//                    url('../fonts/Gotham-Bold.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'gotham_bookregular';
+//   src: url('../fonts/gotham-book-webfont.eot');
+//   src: url('../fonts/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+//        url('../fonts/gotham-book-webfont.woff') format('woff'),
+//        url('../fonts/gotham-book-webfont.ttf') format('truetype'),
+//        url('../fonts/gotham-book-webfont.svg#gotham_bookregular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'gotham_mediumregular';
+//   src: url('../fonts/gotham-medium-webfont.eot');
+//   src: url('../fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
+//        url('../fonts/gotham-medium-webfont.woff') format('woff'),
+//        url('../fonts/gotham-medium-webfont.ttf') format('truetype'),
+//        url('../fonts/gotham-medium-webfont.svg#gotham_mediumregular') format('svg');
 //   font-weight: normal;
 //   font-style: normal;
 // }

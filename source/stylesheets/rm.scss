@@ -20,7 +20,7 @@ $bgcolor: #fff;
 @import 'base';
 
 body {
-  background: $bgcolor url(../images/rm/bg.jpg) center bottom no-repeat fixed;
+  background-image: url(../images/rm/bg.jpg);
 }
 
 // Button style
@@ -70,7 +70,7 @@ body {
     color: #fff;
 
     &:hover {
-      color: $main-color;
+      color: saturate(lighten($main-color, 25%), 50%);
     }
   }
 }
@@ -161,14 +161,14 @@ body {
 
     p {
       // display: inline-block;
-      background: rgba($main-color, 0.9);
+      background: rgba($main-color, 0.95);
       padding: 0.5em 0.7em;
       margin: 0;
       // margin: 0 0 0.5em;
     }
 
     em {
-      color: saturate(lighten($main-color, 40%), 60%);
+      color: saturate(lighten($main-color, 25%), 50%);
     }
 
     @include respond-sm {
@@ -208,11 +208,4 @@ body {
   }
 }
 
-@import 'footer', 'init_links';
-
-// .mahabbah-footer {
-//   color: desaturate(lighten($text-color, 20%), 20%);
-//   a {
-//     color: desaturate(lighten($text-color, 20%), 20%);
-//   }
-// }
+@import 'footer', 'links', 'animations';
