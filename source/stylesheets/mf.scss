@@ -35,7 +35,7 @@ body {
     color: #fff;
 
     &:hover {
-      color: saturate(lighten($main-color, 10%), 20%);
+      color: saturate(lighten($main-color, 15%), 80%);
     }
   }
 }
@@ -58,7 +58,6 @@ body {
     font-size: 2.5em;
     font-family: $avant-font;
     line-height: 0.8em;
-    color: $main-color;
     color: #fff;
     letter-spacing: -5px;
     text-shadow: 1px 1px 10px rgba(#000, 0.15);
@@ -70,7 +69,7 @@ body {
 
     span {
       display: inline-block;
-      color: saturate(lighten($main-color, 20%), 60%);
+      color: saturate(lighten($main-color, 15%), 80%);
     }
 
     span.sub {
@@ -87,7 +86,7 @@ body {
       text-shadow: 1px 1px 4px rgba(#000, 0.3);
 
       > span {
-        color: saturate(lighten($main-color, 20%), 60%);
+        color: saturate(lighten($main-color, 15%), 80%);
       }
     }
   }
@@ -128,19 +127,15 @@ body {
       span {
         display: inline-block;
         line-height: 1em;
-      }
-      span.a {
         background: #fff;
         color: $init-color;
-        border-radius: 5px 0 0 5px;
         border: 2px solid $init-color;
         padding: 5px 10px;
       }
-      span.b {
+      span.alt {
         background: $init-color;
         color: #fff;
-        border-radius: 0 5px 5px 0;
-        padding: 7px 12px;
+        padding: 5px 12px;
       }
     }
 
@@ -149,6 +144,7 @@ body {
     }
     .logo {
       background: #fff;
+      padding: 1em 0;
     }
     .logo.desktop {
       display: block;
@@ -170,19 +166,17 @@ body {
       }
     }
     .alpha {
-      margin-top: 2.5em;
+      margin-top: 4em;
     }
     .gamma {
-      margin-top: 5em;
+      margin-top: 7em;
     }
 
     .alpha {
       background: rgba($main-color, 0.9);
     }
     .beta .word {
-      background: rgba(saturate(lighten($main-color, 20%), 60%), 0.9);
-      background: rgba(darken($main-color, 5%), 0.9);
-      // color: $init-color;
+      background: rgba(lighten($main-color, 5%), 0.9);
     }
     .gamma {
       background: rgba($main-color, 0.9);
@@ -219,24 +213,4 @@ body {
       }
     }
   }
-}
-
-.mahabbah-aside {
-  z-index: 10;
-  // background: rgba(#fff, 0.8);
-
-  p em {
-    color: lighten(saturate($text-color, 10%), 15%);
-    font-weight: 400;
-    font-style: normal;
-  }
-}
-
-.mahabbah-links {
-  // background: rgba($bgcolor, 0.8);
-  // background: transparent url(../images/mf/bgpattern.png) repeat;
-}
-
-.mahabbah-footer {
-  // background: #fff;
 }

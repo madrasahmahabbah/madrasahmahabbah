@@ -1,14 +1,17 @@
 .mahabbah-footer {
-  $color: $text-color;
+  $color: $text-color;//desaturate(lighten($text-color, 5%), 10%);
 
   .footer {
+    // display: none;
     @include outer-container;
     padding: 3em 0 5em;
 
     .alpha, .beta, .gamma {
+      // font-size: 0.55em;
+      // text-align: center;
       .text {
         padding: 1.5em;
-        // text-shadow: 1px 1px 1px rgba(#000, 0.1);
+        text-shadow: 1px 1px 1px rgba(#000, 0.1);
       }
     }
 
@@ -37,11 +40,11 @@
     }
     .beta {
       @include span-columns(4);
-      background: rgba(desaturate(darken($main-color, 10%), 2%), 0.9);
+      background: rgba(darken($main-color, 10%), 0.9);
       color: #fff;
       .text {
         // padding: 0.8em;
-        padding: 2em 1.5em;
+        padding: 2.5em 1.5em;
         font-size: 1.1em;
         text-align: center;
         font-style: italic;
@@ -94,4 +97,54 @@
       }
     }
   }
+
+  // .footer-old {
+  //   display: none;
+  //   padding: 3em 1em 6em;
+  //   text-align: center;
+  //   font-size: 0.55em;
+  //   font-weight: 700;
+  //   color: $color;
+  //   line-height: 1.5em;
+
+  //   a {
+  //     color: $color;
+  //   }
+
+  //   ul.contact {
+  //     margin: 0;
+  //     font-weight: 600;
+  //     letter-spacing: 0;
+
+  //     .phone {
+  //       letter-spacing: -1px;
+  //       word-spacing: 2px;
+  //     }
+  //   }
+
+  //   .col {
+  //     float: left;
+  //     text-align: left;
+  //   }
+
+  //   .col:last-child {
+  //     float: right;
+  //     text-align: right;
+  //   }
+
+  //   @include media($mobile) {
+  //     font-size: 0.45em;
+
+  //     .col {
+  //       text-align: center;
+  //       float: none;
+  //     }
+
+  //     .col:last-child {
+  //       text-align: center;
+  //       float: none;
+  //       margin-top: 1.5em;
+  //     }
+  //   }
+  // }
 }
