@@ -120,7 +120,7 @@ body {
     @include outer-container;
 
     h4 {
-      margin: 0 0 0.3em;
+      margin: 0 0 0.5em;
       font-family: $hnul-font;
       font-weight: 100;
       font-size: 1.2em;
@@ -157,47 +157,35 @@ body {
       display: none;
     }
 
-    .alpha {
-      background: rgba($main-color, 0.9);
-      em {
-        margin-top: 0.3em;
-        display: block;
-        color: $init-color;
-        font-size: 1.4em;
-        line-height: 0.9em;
-      }
-    }
-    .beta .word {
-      background: rgba(saturate(lighten($main-color, 20%), 60%), 0.9);
-      color: $init-color;
-      em {
-        margin-top: 0.3em;
-        display: block;
-        // color: saturate(lighten($init-color, 20%), 10%);
-        font-size: 1.4em;
-        line-height: 0.9em;
-      }
-    }
-    .gamma {
-      background: rgba($main-color, 0.9);
-      em {
-        margin-top: 0.3em;
-        display: block;
-        color: $init-color;
-        font-size: 1.4em;
-        line-height: 0.9em;
-      }
-    }
-
     .alpha, .beta, .gamma {
       @include span-columns(4);
       font-size: 0.9em;
+      line-height: 0.9em;
+      em {
+        margin-top: 0.5em;
+        display: block;
+        color: $init-color;
+        font-size: 1.2em;
+        line-height: 0.9em;
+      }
     }
     .alpha {
       margin-top: 2.5em;
     }
     .gamma {
       margin-top: 5em;
+    }
+
+    .alpha {
+      background: rgba($main-color, 0.9);
+    }
+    .beta .word {
+      background: rgba(saturate(lighten($main-color, 20%), 60%), 0.9);
+      background: rgba(darken($main-color, 5%), 0.9);
+      // color: $init-color;
+    }
+    .gamma {
+      background: rgba($main-color, 0.9);
     }
 
     @include media($mobile) {
