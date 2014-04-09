@@ -18,7 +18,7 @@ $emcolor: saturate(lighten($bgcolor,30%),50%);
     background-size: auto 60%;
   }
 
-  @include respond-xs {
+  @include media($mobile) {
     background: $bgcolor url(../images/M-orange-small.jpg) center center no-repeat;
     background-size: auto;
   }
@@ -38,7 +38,7 @@ $emcolor: saturate(lighten($bgcolor,30%),50%);
     outline: none;
     z-index: 100;
 
-    @include respond-xs {
+    @include media($mobile) {
       @include transform(scale(0.8));
     }
   }
@@ -49,7 +49,7 @@ $emcolor: saturate(lighten($bgcolor,30%),50%);
 .container {
   overflow-x: hidden;
   height: 100%;
-  @include transition(transform 0.5s);
+  @include transition(all 0.5s);
 
   &.overlay-about-open {
     @include transform(translateX(50%));
@@ -80,12 +80,12 @@ $emcolor: saturate(lighten($bgcolor,30%),50%);
   visibility: hidden;
   @include backface-visibility(hidden);
   @include transform(translateX(-100%));
-  @include transition(transform 0.5s, visibility 0s 0.5s);
+  @include transition(all 0.5s, visibility 0s 0.5s);
 
   &.open {
     visibility: visible;
     @include transform(translateX(0%));
-    @include transition(transform 0.5s);
+    @include transition(all 0.5s);
   }
 }
 
@@ -159,7 +159,7 @@ $emcolor: saturate(lighten($bgcolor,30%),50%);
     }
   }
 
-  @include respond-xs {
+  @include media($mobile) {
     bottom: 0;
     height: 100%;
 

@@ -5,66 +5,29 @@
 @charset "utf-8";
 
 @import
+  'bourbon/bourbon',
+  'neat-settings',
+  'neat/neat',
   'fonts',
-  'compass/css3',
-  'vars',
-  'responsive';
+  'vars';
 
 // initiative specific
-// $init-color: #11572a; // initiative color
 $init-color: $rm-color; // initiative color
 $main-color: desaturate(lighten($init-color, 20%), 5%);
 $text-color: $main-color;
-$bgcolor: saturate(lighten($init-color, 20%), 10%);
+$bgcolor: $init-color;
 
-@import 'base';
+@import
+  'base',
+  'topnav',
+  'button',
+  'footer',
+  'links';
 
 body {
-  background-image: url(../images/rm/bg.jpg);
-  background: #fff url(../images/rm/hero.jpg) center center no-repeat;
+  background: #fff url(../images/rm/hero.jpg) center top no-repeat fixed;
   background-size: cover;
 }
-
-// Button style
-.btn {
-  border: none;
-  display: inline-block;
-  background: #fff;
-  font-weight: 400;
-  font-family: $texgyre-font;
-  padding: 0.6em 2em;
-  margin: 5px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  border-radius: 2em;
-  border: 3px solid $text-color;
-  color: $text-color;
-  @include transition(background 0.2s, color 0.2s, border-color 0.2s);
-
-  &:hover {
-    color: darken($text-color, 10%);
-    border-color: darken($text-color, 10%);
-  }
-
-  @include respond-xs {
-    font-size: 0.6em;
-  }
-
-  span {
-    font-family: $texgyrebold-font;
-  }
-
-  &.btn-tumblr {
-    background: rgba($init-color, 0.8);
-    color: #fff;
-    border: 3px solid #fff;
-    &:hover {
-      background: $init-color;
-    }
-  }
-}
-
-@import 'topnav';
 
 // Top Navigation Style
 .mahabbah-top {
@@ -129,7 +92,7 @@ body {
     padding-top: 1em;
   }
 
-  @include respond-xs {
+  @include media($mobile) {
     padding: 2em 0;
     h1 {
       font-size: 2em;
@@ -158,7 +121,7 @@ body {
       margin: 0 1em 1em;
       border-radius: 0 0 0.4em 0.4em;
 
-      @include respond-xs {
+      @include media($mobile) {
         width: 100px;
         img.logoimg {
           width: 100%;
@@ -173,7 +136,7 @@ body {
     p {
       padding: 0.5em 0.7em;
       margin: 0;
-      text-shadow: 1px 1px 2px rgba(#000, 0.2);
+      // text-shadow: 1px 1px 2px rgba(#000, 0.2);
 
       em {
         color: saturate(lighten($main-color, 25%), 50%);
@@ -182,11 +145,11 @@ body {
       }
     }
 
-    @include respond-sm {
+    @include media($tablet) {
       font-size: 0.9em;
     }
 
-    @include respond-xs {
+    @include media($mobile) {
       font-size: 0.7em;
     }
   }
@@ -203,13 +166,10 @@ body {
   }
 }
 
-// @import 'footer', 'links', 'animations';
-@import 'footer', 'links';
-
 .mahabbah-links {
-  background: rgba($bgcolor, 0.8);
+  // background: rgba($bgcolor, 0.8);
 }
 
 .mahabbah-footer {
-  background: #fff;
+  // background: #fff;
 }

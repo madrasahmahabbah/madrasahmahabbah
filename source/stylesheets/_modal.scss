@@ -39,7 +39,7 @@ $emcolor: saturate(lighten($bgcolor, 20%), 40%);
     background: #A5281B;
   }
 
-  @include respond-xs {
+  @include media($mobile) {
     font-size: 0.6em;
   }
 }
@@ -73,7 +73,7 @@ $emcolor: saturate(lighten($bgcolor, 20%), 40%);
   position: relative;
   border-radius: 3px;
   margin: 0 auto;
-  @include box-shadow(0 0 20px rgba(#000, 0.2));
+  box-shadow: 0 0 20px rgba(#000, 0.2);
 }
 
 .md-content h3 {

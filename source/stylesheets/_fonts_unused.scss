@@ -1,36 +1,36 @@
-@import url(../fonts/ff-enzo-web-lite.css);
-@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
-@font-face {
-  font-family: 'AvantGardeBold';
-  src: url('../fonts/huge_agb_v5-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/huge_agb_v5-webfont.woff') format('woff'),
-       url('../fonts/huge_agb_v5-webfont.ttf') format('truetype'),
-       url('../fonts/huge_agb_v5-webfont.svg#svgFontName') format('svg')
-}
+// // HELVETICA NEUE
+// @font-face {
+//   font-family: 'helvetica-neue-regular';
+//   src: url('../fonts/helveticaneue.eot'); /* IE9 Compat Modes */
+//   src: url('../fonts/helveticaneue.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('../fonts/helveticaneue.woff') format('woff'), /* Modern Browsers */
+//        url('../fonts/helveticaneue.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('../fonts/helveticaneue.svg#a68121ef2e891aed38ff01110987f27a') format('svg'); /* Legacy iOS */
+//   font-style:   normal;
+//   font-weight:  400;
+// }
+// @font-face {
+//   font-family: 'helvetica-neue-bold';
+//   src: url('../fonts/helveticaneuebold.eot'); /* IE9 Compat Modes */
+//   src: url('../fonts/helveticaneuebold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('../fonts/helveticaneuebold.woff') format('woff'), /* Modern Browsers */
+//        url('../fonts/helveticaneuebold.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('../fonts/helveticaneuebold.svg#b0b230b12ba14b2f0690df366df880c5') format('svg'); /* Legacy iOS */
+//   font-style:   normal;
+//   font-weight:  700;
+// }
+// @font-face {
+//   font-family: 'helvetica-neue-italic';
+//   src: url('../fonts/helveticaneueitalic.eot'); /* IE9 Compat Modes */
+//   src: url('../fonts/helveticaneueitalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('../fonts/helveticaneueitalic.woff') format('woff'), /* Modern Browsers */
+//        url('../fonts/helveticaneueitalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('../fonts/helveticaneueitalic.svg#742171b431310a8283213206fd340c77') format('svg'); /* Legacy iOS */
+//   font-style:   italic;
+//   font-weight:  400;
+// }
 
-// TEXGY ADVENTOR
-
-@font-face {
-  font-family: 'texgyreadventorregular';
-  src: url('../fonts/texgyreadventor-regular-webfont.eot');
-  src: url('../fonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/texgyreadventor-regular-webfont.woff') format('woff'),
-       url('../fonts/texgyreadventor-regular-webfont.ttf') format('truetype'),
-       url('../fonts/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'texgyreadventorbold';
-  src: url('../fonts/texgyreadventor-bold-webfont.eot');
-  src: url('../fonts/texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/texgyreadventor-bold-webfont.woff') format('woff'),
-       url('../fonts/texgyreadventor-bold-webfont.ttf') format('truetype'),
-       url('../fonts/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 // @font-face {
 //   font-family: 'texgyreadventoritalic';
 //   src: url('../fonts/texgyreadventor-italic-webfont.eot');
@@ -54,7 +54,6 @@
 
 
 // GOTHAM
-
 // @font-face {
 //   font-family: 'gotham_bold';
 //   src: url('../fonts/Gotham-Bold.eot');

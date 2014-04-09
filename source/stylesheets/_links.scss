@@ -1,6 +1,5 @@
 .mahabbah-links {
-  $bgcolor: saturate(lighten($init-color, 20%), 10%);
-  background: $bgcolor;
+  background: rgba($init-color, 0.8);
 
   .row {
     padding: 1em 1em 2em;

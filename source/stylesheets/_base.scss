@@ -9,12 +9,12 @@ html, body {
 body {
   background: $bgcolor url(../images/naal-bg.jpg) center center no-repeat fixed;
   color: $text-color;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 26px; //28px
   line-height: 1.25;
   font-family: $main-font;
 
-  @include respond-xs {
+  @include media($mobile) {
     background-size: 150% auto;
   }
 }
@@ -55,7 +55,7 @@ section.row {
   // background: #fff;
   text-align: center;
 
-  @include respond-xs {
+  @include media($mobile) {
     padding: 1.5em 0.5em;
     font-size: 0.8em;
   }
@@ -66,53 +66,19 @@ section p {
   margin: 0 auto;
   padding: 1.2em 0;
 
-  @include respond-xs {
+  @include media($mobile) {
     padding: 0.5em 0 1em;
   }
 }
 
 // some animation
-.initiative .mahabbah-header {
-  animation-name: bodyFade;
-  -webkit-animation-name: bodyFade;
 
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+// @import
+//   'companimation',
+//   'companimation/preset/fade/fadeInUp';
 
-  animation-timing-function: ease-out;
-  -webkit-animation-timing-function: ease-out;
+// .mahabbah-header h1 {
+//   @extend %fadeInUp;
+//   @include animation-delay(0.5s);
+// }
 
-  transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -webkit-transform-origin: 0% 0%;
-}
-
-@keyframes bodyFade {
-  0% {
-    opacity: 0;
-    transform: translateY(-200px);
-  }
-  30% {
-    opacity: 0;
-    transform: translateY(-150px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes bodyFade {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-200px);
-  }
-  30% {
-    opacity: 0;
-    -webkit-transform: translateY(-150px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}

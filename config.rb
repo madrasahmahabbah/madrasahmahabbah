@@ -15,6 +15,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :partials_dir, 'partials'
 set :build_dir, '../madrasahmahabbah.github.io'
+# set :build_dir, 'build'
 
 # Build-specific configuration
 configure :build do

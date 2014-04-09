@@ -76,7 +76,7 @@ a:hover, a:focus {
 }
 
 
-@include respond-xs {
+@include media($mobile) {
   .mahabbah-header {
     padding: 2em 0;
 
@@ -101,7 +101,7 @@ section {
   // padding: 1em 2em 2em;
   // font-size: 1.5em;
 
-  @include respond-xs {
+  @include media($mobile) {
     padding: 0.5em 0.5em 2em;
     font-size: 0.7em;
   }
@@ -112,7 +112,7 @@ section p {
   margin: 0 auto;
   padding: 1.2em 0;
 
-  @include respond-xs {
+  @include media($mobile) {
     padding: 0.5em 0 1em;
   }
 }
@@ -147,7 +147,7 @@ section button {
     // box-shadow: inset 3px 3px 0 rgba(#000,0.4);
   }
 
-  @include respond-xs {
+  @include media($mobile) {
     padding: 5px 8px;
   }
 }
@@ -220,7 +220,7 @@ section::after {
     // font-family: 'AvantGardeBold';
   }
 
-  @include respond-xs {
+  @include media($mobile) {
     padding-bottom: 3em;
   }
 }
@@ -278,7 +278,7 @@ section::after {
       }
     }
 
-    @include respond-xs {
+    @include media($mobile) {
       background-size: 90%;
       font-size: 0.8em;
       padding: 3em 0 0;
@@ -416,7 +416,7 @@ section::after {
     .csstransforms3d & a:focus span::before {
     }
 
-    @include respond-xs {
+    @include media($mobile) {
       a {
         display: block;
         width: 100%;
@@ -435,7 +435,7 @@ section::after {
   font-size: 0.7em;
   color: #aca784;
 
-  @include respond-xs {
+  @include media($mobile) {
     font-size: 0.4em;
   }
 }
