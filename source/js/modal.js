@@ -1,12 +1,3 @@
-(function() {
-  var verses = $('.mahabbah-quran blockquote');
-  verses.eq(Math.floor(Math.random() * verses.length)).show('medium');
-
-  verses.click(function() {
-    verses.hide('medium').eq(Math.floor(Math.random() * verses.length)).show('medium');
-  });
-})();
-
 /**
  * modalEffects by http://www.codrops.com
  * converted to use jQuery by @wansaleh

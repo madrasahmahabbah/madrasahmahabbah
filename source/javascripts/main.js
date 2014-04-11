@@ -1,2 +1,0 @@
-//= require 'others'
-//= require 'overlay'

@@ -1,7 +1,7 @@
 $bgcolor: #e74c3c;
 // $bgcolor: #112b6b;
 $overlay-bgcolor: $alt-color;
-$emcolor: saturate(lighten($bgcolor, 20%), 40%);
+$emcolor: saturate(lighten($bgcolor, 10%), 70%);
 
 .container {
   min-height: 100%;
@@ -78,11 +78,13 @@ $emcolor: saturate(lighten($bgcolor, 20%), 40%);
 
 .md-content h3 {
   margin: 0;
-  padding: 0.4em;
+  padding: 0.7em 0.7em 0.6em;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 300;
   font-family: $avant-font;
+  letter-spacing: -2px;
+  line-height: 1em;
   opacity: 0.8;
   background: rgba(0,0,0,0.1);
   border-radius: 3px 3px 0 0;
@@ -113,13 +115,14 @@ $emcolor: saturate(lighten($bgcolor, 20%), 40%);
 
 .md-content > div p span {
   font-style: italic;
+  font-weight: 700;
   color: rgba(#000,0.5);
 }
 
 .md-content > div p em {
   // font-style: normal;
-  font-weight: 500;
-  color: $emcolor;
+  font-weight: 700;
+  // color: $emcolor;
 }
 
 .md-content button {

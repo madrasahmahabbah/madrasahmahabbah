@@ -146,6 +146,7 @@ $emcolor: saturate(lighten($bgcolor,30%),50%);
       // font-style: normal;
       color: $emcolor;
       @include transition(color 0.3s);
+      font-weight: 700;
     }
   }
 

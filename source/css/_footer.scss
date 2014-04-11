@@ -17,14 +17,13 @@
 
     .alpha {
       @include span-columns(4);
+      margin-top: 0;
       background: rgba($main-color, 0.9);
       font-size: 0.6em;
       color: #fff;
-      margin-top: 2em;
       .text {
-        padding: 1em 1.5em;
         p {
-          margin: 1em 0;
+          margin: 0 0 1em;
         }
         p.phone {
           font-size: 0.9em;
@@ -34,21 +33,28 @@
           word-spacing: 3px;
         }
         p.links {
+          margin: 0;
           font-size: 0.9em;
         }
       }
     }
     .beta {
       @include span-columns(4);
+      margin-top: 1em;
       background: rgba(desaturate(darken($main-color, 10%), 2%), 0.9);
       color: #fff;
       .text {
         margin: 0;
         padding: 2em 1.5em;
-        font-size: 1.1em;
+        font-size: 1em;
         text-align: center;
         font-style: italic;
         line-height: 0.85em;
+        b {
+          // line-height: 0.8em;
+          font-size: 1.15em;
+          letter-spacing: -1px;
+        }
         .cite {
           display: block;
           color: saturate(lighten($main-color, 10%), 20%);
@@ -63,13 +69,13 @@
     }
     .gamma {
       @include span-columns(4);
+      margin-top: 7em;
+      padding-top: 6em;
       background: rgba($init-color, 0.9) url(../images/arabdots-white.svg) 95% -10px no-repeat;
       background-size: 150px;
       font-size: 0.55em;
       color: #fff;
-      margin-top: 2em;
       text-align: left;
-      padding-top: 6em;
       @include media($mobile) {
         background-size: 100px;
         padding-top: 3em;

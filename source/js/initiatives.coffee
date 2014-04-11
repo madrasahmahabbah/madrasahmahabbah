@@ -21,5 +21,3 @@ $ ->
 #     # console.log $window.height()
 
 #     return
-
-#   return

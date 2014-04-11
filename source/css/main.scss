@@ -164,9 +164,9 @@ section button {
   }
 
   p em {
-    color: lighten(saturate($text-color, 10%), 15%);
-    font-weight: 400;
-    font-style: normal;
+    // color: lighten(saturate($text-color, 10%), 15%);
+    font-weight: 600;
+    // font-style: normal;
   }
 
   .error {
@@ -184,7 +184,7 @@ section button {
     font-style: italic;
     background: transparent url(../images/bismillah-white.png) center top no-repeat;
     padding-top: 2.6em;
-    font-size: 0.9em;
+    // font-size: 0.9em;
     color: saturate(lighten($text-color, 40%), 25%);
 
     p {
@@ -193,15 +193,15 @@ section button {
 
     .cite {
       // font-style: normal;
-      // font-weight: 700;
+      font-weight: 700;
       // padding-top: 1.2em;
       padding-bottom: 0;
       color: saturate(lighten($text-color, 30%), 15%);
-      // letter-spacing: 1px;
+      letter-spacing: 1px;
 
-      &:before {
-        content: '\2014';
-      }
+      // &:before {
+      //   content: '\2014';
+      // }
     }
 
     @include media($mobile) {
@@ -319,9 +319,8 @@ section button {
 .mahabbah-footer .footer {
   .alpha {
     background: #fff;
-    color: saturate(lighten($text-color, 20%), 10%);
-    a {
-      color: saturate(lighten($text-color, 5%), 10%);
+    .text, .text a {
+      color: saturate(lighten($text-color, 20%), 10%);
     }
   }
 }

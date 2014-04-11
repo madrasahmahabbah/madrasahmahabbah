@@ -84,11 +84,12 @@ body {
     width: auto;
     color: #fff;
     // padding: 0.3em 1em;
-    margin: 0.5em 0.5em;
+    margin: 0 0.5em;
     text-shadow: 1px 1px 4px rgba(#000, 0.3);
 
-    > span {
+    > em {
       color: lighten($main-color, 5%);
+      font-style: normal;
     }
   }
 
