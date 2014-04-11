@@ -1,21 +1,25 @@
-# EXPERIMENTS: parallax scroll
 $ ->
-  $window = $(window)
-  $body = $("body.initiative")
-  $header = $(".mahabbah-header")
-  $footer = $(".mahabbah-footer")
+  hadiths = $(".footer-hadith")
+  hadiths.hide().eq(Math.floor(Math.random() * hadiths.length)).show()
 
-  $window.scroll ->
-    bodyY = -($window.scrollTop() / 5)
-    $body.css backgroundPosition: "0 " + bodyY + "px"
+# # EXPERIMENTS: parallax scroll
+# $ ->
+#   $window = $(window)
+#   $body = $("body.initiative")
+#   $header = $(".mahabbah-header")
+#   $footer = $(".mahabbah-footer")
 
-    headerY = -($window.scrollTop() / 1)
-    $header.css y: headerY + "px"
+#   $window.scroll ->
+#     bodyY = -($window.scrollTop() / 5)
+#     $body.css backgroundPosition: "0 " + bodyY + "px"
 
-    # footerY = $window.height() - ($window.scrollTop() / 1)
-    # $footer.css y: footerY + "px"
-    # console.log $window.height()
+#     headerY = -($window.scrollTop() / 1)
+#     $header.css y: headerY + "px"
 
-    return
+#     # footerY = $window.height() - ($window.scrollTop() / 1)
+#     # $footer.css y: footerY + "px"
+#     # console.log $window.height()
 
-  return
+#     return
+
+#   return
