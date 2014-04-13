@@ -5,13 +5,13 @@
       <button type="button" class="overlay-mvmt-close">Close</button>
       <nav>
         <ul>
-          <li><a class="i-rm"  href="/beta/raudhatul-muhibbain"><span>Raudhatul</span> Muhibbain</a></li>
-          <li><a class="i-mm"  href="/beta/mabkhoor-music"><span>Mabkhoor</span> Music</a></li>
-          <li><a class="i-mf"  href="/beta/mahabbah-fashion"><span>Mahabbah</span> Fashion</a></li>
-          <li><a class="i-mfb" target="_blank" href="http://mahabbahfoodandbeverages.tumblr.com/"><span>Mahabbah</span> Food &amp; Beverages</a></li>
-          <li><a class="i-mtc" target="_blank" href="http://mahabbahtrainingconsultancy.tumblr.com/"><span>Mahabbah</span> Training &amp; Consultancy</a></li>
-          <li><a class="i-mtt" target="_blank" href="http://mahabbahtravelandtours.tumblr.com/"><span>Mahabbah</span> Travel &amp; Tours</a></li>
-          <li><a class="i-mb"  target="_blank" href="http://mahabbahbooks.tumblr.com/"><span>Mahabbah</span> Books</a></li>
+<%
+data.site.init_codes.each do |code|
+  link = data.site.init_links[code]
+  title = data.site.init_titles[code].split(' ', 2)
+%>
+          <li><a class="i-<%= code %>" href="<%= link %>"><span><%= title[0] %></span> <%= title[1] %></li>
+<% end %>
         </ul>
       </nav>
     </div>

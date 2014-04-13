@@ -13,24 +13,21 @@ activate :autoprefixer
 # Reload the browser automatically whenever files change
 activate :livereload
 
-set :css_dir, 'css'
-set :js_dir, 'js'
-set :images_dir, 'images'
+# Enable cache buster
+# activate :asset_hash
+
+set :css_dir, 'assets/css'
+set :js_dir, 'assets/js'
+set :images_dir, 'assets/images'
 set :partials_dir, 'partials'
 set :build_dir, '../madrasahmahabbah.github.io'
-# set :build_dir, 'build'
 
 # Build-specific configuration
 configure :build do
 
   activate :imageoptim
-
   activate :minify_css
-
   activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets

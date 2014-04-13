@@ -1,0 +1,40 @@
+// Button style
+.btn {
+  border: none;
+  display: inline-block;
+  background: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: $texgyre-font;
+  padding: 0.5em 1.5em;
+  margin: 5px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 2em;
+  border: 3px solid $text-color;
+  color: $text-color;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: darken($text-color, 10%);
+    border-color: darken($text-color, 10%);
+  }
+
+  span {
+    font-family: $texgyrebold-font;
+  }
+
+  &.btn-tumblr {
+    background: rgba($init-color, 0.8);
+    color: #fff;
+    border: 3px solid #fff;
+    &:hover {
+      background: $init-color;
+    }
+  }
+
+  @include media($mobile) {
+    font-size: 0.8rem;
+    border-width: 2px !important;
+  }
+}

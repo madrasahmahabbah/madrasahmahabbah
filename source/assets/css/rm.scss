@@ -1,0 +1,245 @@
+//
+// RAUDHATUL MUHIBBAIN
+//
+
+@charset "utf-8";
+
+@import
+  'bourbon/bourbon',
+  'neat-settings',
+  'neat/neat',
+  'fonts',
+  'vars',
+  'responsive';
+
+// initiative specific
+$init-color: $rm-color; // initiative color
+$main-color: desaturate(lighten($init-color, 20%), 5%);
+$text-color: $init-color;
+$bgcolor: $init-color;
+
+@import
+  'base',
+  'topnav',
+  'button',
+  'footer',
+  'links';
+
+body {
+  background: #fff url(../images/rm/hero.jpg) center top no-repeat fixed;
+  background-size: cover;
+}
+
+// Top Navigation Style
+.mahabbah-top {
+  a {
+    color: #fff;
+
+    &:hover {
+      color: saturate(lighten($main-color, 25%), 50%);
+    }
+  }
+}
+
+.mahabbah-header {
+  background: $init-color url(../images/rm/headerbg.jpg) center bottom no-repeat;
+  background: transparent;
+  margin: 0 auto;
+  padding: 3em 0 2em;
+  text-align: center;
+
+  h1 {
+    background: transparent url(../images/rm/arabdots.svg) center top no-repeat;
+    margin: 0;
+    padding-top: 0.8em;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: $avant-font;
+    line-height: 0.8em;
+    color: $main-color;
+    letter-spacing: -5px;
+    text-shadow: 1px 1px 20px rgba(#000, 0.4);
+
+    span {
+      display: inline-block;
+      color: saturate(lighten($main-color, 25%), 50%);
+    }
+
+    span.sub {
+      display: block;
+      padding: 0;
+      font-size: 0.45em;
+      font-weight: 400;
+      font-family: $texgyre-font;
+      letter-spacing: 0;
+      line-height: 1em;
+      width: auto;
+      color: saturate(lighten($main-color, 40%), 40%);
+      padding: 0 1em;
+      text-shadow: 1px 1px 4px rgba(#000, 0.3);
+
+      > span {
+        color: saturate(lighten($main-color, 20%), 20%);
+      }
+    }
+  }
+
+  nav {
+    padding-top: 1em;
+  }
+
+  @include media($mobile) {
+    padding: 2em 0;
+    h1 {
+      font-size: 2em;
+      span.sub {
+        font-size: 0.4em;
+        letter-spacing: 1px;
+        word-spacing: normal;
+      }
+    }
+  }
+}
+
+.mahabbah-hero {
+  // background: rgba($bgcolor, 0.8);
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+
+  .hero {
+    @include outer-container;
+
+    h4 {
+      margin: 0 0 1em;
+      font-family: $hnul-font;
+      font-weight: 100;
+      font-size: 1.2em;
+
+      span {
+        display: inline-block;
+        line-height: 1em;
+        background: #fff;
+        color: $init-color;
+        border: 2px solid $init-color;
+        padding: 5px 10px;
+      }
+      span.alt {
+        background: $init-color;
+        color: #fff;
+        padding: 5px 12px;
+      }
+    }
+
+    .word {
+      padding: 2em 1.5em;
+      font-style: italic;
+    }
+    .logo {
+      padding: 1em 0;
+      display: block;
+    }
+    .logo.mobile {
+      display: none;
+    }
+
+    .alpha, .beta, .gamma {
+      @include span-columns(4);
+      font-size: 0.9em;
+      line-height: 1em;
+      em {
+        // color: $init-color;
+        font-weight: 700;
+        letter-spacing: -1px;
+        font-size: 1.1em;
+      }
+    }
+    .alpha {
+      margin-top: 5em;
+    }
+    .gamma {
+      margin-top: 8em;
+    }
+
+    .logo {
+      background: #fff;
+      opacity: 0;
+      animation: fadeInDown 1s 0.5s forwards;
+    }
+    .alpha .word {
+      background: rgba(darken(adjust-hue($main-color, -50), 10%), 0.9);
+      opacity: 0;
+      animation: fadeInLeft 1s 0.5s forwards;
+    }
+    .beta .word {
+      background: rgba(darken(adjust-hue($main-color, 20), 10%), 0.9);
+      opacity: 0;
+      animation: fadeInUp 1s 0.5s forwards;
+    }
+    .gamma .word {
+      // padding: 1.5em 0.75em;
+      background: rgba(adjust-hue($init-color, 40), 0.9);
+      font-size: 1.4em;
+      line-height: 1em;
+      opacity: 0;
+      animation: fadeInRight 1s 0.5s forwards;
+      em {
+        font-size: 1em;
+      }
+    }
+
+    @include media($mobile) {
+      .logo, .word {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .logo.desktop {
+        display: none;
+      }
+      .logo.mobile {
+        display: block;
+      }
+      .alpha, .beta, .gamma {
+        @include span-columns(4);
+        font-size: 0.7em;
+        margin: 0;
+      }
+    }
+
+    @include media($tablet) {
+      .logo, .word {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .logo.desktop {
+        display: none;
+      }
+      .logo.mobile {
+        display: block;
+      }
+      .alpha, .beta, .gamma {
+        @include span-columns(8);
+        margin: 0;
+      }
+    }
+  }
+}
+
+.mahabbah-aside {
+  z-index: 10;
+  background: transparent;
+
+  p em {
+    color: lighten(saturate($text-color, 10%), 15%);
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.mahabbah-links {
+  // background: rgba($bgcolor, 0.8);
+}
+
+.mahabbah-footer .footer .alpha {
+  background-image: url(../images/rm/silh.svg);
+}

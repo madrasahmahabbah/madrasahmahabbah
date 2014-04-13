@@ -1,0 +1,252 @@
+//
+// RAUDHATUL MUHIBBAIN
+//
+
+@charset "utf-8";
+
+@import
+  'bourbon/bourbon',
+  'neat-settings',
+  'neat/neat',
+  'fonts',
+  'vars',
+  'responsive';
+
+// initiative specific
+$init-color: $mf-color; // initiative color
+$main-color: saturate(lighten($init-color, 30%), 20%);
+$text-color: lighten($init-color, 10%);
+$bgcolor: saturate(lighten($init-color, 20%), 10%);
+
+@import
+  'base',
+  'topnav',
+  'button',
+  'footer',
+  'links';
+
+body {
+  background: #fff url(../images/mf/hero.jpg) center top no-repeat fixed;
+  background-size: cover;
+}
+
+// Top Navigation Style
+.mahabbah-top {
+  a {
+    color: #fff;
+
+    &:hover {
+      color: saturate(lighten($main-color, 15%), 80%);
+    }
+  }
+}
+
+.mahabbah-header {
+  background: $init-color url(../images/mf/headerbg.jpg) center bottom no-repeat;
+  background: transparent url(../images/mf/bgpattern.png) repeat;
+  background: transparent;
+  // background: rgba($init-color, 0.8);
+  margin: 0 auto;
+  padding: 3em 0 2em;
+  text-align: center;
+
+  h1 {
+    background: transparent url(../images/mf/arabdots.svg) center top no-repeat;
+    margin: 0;
+    padding-top: 0.6em;
+    margin-top: 0.2em;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: $avant-font;
+    line-height: 0.8em;
+    color: #fff;
+    letter-spacing: -5px;
+    text-shadow: 1px 1px 10px rgba(#000, 0.15);
+
+    span {
+      display: inline-block;
+      color: saturate(lighten($main-color, 15%), 80%);
+    }
+
+    span.sub {
+      display: block;
+      padding: 0;
+      font-size: 0.45em;
+      font-weight: 400;
+      font-family: $texgyre-font;
+      letter-spacing: 0;
+      line-height: 1em;
+      width: auto;
+      color: #fff;
+      padding: 0 1em;
+      text-shadow: 1px 1px 4px rgba(#000, 0.3);
+
+      > span {
+        color: saturate(lighten($main-color, 15%), 80%);
+      }
+    }
+  }
+
+  nav {
+    padding-top: 1em;
+  }
+
+  @include media($mobile) {
+    padding: 2em 0;
+    h1 {
+      font-size: 2em;
+      span.sub {
+        font-size: 0.4em;
+        letter-spacing: 1px;
+        word-spacing: normal;
+      }
+    }
+  }
+}
+
+.mahabbah-hero {
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+
+  .hero {
+    @include outer-container;
+
+    h4 {
+      margin: 0 0 1em;
+      font-family: $hnul-font;
+      font-weight: 100;
+      font-size: 1.2em;
+
+      span {
+        display: inline-block;
+        line-height: 1em;
+        background: #fff;
+        color: $init-color;
+        border: 2px solid $init-color;
+        padding: 5px 10px;
+      }
+      span.alt {
+        background: $init-color;
+        color: #fff !important;
+        padding: 5px 12px;
+        border-left: 0;
+      }
+    }
+
+    .word {
+      padding: 3em 2em;
+    }
+    .logo {
+      padding: 1em 0;
+      display: block;
+    }
+    .logo.mobile {
+      display: none;
+    }
+
+    .alpha, .beta, .gamma {
+      @include span-columns(4);
+      font-size: 0.9em;
+      line-height: 0.9em;
+      em {
+        margin-top: 0.5em;
+        display: block;
+        color: #fff;
+        // color: $init-color;
+        font-size: 1.2em;
+        line-height: 0.9em;
+      }
+    }
+    .alpha {
+      margin-top: 4em;
+    }
+    .gamma {
+      margin-top: 7em;
+    }
+
+    .logo {
+      background: #fff;
+      opacity: 0;
+      animation: fadeInDown 1s 0.5s forwards;
+    }
+    .alpha .word {
+      $color: rgba(darken(adjust-hue($main-color, -70), 10%), 0.9);
+      background: $color;
+      opacity: 0;
+      animation: fadeInLeft 1s 0.5s forwards;
+      h4 span {
+        color: darken($color, 30%);
+        border-color: darken($color, 30%);
+      }
+      h4 span.alt {
+        background: darken($color, 30%);
+      }
+    }
+    .beta .word {
+      $color: rgba(darken(adjust-hue($main-color, -20), 10%), 0.9);
+      background: $color;
+      opacity: 0;
+      animation: fadeInUp 1s 0.5s forwards;
+      h4 span {
+        color: darken($color, 30%);
+        border-color: darken($color, 30%);
+      }
+      h4 span.alt {
+        background: darken($color, 30%);
+      }
+    }
+    .gamma .word {
+      $color: rgba(darken(adjust-hue($main-color, 100), 10%), 0.9);
+      background: $color;
+      opacity: 0;
+      animation: fadeInRight 1s 0.5s forwards;
+      h4 span {
+        color: darken($color, 30%);
+        border-color: darken($color, 30%);
+      }
+      h4 span.alt {
+        background: darken($color, 30%);
+      }
+    }
+
+    @include media($mobile) {
+      .logo, .word {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .logo.desktop {
+        display: none;
+      }
+      .logo.mobile {
+        display: block;
+      }
+      .alpha, .beta, .gamma {
+        @include span-columns(4);
+        font-size: 0.7em;
+        margin: 0;
+      }
+    }
+
+    @include media($tablet) {
+      .logo, .word {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .logo.desktop {
+        display: none;
+      }
+      .logo.mobile {
+        display: block;
+      }
+      .alpha, .beta, .gamma {
+        @include span-columns(8);
+        margin: 0;
+      }
+    }
+  }
+}
+
+.mahabbah-footer .footer .alpha {
+  background-image: url(../images/mf/silh.svg);
+}

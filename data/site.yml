@@ -1,0 +1,30 @@
+title: Madrasah Mahabbah
+
+keywords: madrasah, mahabbah, muhibbains, raudhatul muhibbain, mabkhoor music, mahabbah fashion, mahabbah food &amp; beverages, mahabbah training &amp; consultancy, mahabbah travel &amp; tours, mahabbah books
+
+init_codes:
+  - rm
+  - mm
+  - mf
+  - mfb
+  - mtc
+  - mtt
+  - mb
+
+init_titles:
+  rm:  Raudhatul Muhibbain
+  mm:  Mabkhoor Music
+  mf:  Mahabbah Fashion
+  mfb: Mahabbah Food &amp; Beverages
+  mtc: Mahabbah Training &amp; Consultancy
+  mtt: Mahabbah Travel &amp; Tours
+  mb:  Mahabbah Books
+
+init_links:
+  rm:  /beta/raudhatul-muhibbain.html
+  mm:  /beta/mabkhoor-music.html
+  mf:  /beta/mahabbah-fashion.html
+  mfb: http://mahabbahfoodandbeverages.tumblr.com/
+  mtc: http://mahabbahtrainingconsultancy.tumblr.com/
+  mtt: http://mahabbahtravelandtours.tumblr.com/
+  mb:  http://mahabbahbooks.tumblr.com/
