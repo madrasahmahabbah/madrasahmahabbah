@@ -39,7 +39,10 @@ $emcolor: saturate(lighten($bgcolor,30%),50%);
     z-index: 100;
 
     @include media($mobile) {
-      transform: scale(0.8);
+      background-size: 90% auto;
+      transform: scale(0.6);
+      right: 5px;
+      top: 5px;
     }
   }
 }

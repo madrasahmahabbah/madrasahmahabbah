@@ -21,9 +21,9 @@ init_titles:
   mb:  Mahabbah Books
 
 init_links:
-  rm:  /beta/raudhatul-muhibbain.html
-  mm:  /beta/mabkhoor-music.html
-  mf:  /beta/mahabbah-fashion.html
+  rm:  /raudhatul-muhibbain/
+  mm:  /mabkhoor-music/
+  mf:  /mahabbah-fashion/
   mfb: http://mahabbahfoodandbeverages.tumblr.com/
   mtc: http://mahabbahtrainingconsultancy.tumblr.com/
   mtt: http://mahabbahtravelandtours.tumblr.com/

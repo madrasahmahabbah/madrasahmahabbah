@@ -10,12 +10,12 @@
   transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 
-  // Movements Overlay
+  // Initiatives Overlay
 
   (function() {
-    var triggerBttn = $('#trigger-overlay-mvmt'),
-      overlay = $('div.overlay-mvmt'),
-      closeBttn = $('button.overlay-mvmt-close');
+    var triggerBttn = $('#trigger-overlay-init'),
+      overlay = $('div.overlay-init'),
+      closeBttn = $('button.overlay-init-close');
 
     function toggleOverlay() {
       if (overlay.hasClass('open')) {

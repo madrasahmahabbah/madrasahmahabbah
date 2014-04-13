@@ -1,5 +1,6 @@
 .mahabbah-footer {
   $color: $text-color;
+  // background: rgba(#fff, 0.5);
 
   .footer {
     @include outer-container;
@@ -92,7 +93,7 @@
       .alpha, .beta, .gamma {
         @include span-columns(4);
         margin: 0;
-        font-size: 0.5em;
+        font-size: 0.6em;
         text-align: center;
       }
       .gamma .logo {
@@ -105,7 +106,7 @@
       .alpha, .beta, .gamma {
         @include span-columns(8);
         margin: 0;
-        font-size: 0.5em;
+        font-size: 0.6em;
         text-align: center;
       }
       .gamma .logo {

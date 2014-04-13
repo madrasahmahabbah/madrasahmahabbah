@@ -3,10 +3,6 @@
 #   config.output_style = :compact
 # end
 
-proxy '/README.md', '/README.txt', :layout => false
-ignore '/README.txt'
-# page '/README.md', :layout => false
-
 # CSS Autoprefixer
 activate :autoprefixer
 
@@ -21,6 +17,15 @@ set :js_dir, 'assets/js'
 set :images_dir, 'assets/images'
 set :partials_dir, 'partials'
 set :build_dir, '../madrasahmahabbah.github.io'
+
+# Proxies
+# 1. readme
+proxy '/README.md', '/README.txt', :layout => false
+ignore '/README.txt'
+# 2. initiative pages
+proxy '/raudhatul-muhibbain/index.html', '/beta/raudhatul-muhibbain.html'
+proxy '/mabkhoor-music/index.html',      '/beta/mabkhoor-music.html'
+proxy '/mahabbah-fashion/index.html',    '/beta/mahabbah-fashion.html'
 
 # Build-specific configuration
 configure :build do

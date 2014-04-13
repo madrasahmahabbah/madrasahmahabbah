@@ -166,20 +166,22 @@ body {
       animation: fadeInLeft 1s 0.5s forwards;
     }
     .beta .word {
-      background: rgba(desaturate(darken(adjust-hue($main-color, -10), 30%), 20%), 0.9);
+      background: desaturate(darken(adjust-hue($main-color, -10), 30%), 20%) url(../images/mm/betabg.jpg) center center no-repeat;
       font-size: 1.4em;
       font-style: italic;
       line-height: 1em;
       opacity: 0;
       animation: fadeInLeft 1s 1s forwards;
+      text-shadow: 0 0 10px rgba(#000, 0.4);
       em {
         font-size: 1em;
       }
     }
     .gamma .word {
-      background: rgba(desaturate(lighten(adjust-hue($init-color, 10), 10%), 20%), 0.9);
+      background: desaturate(lighten(adjust-hue($init-color, 10), 10%), 20%) url(../images/mm/gammabg.jpg) center top no-repeat;
       opacity: 0;
       animation: fadeInLeft 1s 1.5s forwards;
+      text-shadow: 0 0 10px rgba(#000, 0.4);
     }
 
     @include media($mobile) {

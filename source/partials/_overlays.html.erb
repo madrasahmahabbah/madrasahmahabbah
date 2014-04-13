@@ -1,8 +1,9 @@
     <!-- Overlays -->
 
-    <div class="overlay-mvmt overlay-mvmt-hugeinc">
-      <div class="overlay-mvmt-bg"></div>
-      <button type="button" class="overlay-mvmt-close">Close</button>
+    <!-- Initiative links -->
+    <div class="overlay-init">
+      <div class="overlay-init-bg"></div>
+      <button type="button" class="overlay-init-close">Close</button>
       <nav>
         <ul>
 <%
@@ -10,12 +11,13 @@ data.site.init_codes.each do |code|
   link = data.site.init_links[code]
   title = data.site.init_titles[code].split(' ', 2)
 %>
-          <li><a class="i-<%= code %>" href="<%= link %>"><span><%= title[0] %></span> <%= title[1] %></li>
+          <li><a class="i-<%= code %>" href="<%= link %>"><span><%= title[0] %></span> <%= title[1] %></a></li>
 <% end %>
         </ul>
       </nav>
     </div>
 
+    <!-- About us -->
     <div class="overlay-about overlay-about-contentpush">
       <button type="button" class="overlay-about-close">Close</button>
 

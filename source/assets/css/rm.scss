@@ -167,20 +167,23 @@ body {
       animation: fadeInDown 1s 0.5s forwards;
     }
     .alpha .word {
-      background: rgba(darken(adjust-hue($main-color, -50), 10%), 0.9);
+      background: rgba(darken(adjust-hue($main-color, -50), 10%), 0.9) url(../images/rm/alphabg.jpg) center center no-repeat;
+      text-shadow: 0 0 10px rgba(#000, 0.5);
       opacity: 0;
       animation: fadeInLeft 1s 0.5s forwards;
     }
     .beta .word {
-      background: rgba(darken(adjust-hue($main-color, 20), 10%), 0.9);
+      background: rgba(darken(adjust-hue($main-color, 20), 10%), 0.9) url(../images/rm/betabg.jpg) center center no-repeat;
+      text-shadow: 0 0 10px rgba(#000, 0.5);
       opacity: 0;
       animation: fadeInUp 1s 0.5s forwards;
     }
     .gamma .word {
       // padding: 1.5em 0.75em;
-      background: rgba(adjust-hue($init-color, 40), 0.9);
+      background: rgba(adjust-hue($init-color, 40), 0.9) url(../images/rm/gammabg.jpg) right bottom no-repeat;
       font-size: 1.4em;
       line-height: 1em;
+      text-shadow: 0 0 10px rgba(#000, 0.7);
       opacity: 0;
       animation: fadeInRight 1s 0.5s forwards;
       em {

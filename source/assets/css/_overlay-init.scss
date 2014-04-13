@@ -3,7 +3,7 @@ $bgcolor: desaturate(lighten($main-color, 10%), 10%);
 $duration: 0.5s;
 
 /* Overlay style */
-.overlay-mvmt {
+.overlay-init {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -11,8 +11,11 @@ $duration: 0.5s;
   left: 0;
   z-index: 50;
   background: transparent url(../images/naal-black.png) center center no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $duration, visibility 0s $duration;
 
-  .overlay-mvmt-bg {
+  .overlay-init-bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -21,7 +24,7 @@ $duration: 0.5s;
   }
 
   /* Overlay closing cross */
-  .overlay-mvmt-close {
+  .overlay-init-close {
     width: 80px;
     height: 80px;
     position: absolute;
@@ -37,8 +40,16 @@ $duration: 0.5s;
 
     @include media($mobile) {
       background-size: 90% auto;
-      transform: scale(0.8);
+      transform: scale(0.6);
+      right: 5px;
+      top: 5px;
     }
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity $duration;
   }
 
   /* Menu style */
@@ -53,14 +64,16 @@ $duration: 0.5s;
     word-spacing: -5px;
     transform: translateY(-50%);
     z-index: 10;
+    perspective: 1200px;
 
     @include media($mobile) {
       letter-spacing: -1px;
       word-spacing: -3px;
+      transform: translateY(-55%);
     }
   }
 
-  ul {
+  nav ul {
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -68,104 +81,6 @@ $duration: 0.5s;
     height: 100%;
     width: 100%;
     position: relative;
-  }
-
-  ul li {
-    display: block;
-    height: 20%;
-    height: calc(100% / 7);
-    min-height: 54px;
-  }
-
-  ul li a {
-    padding: 0.1em 1em;
-    font-weight: 300;
-    display: block;
-    color: #fff;
-    transition: color 0.5s, background 0.5s;
-
-    span {
-      display: inline-block;
-      font-family: $avant-font;
-      font-weight: 700;
-      color: saturate(lighten($bgcolor, 20%), 30%);
-      transition: color 0.5s;
-    }
-
-    // initiative colors
-    &:hover,
-    &:focus {
-      color: $bgcolor;
-      background: #fff;
-      span {
-        color: $bgcolor;
-      }
-    }
-
-    &.i-rm:hover,
-    &.i-rm:focus {
-      color: $rm-color;
-      span { color: $rm-color; }
-    }
-
-    &.i-mm:hover,
-    &.i-mm:focus {
-      color: $mm-color;
-      span { color: $mm-color; }
-    }
-
-    &.i-mf:hover,
-    &.i-mf:focus {
-      color: $mf-color;
-      span { color: $mf-color; }
-    }
-
-  }
-
-  @include media($tablet) {
-    nav {
-      height: 70%;
-      font-size: 34px;
-    }
-    ul li {
-      min-height: 34px;
-    }
-  }
-
-  @include media($mobile) {
-    background-size: 180% auto;
-    nav {
-      height: 65%;
-      font-size: 24px;
-      line-height: 1em;
-    }
-    ul li {
-      height: auto;
-      min-height: 24px;
-    }
-    ul li a {
-      padding: 0.5em 1em;
-    }
-  }
-}
-
-/* Effects */
-.overlay-mvmt-hugeinc {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity $duration, visibility 0s $duration;
-
-  &.open {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity $duration;
-  }
-
-  nav {
-    perspective: 1200px;
-  }
-
-  nav ul {
     opacity: 0.4;
     transform: translateY(-25%) rotateX(35deg);
     transition: transform $duration;
@@ -178,5 +93,75 @@ $duration: 0.5s;
 
   &.close nav ul {
     transform: translateY(25%) rotateX(-35deg);
+  }
+
+  nav ul li {
+    display: block;
+    height: 20%;
+    height: calc(100% / 7);
+    min-height: 54px;
+  }
+
+  nav ul li a {
+    padding: 0.1em 1em;
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    transition: color 0.5s, background 0.5s;
+
+    span {
+      display: inline-block;
+      font-family: $avant-font;
+      font-weight: 700;
+    }
+
+    // initiative colors
+    &:hover,
+    &:focus {
+      color: $bgcolor;
+      background: #fff;
+    }
+
+    &.i-rm:hover,
+    &.i-rm:focus {
+      color: $rm-color;
+    }
+
+    &.i-mm:hover,
+    &.i-mm:focus {
+      color: $mm-color;
+    }
+
+    &.i-mf:hover,
+    &.i-mf:focus {
+      color: $mf-color;
+    }
+
+  }
+
+  @include media($tablet) {
+    nav {
+      height: 70%;
+      font-size: 34px;
+      ul li {
+        min-height: 34px;
+      }
+    }
+  }
+
+  @include media($mobile) {
+    background-size: 180% auto;
+    nav {
+      height: 65%;
+      font-size: 24px;
+      line-height: 1em;
+      ul li {
+        height: auto;
+        min-height: 24px;
+      }
+      ul li a {
+        padding: 0.5em 1em;
+      }
+    }
   }
 }

@@ -20,7 +20,7 @@ $bgcolor: #e2decc;
   'footer',
   'overlay-init',
   'overlay-about',
-  'modal';
+  'overlay-modal';
 
 a {
   color: $main-color;
@@ -133,7 +133,7 @@ section button {
     background: lighten($alt-color, 10%);
   }
 
-  &.trigger-mvmt {
+  &.trigger-init {
     background: $main-color;
   }
 
