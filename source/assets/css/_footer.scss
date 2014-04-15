@@ -1,4 +1,4 @@
-.mahabbah-footer {
+.m-footer {
   $color: $text-color;
   // background: rgba(#fff, 0.5);
 
@@ -47,7 +47,7 @@
     .beta {
       @include span-columns(4);
       margin-top: 1em;
-      background: rgba(desaturate(darken($main-color, 10%), 2%), 0.9);
+      background: rgba(desaturate(darken($main-color, 10%), 2%), 0.95) url(../images/footerbeta.png);
       color: #fff;
       .text {
         margin: 0;
@@ -56,6 +56,7 @@
         text-align: center;
         font-style: italic;
         line-height: 0.85em;
+        text-shadow: 0 0 5px rgba(#000, 0.5);
         b {
           // line-height: 0.8em;
           font-size: 1.15em;

@@ -31,7 +31,7 @@ body {
 }
 
 // Top Navigation Style
-.mahabbah-top {
+.m-toplink {
   a {
     color: #fff;
 
@@ -41,7 +41,7 @@ body {
   }
 }
 
-.mahabbah-header {
+.m-header {
   background: $init-color url(../images/rm/headerbg.jpg) center bottom no-repeat;
   background: transparent;
   margin: 0 auto;
@@ -101,7 +101,7 @@ body {
   }
 }
 
-.mahabbah-hero {
+.m-hero {
   // background: rgba($bgcolor, 0.8);
   color: #fff;
   text-align: center;
@@ -134,10 +134,13 @@ body {
     .word {
       padding: 2em 1.5em;
       font-style: italic;
+      text-shadow: 0 0 6px rgba(#000, 0.9);
+      opacity: 0;
     }
     .logo {
       padding: 1em 0;
       display: block;
+      opacity: 0;
     }
     .logo.mobile {
       display: none;
@@ -155,37 +158,41 @@ body {
       }
     }
     .alpha {
-      margin-top: 5em;
+      margin-top: 4em;
     }
     .gamma {
-      margin-top: 8em;
+      margin-top: 3em;
     }
 
     .logo {
       background: #fff;
-      opacity: 0;
       animation: fadeInDown 1s 0.5s forwards;
     }
     .alpha .word {
-      background: rgba(darken(adjust-hue($main-color, -50), 10%), 0.9) url(../images/rm/alphabg.jpg) center center no-repeat;
-      text-shadow: 0 0 10px rgba(#000, 0.5);
-      opacity: 0;
+      background: rgba(darken(adjust-hue($main-color, -50), 10%), 0.9);
+      background: url(../images/rm/alphabg.jpg) center center no-repeat;
+      background-size: cover;
       animation: fadeInLeft 1s 0.5s forwards;
+      text-align: left;
+      padding: 4em 1.5em 1.5em;
     }
     .beta .word {
-      background: rgba(darken(adjust-hue($main-color, 20), 10%), 0.9) url(../images/rm/betabg.jpg) center center no-repeat;
-      text-shadow: 0 0 10px rgba(#000, 0.5);
-      opacity: 0;
+      background: rgba(darken(adjust-hue($main-color, 20), 10%), 0.9);
+      background: url(../images/rm/betabg.jpg) center center no-repeat;
+      background-size: cover;
       animation: fadeInUp 1s 0.5s forwards;
+      padding: 3em 1.5em 1.5em;
     }
     .gamma .word {
       // padding: 1.5em 0.75em;
-      background: rgba(adjust-hue($init-color, 40), 0.9) url(../images/rm/gammabg.jpg) right bottom no-repeat;
-      font-size: 1.4em;
+      background: rgba(adjust-hue($init-color, 40), 0.9);
+      background: url(../images/rm/gammabg.jpg) right bottom no-repeat;
+      background-size: cover;
+      font-size: 1.76em;
       line-height: 1em;
-      text-shadow: 0 0 10px rgba(#000, 0.7);
-      opacity: 0;
       animation: fadeInRight 1s 0.5s forwards;
+      text-align: right;
+      padding: 1em 1em 4em;
       em {
         font-size: 1em;
       }
@@ -228,7 +235,7 @@ body {
   }
 }
 
-.mahabbah-aside {
+.m-aside {
   z-index: 10;
   background: transparent;
 
@@ -239,10 +246,6 @@ body {
   }
 }
 
-.mahabbah-links {
-  // background: rgba($bgcolor, 0.8);
-}
-
-.mahabbah-footer .footer .alpha {
+.m-footer .footer .alpha {
   background-image: url(../images/rm/silh.svg);
 }

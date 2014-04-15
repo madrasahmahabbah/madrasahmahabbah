@@ -30,7 +30,7 @@ a:hover, a:focus {
   color: darken($main-color, 10%);
 }
 
-.mahabbah-header {
+.m-header {
   background: #fff;
   margin: 0 auto;
   padding: 4em 0;
@@ -92,7 +92,7 @@ a:hover, a:focus {
 section h2 {
   background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
   background-size: auto 50%;
-  // padding-top: 0.6em;
+  padding-top: 0.6em;
   margin-top: 0;
   font-family: $avant-font;
   letter-spacing: -3px;
@@ -106,7 +106,7 @@ section button {
   display: inline-block;
   background: $text-color;
   color: #fff;
-  color: rgba(#000,0.4);
+  // color: rgba(#000,0.4);
   font-weight: 400;
   font-family: $texgyre-font;
   padding: 15px 30px;
@@ -143,9 +143,10 @@ section button {
   }
 }
 
-.mahabbah-welcome {
+.m-welcome {
   z-index: 10;
   background: transparent;
+  background: url(../images/herobg.jpg) fixed;
 
   p {
     padding-top: 0;
@@ -175,18 +176,23 @@ section button {
   }
 }
 
-.mahabbah-quran {
+.m-quran {
   z-index: 10;
   background: rgba($text-color, 0.7);
+  background: url(../images/quranbg.jpg) center center no-repeat;
+  background-size: cover;
 
   blockquote {
     display: none;
     margin: 0;
     font-style: italic;
     background: transparent url(../images/bismillah-white.png) center top no-repeat;
-    padding-top: 2.6em;
+    padding-top: 1.5em;
     // font-size: 0.9em;
     color: saturate(lighten($text-color, 40%), 25%);
+    font-size: 1.3em;
+    line-height: 0.9em;
+    text-shadow: 0 0 5px rgba(#000, 1);
 
     p {
       padding: 0.6em 0;
@@ -214,7 +220,7 @@ section button {
   }
 }
 
-.mahabbah-related {
+.m-related {
   z-index: 10;
   // padding-top: 2em;
   background: #fff;
@@ -317,7 +323,7 @@ section button {
   }
 }
 
-.mahabbah-footer .footer {
+.m-footer .footer {
   .alpha {
     // background: #fff;
     .text, .text a {

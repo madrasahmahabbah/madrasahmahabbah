@@ -1,5 +1,5 @@
-.mahabbah-links {
-  background: rgba($init-color, 0.8);
+.m-links {
+  background: rgba($init-color, 0.9) url(../images/starbg.png);
   margin-top: 3em;
 
   @include media($mobile) {
@@ -57,7 +57,8 @@
     .btn-mfb, .btn-mfb:hover,
     .btn-mtc, .btn-mtc:hover,
     .btn-mtt, .btn-mtt:hover,
-    .btn-mb, .btn-mb:hover {
+    .btn-mb, .btn-mb:hover,
+    .btn-mt, .btn-mt:hover {
       opacity: 0.3;
       cursor: default;
     }
@@ -70,6 +71,7 @@
 .initiative-mfb .btn-mfb,
 .initiative-mtc .btn-mtc,
 .initiative-mtt .btn-mtt,
-.initiative-mb .btn-mb {
+.initiative-mb .btn-mb,
+.initiative-mt .btn-mt {
   display: none;
 }

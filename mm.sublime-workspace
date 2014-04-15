@@ -4,20 +4,124 @@
 		"selected_items":
 		[
 			[
-				"bord",
-				"border"
+				"back",
+				"background"
 			],
 			[
-				"re",
-				"relative"
+				"text",
+				"text-color"
+			],
+			[
+				"ini",
+				"init_links"
+			],
+			[
+				"bi",
+				"bgi	background-image"
+			],
+			[
+				"tex",
+				"text-color"
+			],
+			[
+				"fost",
+				"font-style"
+			],
+			[
+				"wor",
+				"word"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fsi",
+				"font-size"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"main",
+				"main-color-1"
 			],
 			[
 				"padd",
 				"padding-top"
 			],
 			[
-				"font",
-				"font-family"
+				"mar",
+				"margin"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"maha",
+				"mahabbah-hero"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"res",
+				"respond-xs"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"visi",
+				"visibility"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"webkit-text",
+				"webkit-text-stroke"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"re",
+				"relative"
 			],
 			[
 				"co",
@@ -32,24 +136,12 @@
 				"border-radius"
 			],
 			[
-				"tran",
-				"transparent"
-			],
-			[
 				"inl",
 				"include"
 			],
 			[
-				"back",
-				"background"
-			],
-			[
 				"pa",
 				"pos:a	position:absolute"
-			],
-			[
-				"ba",
-				"background-size"
 			],
 			[
 				"pad",
@@ -72,10 +164,6 @@
 				"box-shadow"
 			],
 			[
-				"ini",
-				"init-color"
-			],
-			[
 				"par",
 				"partial"
 			],
@@ -88,20 +176,8 @@
 				"include"
 			],
 			[
-				"fon",
-				"font-weight"
-			],
-			[
-				"tex",
-				"text-color"
-			],
-			[
 				"he",
 				"heading-font"
-			],
-			[
-				"font-s",
-				"font-style"
 			],
 			[
 				"pos",
@@ -110,10 +186,6 @@
 			[
 				"remov",
 				"removeClass"
-			],
-			[
-				"text",
-				"text-shadow"
 			],
 			[
 				"d",
@@ -168,16 +240,8 @@
 				"d:ib	display:inline-block"
 			],
 			[
-				"max",
-				"max-width"
-			],
-			[
 				"paddi",
 				"padding-top"
-			],
-			[
-				"maha",
-				"mahabbah-header"
 			],
 			[
 				"i",
@@ -219,12 +283,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 159.0,
 		"selected_items":
 		[
 			[
+				"chan",
+				"ChangeQuotes"
+			],
+			[
 				"ins",
 				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
 			],
 			[
 				"inst",
@@ -235,7 +307,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 561.0
+		"width": 516.0
 	},
 	"console":
 	{
@@ -256,117 +328,134 @@
 	},
 	"file_history":
 	[
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/initiatives.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/mabkhoormusic/index.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/init_mm.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/init_rm.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/index.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/layout.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_topnav.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_topnav.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_mm.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/raudhatulmuhibbain/index.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_main.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_links.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_links.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_footer.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/mm/arabdots.svg",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_rm.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all_rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/mm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/main.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_overlays.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/data/site.yml",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_overlay-init.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/layout.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_footer.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_links.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/config.rb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/js/overlay.js",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/js/modal.js",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_overlay-about.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_modal.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_quran.html.erb",
+		"/Users/wan/.zshrc",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/Gemfile",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/raudhatul-muhibbain.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/mabkhoor-music.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/mahabbah-fashion.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_vars.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/mf.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/images/silh.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/images/mf/silh.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/images/mm/silh.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/images/rm/silh.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_topnav.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_links.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_base.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/initiatives.erb",
+		"/Users/wan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_footer.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/js/initiatives.coffee",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/index.html.slim",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/old/_footer_old.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_button.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/_modal.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css/old/_main_sectionseperator.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_topnav.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_overlay-init.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_overlay-about.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_modal.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_links.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_button.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_base.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_animation.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/mahabbah-fashion/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/:*! normalize.css v3.0.1 | MIT License | git.io:no",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/mf.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/mm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/mabkhoor-music/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/js/initiatives.coffee",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/_footer.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/css/main.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/js/modal.js",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/js/main.coffee",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/mf.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_footer.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-about.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/mf/arabdots.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/arabdots-white.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_links.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/mm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_footer_old.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_neat-settings.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_modal.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_base.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_topnav.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/neat/functions/_private.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_animations.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/test/bourbon/_bourbon.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/main.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/lemonade.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_grids.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/raudhatul-muhibbain/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/404.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/mm/arabdots.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_vars.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-init.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/assets/psds/arabdots.ai",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/.cache/sass/6a9920b8706f39840ad69cbad1e48fa491762bf4/all_rm.scssc",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/.cache/sprockets/a182645a4eb9fba3883539054374bf1c",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/mm.sublime-project",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/raudhatulmuhibbain/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/beta/mabkhoormusic/index.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_topnav.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_fonts.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/fonts/ff-enzo-web-lite.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/rm/arabdots.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/arabdots-green.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/arabdots-brown.svg",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_arabdots.html.erb",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_arabdots.erb",
+		"/Users/wan/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-movement.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/fonts/mm/mm.css",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_main.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/init_rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/init_mm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all_rm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_mm.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_links.scss",
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_init_rm.scss",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/rm.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/raudhatulmuhibbain/index.html.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/raudhatulmuhibbin/index.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/rm/arabdots.svg",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/arabdots-rm.svg",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/layouts/init_rm.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/images/arabdots-green.svg",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/initiatives.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/Gemfile",
-		"/Users/wan/.zshrc",
 		"/private/var/folders/7g/vxkcvnyj5kb18x5hwk65ds9c0000gn/T/428e9219-9de9-41a6-b7a4-95a449a9a688/etc/apt/sources.list.d/zodttd.list",
 		"/private/var/folders/7g/vxkcvnyj5kb18x5hwk65ds9c0000gn/T/428e9219-9de9-41a6-b7a4-95a449a9a688/etc/apt/sources.list.d/cydia.list",
 		"/Volumes/WDG Media/Torrents/Almost Human - 01x12 - Beholder.DIMENSION.English.C.updated.Addic7ed.com.srt",
 		"/Users/wan/Desktop/sorted.list",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/all.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_modal.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-about.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/config.rb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/404.html.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/javascripts/others.js",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/sitemap.xml.erb",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/README.html",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/robots.txt",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/README.md",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/partials/_quran.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_fonts.scss",
 		"/Users/wan/Desktop/rootkey.csv",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Tests/s3/index.html",
 		"/Users/wan/.zlogin",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_vars.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/fonts/ff-enzo-web-lite.css",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/README.html.erb",
-		"/Users/wan/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/ff-enzo-web.css",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/javascripts/all.js",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/CNAME",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/CNAME",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/__DREAMHOST__.txt",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_overlay-movement.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/fonts/huge_agb_v5-webfont.svg",
-		"/private/etc/hosts",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/stylesheets/_responsive.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/build/index.html",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_overlay-about.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_overlay-movement.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/index.html.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_main.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/images/arabdots-brown.svg",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/images/arabdots.svg",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/all.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/config.rb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/layouts/layout.erb",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_vars.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_fonts.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/javascripts/others.js",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/build/stylesheets/all.css",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/javascripts/random.js",
-		"/Users/wan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_responsive.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/_links.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/all.css",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Middleman/madrasahmahabbah/source/stylesheets/normalize.css",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/js/overlay.js",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/_vars.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/_fonts.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/_mixins.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/style.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/Build/css/style.css",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/_overlay-about.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css/_overlay-movement.scss",
-		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MM2/js/overlay.js",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_icon.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/style.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_btn.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_cta.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_example.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/partials/_header.html",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/index.html",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/index2.html",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/javascript/main.js",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_nav.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/partials/_footer.html",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/partials/_head.html",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/module/_hero.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets/_base.scss",
-		"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/MM/MM/index.html",
-		"/Users/wan/Library/Application Support/Google/Chrome/Local State",
-		"/Library/Preferences/com.box.sync.plist",
-		"/Users/wan/.bashrc",
-		"/private/var/folders/7g/vxkcvnyj5kb18x5hwk65ds9c0000gn/T/428e9219-9de9-41a6-b7a4-95a449a9a688/var/mobile/Library/LibHide/hidden.plist",
-		"/Users/wan/.zshrc-e",
-		"/Users/wan/.oh-my-zsh/plugins/sublime/sublime.plugin.zsh",
-		"/Volumes/WDG Media/Torrents/_Music/Updates/Waves.All.Plugins.Bundle.v9r14.MacOSX-R2R/R2R.nfo"
+		"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/javascripts/all.js"
 	],
 	"find":
 	{
@@ -377,6 +466,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Github/madrasahmahabbah/source/assets/css",
 			"/Volumes/My Book FW 2/Cloud/Dropbox/Dev/Hammer/Projects/MadrasahMahabbah/css",
 			"/Volumes/My Book FW 2/Cloud/Google Drive/Dev/Hammer/Projects/MM2/stylesheets"
 		]
@@ -386,6 +476,114 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"1px",
+			"beta/",
+			"mvmt",
+			"overlay-mvmt",
+			"20",
+			"10",
+			"1s 1s",
+			"1s",
+			"@include respond_sm",
+			"@include respond_xs",
+			"~> ",
+			"@include media($tablet)",
+			"@include media($mobile)",
+			"@includ",
+			"span",
+			"      ",
+			"	text",
+			"//",
+			"<blockquote class=\"text footer-hadith\">\n",
+			"javascripts",
+			"stylesheets",
+			"javascripts",
+			"stylesheets",
+			"/javascripts",
+			"/stylesheets",
+			"/javascripts",
+			"/stylesheets",
+			"$init-color",
+			"main-colo",
+			"$main-colo",
+			"$main-color",
+			"$text-color",
+			"ass=\"b",
+			" class=\"a\"",
+			".9",
+			"</b>.",
+			"85",
+			"/h4>",
+			" - ",
+			"10px",
+			"class=\"",
+			"(3)",
+			"p>",
+			"em",
+			"bourbon",
+			"/p",
+			"<p",
+			"fadeInUp",
+			" ",
+			"b> ",
+			" | ",
+			"0.75",
+			", 0.9",
+			"2s",
+			"translateX",
+			"transform",
+			" ",
+			"2px",
+			"1.5s;",
+			"10px",
+			"1em",
+			"</span>",
+			"<span>",
+			"50",
+			"stretchRight",
+			".entrance",
+			"mm",
+			"fa-li",
+			"fa-fw",
+			"contact ",
+			"fa fa-",
+			"span",
+			"</span>\n            <span class=\"contact phone\">\n              <i class=\"fa fa-phone\"></i> ",
+			"2s",
+			"ceaser($easing)",
+			"timing-function",
+			"anim_btn",
+			"easeOutQuint",
+			"animate",
+			"$animations",
+			"animation:",
+			"animation",
+			"rm/",
+			"raudhatul",
+			"Raudhatul",
+			"span",
+			"</a>",
+			"<a clas",
+			" {\n	display: none;\n}",
+			"url('fonts/",
+			"text",
+			"$text-color",
+			"rm",
+			"family",
+			"$green",
+			"$orange",
+			"orange",
+			"$orange",
+			"orange",
+			"li",
+			" fa-li",
+			"middot",
+			"|",
+			"span",
+			"icon-",
+			"icon",
+			"lass=\"icon\"",
+			"fa fa",
 			"p",
 			"span",
 			"0.6",
@@ -405,115 +603,7 @@
 			"$green",
 			"h2",
 			"p",
-			"border-color",
-			"mm",
-			"tc",
-			"mm",
-			"20",
-			"box-sha",
-			"box-shadow:",
-			".mahabbah-top ",
-			"mahabbah-icon",
-			"a h",
-			"codrops",
-			"trigger",
-			"src=\"",
-			"tumble",
-			"arabdots-rm.",
-			"20",
-			"em",
-			"h2",
-			"src=\"/",
-			"url",
-			"url(/images",
-			"url",
-			"url('/",
-			"url(/",
-			"rl(/",
-			"href=\"/",
-			"/",
-			"url('../",
-			"images/",
-			"...",
-			"e74c3c",
-			"\" class=\"",
-			"font-fam",
-			"'Lato', 'Avenir Next', Arial, sans-serif",
-			"heading-font",
-			"font-fam",
-			"span",
-			" md-show",
-			"close",
-			"webkit",
-			"list",
-			"-webki",
-			"webkit",
-			"<a ",
-			"a ",
-			"button",
-			"weig",
-			".md-effect-3",
-			"getAttribute",
-			"$(this)",
-			"el.",
-			"if(",
-			"document.querySelectorAll",
-			"document.querySelector",
-			" )",
-			"( ",
-			"build",
-			"bgcolor",
-			"A4CE39",
-			", background 0.5s",
-			"</span>",
-			"Mahabbah ",
-			"radius",
-			"صلى الله عليه وسلم",
-			"item",
-			"em",
-			"+",
-			"#85b91e",
-			"small-screen",
-			"mid-screen",
-			"small-screen",
-			"mid-screen",
-			"small-screen",
-			"@media",
-			"'",
-			"<!-- @path ",
-			"url(../img/",
-			"url(",
-			"url('fonts/",
-			"url('fonts/h",
-			"\"",
-			"  ",
-			"AvantGardeBold",
-			"url('",
-			"HUGEAvantGardeBold",
-			"bgcolor",
-			"mid-screen",
-			"24px",
-			"HUGEAvantGardeBold",
-			"Al ",
-			"90deg",
-			", color 0.3s",
-			"91deg",
-			"70deg",
-			"90deg",
-			"5em",
-			".cl-effect-2 ",
-			"nav a",
-			"h3",
-			"span",
-			".cl-effect-2",
-			".cl-effect-2 ",
-			"200",
-			"nav",
-			"3deg",
-			"2deg",
-			"#868375",
-			"3deg",
-			"2deg"
+			"border-color"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -521,6 +611,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"@include media($tablet)",
+			"@include media($mobile)",
+			"@include respond_sm",
+			"@include respond_xs"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -574,7 +668,7 @@
 	"project": "mm.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -582,6 +676,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"arab",
+				"source/images/mf/arabdots.svg"
+			]
 		],
 		"width": 0.0
 	},
@@ -608,7 +706,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 163.0,
+	"side_bar_width": 196.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

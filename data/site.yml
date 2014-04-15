@@ -10,6 +10,7 @@ init_codes:
   - mtc
   - mtt
   - mb
+  - mt
 
 init_titles:
   rm:  Raudhatul Muhibbain
@@ -19,6 +20,7 @@ init_titles:
   mtc: Mahabbah Training &amp; Consultancy
   mtt: Mahabbah Travel &amp; Tours
   mb:  Mahabbah Books
+  mt:  Mahabbah Technologies
 
 init_links:
   rm:  /raudhatul-muhibbain/
@@ -28,3 +30,4 @@ init_links:
   mtc: http://mahabbahtrainingconsultancy.tumblr.com/
   mtt: http://mahabbahtravelandtours.tumblr.com/
   mb:  http://mahabbahbooks.tumblr.com/
+  mt:  http://mahabbahtechnologies.tumblr.com/

@@ -7,7 +7,7 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    autoprefixer-rails (0.8.20131213)
+    autoprefixer-rails (1.1.20140410)
       execjs
     bourbon (3.1.8)
       sass (>= 3.2.0)
@@ -65,9 +65,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.2.17, < 4.0)
       uglifier (~> 2.5)
-    middleman-autoprefixer (0.2.3)
-      autoprefixer-rails (~> 0.8)
-      middleman-core
+    middleman-autoprefixer (1.1.1)
+      autoprefixer-rails (~> 1.1.20140302)
+      middleman (~> 3.2)
     middleman-core (3.3.2)
       activesupport (~> 4.0.1)
       bundler (~> 1.1)

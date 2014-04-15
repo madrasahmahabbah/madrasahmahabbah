@@ -35,7 +35,7 @@ body {
 }
 
 // Top Navigation Style
-.mahabbah-top {
+.m-toplink {
   a {
     color: #fff;
 
@@ -45,7 +45,7 @@ body {
   }
 }
 
-.mahabbah-header {
+.m-header {
   // background: $init-color url(../images/mm/headerbg.jpg) center bottom no-repeat;
   margin: 0 auto;
   padding: 3em 0 2em;
@@ -101,7 +101,7 @@ body {
   }
 }
 
-.mahabbah-hero {
+.m-hero {
   // background: rgba($bgcolor, 0.8);
   color: #fff;
   text-align: center;
@@ -134,9 +134,12 @@ body {
     .word {
       padding: 2em 1.5em;
       font-style: italic;
+      text-shadow: 0 0 6px rgba(#000, 0.3);
+      opacity: 0;
     }
     .logo {
       padding: 1em 0;
+      opacity: 0;
     }
 
     .alpha, .beta, .gamma {
@@ -157,31 +160,35 @@ body {
       margin-top: 2em;
     }
     .gamma {
-      margin-top: 6em;
+      margin-top: 4em;
     }
 
     .logo {
       background: #fff;
-      opacity: 0;
       animation: fadeInLeft 1s 0.5s forwards;
     }
     .beta .word {
-      background: desaturate(darken(adjust-hue($main-color, -10), 30%), 20%) url(../images/mm/betabg.jpg) center center no-repeat;
-      font-size: 1.4em;
+      background: desaturate(darken(adjust-hue($main-color, -10), 30%), 20%);
+      background: url(../images/mm/betabg.jpg) center center no-repeat;
+      background-size: cover;
+      font-size: 1.5em;
       font-style: italic;
       line-height: 1em;
-      opacity: 0;
       animation: fadeInLeft 1s 1s forwards;
-      text-shadow: 0 0 10px rgba(#000, 0.4);
+      padding: 1em 1em 2em;
+      text-align: left;
       em {
         font-size: 1em;
       }
     }
     .gamma .word {
-      background: desaturate(lighten(adjust-hue($init-color, 10), 10%), 20%) url(../images/mm/gammabg.jpg) center top no-repeat;
-      opacity: 0;
+      background: rgba(desaturate(lighten(adjust-hue($init-color, 10), 10%), 20%), 0.9);
+      background: url(../images/mm/gammabg4.jpg) center center no-repeat;
+      background-size: cover;
       animation: fadeInLeft 1s 1.5s forwards;
-      text-shadow: 0 0 10px rgba(#000, 0.4);
+      text-shadow: 0 0 3px rgba(#000, 0.8);
+      padding: 4em 1.5em 1.5em;
+      text-align: right;
     }
 
     @include media($mobile) {
@@ -209,7 +216,7 @@ body {
   }
 }
 
-.mahabbah-aside {
+.m-aside {
   z-index: 10;
   background: transparent;
 
@@ -220,10 +227,10 @@ body {
   }
 }
 
-.mahabbah-links {
+.m-links {
   // background: rgba($bgcolor, 0.75);
 }
 
-.mahabbah-footer .footer .alpha {
+.m-footer .footer .alpha {
   background-image: url(../images/mm/silh.svg);
 }

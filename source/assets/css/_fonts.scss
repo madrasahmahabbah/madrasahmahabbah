@@ -32,6 +32,16 @@
   font-style:   normal;
   font-weight:  200;
 }
+@font-face {
+  font-family: 'helvetica-neue-bold';
+  src: url('../fonts/helveticaneuebold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/helveticaneuebold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/helveticaneuebold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/helveticaneuebold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/helveticaneuebold.svg#b0b230b12ba14b2f0690df366df880c5') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  700;
+}
 
 // TEXGY ADVENTOR
 @font-face {

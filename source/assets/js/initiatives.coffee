@@ -16,7 +16,7 @@
 
   #     this.$el.html(this.template(hadiths[Math.floor(Math.random() * hadiths.length)]))
 
-  hadiths = $(".footer-hadith")
+  hadiths = $(".m-hadith")
   hadiths.hide().eq(Math.floor(Math.random() * hadiths.length)).show()
 )()
 
@@ -24,8 +24,8 @@
 # $ ->
 #   $window = $(window)
 #   $body = $("body.initiative")
-#   $header = $(".mahabbah-header")
-#   $footer = $(".mahabbah-footer")
+#   $header = $(".m-header")
+#   $footer = $(".m-footer")
 
 #   $window.scroll ->
 #     bodyY = -($window.scrollTop() / 5)

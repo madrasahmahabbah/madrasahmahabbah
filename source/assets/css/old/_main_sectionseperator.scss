@@ -29,7 +29,7 @@ a:hover, a:focus {
   color: darken($green, 10%);
 }
 
-.mahabbah-header {
+.m-header {
   background: #fff;
   margin: 0 auto;
   padding: 5em 0;
@@ -77,7 +77,7 @@ a:hover, a:focus {
 
 
 @include media($mobile) {
-  .mahabbah-header {
+  .m-header {
     padding: 2em 0;
 
     h1 {
@@ -170,7 +170,7 @@ section::after {
 
 
 /* Double Diagonal line */
-.mahabbah-welcome {
+.m-welcome {
   z-index: 10;
   // padding-top: 1em;
   // padding-bottom: 4em;
@@ -225,7 +225,7 @@ section::after {
   }
 }
 
-.mahabbah-quran {
+.m-quran {
   z-index: 10;
   // padding-top: 1em;
   // padding-bottom: 3.5em;
@@ -287,7 +287,7 @@ section::after {
   }
 }
 
-.mahabbah-related {
+.m-related {
   z-index: 10;
   // padding-top: 2em;
   background: #fff;
@@ -429,7 +429,7 @@ section::after {
   }
 }
 
-.mahabbah-footer {
+.m-footer {
   padding: 1em 2em 2em;
   text-align: center;
   font-size: 0.7em;
