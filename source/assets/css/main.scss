@@ -199,12 +199,11 @@ section button {
     }
 
     .cite {
-      // font-style: normal;
+      font-size: 0.8em;
       font-weight: 700;
-      // padding-top: 1.2em;
       padding-bottom: 0;
       color: saturate(lighten($text-color, 30%), 15%);
-      letter-spacing: 1px;
+      letter-spacing: -1px;
 
       // &:before {
       //   content: '\2014';
@@ -213,8 +212,8 @@ section button {
 
     @include media($mobile) {
       background-size: 80% auto;
-      font-size: 0.8em;
-      padding: 3em 0 0;
+      font-size: 0.95em;
+      padding: 1.5em 1em 0;
       margin: 0;
     }
   }

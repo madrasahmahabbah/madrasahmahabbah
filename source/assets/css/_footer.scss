@@ -43,6 +43,9 @@
           font-size: 0.9em;
         }
       }
+      @include media($mobile) {
+        font-size: 0.5em;
+      }
     }
     .beta {
       @include span-columns(4);
@@ -73,19 +76,23 @@
           font-style: normal;
         }
       }
+      @include media($mobile) {
+        font-size: 0.7em;
+      }
     }
     .gamma {
       @include span-columns(4);
       margin-top: 7em;
       padding-top: 6em;
-      background: rgba($init-color, 0.9) url(../images/arabdots-white.svg) 95% -10px no-repeat;
-      background-size: 150px;
+      background: rgba($init-color, 0.9) url(../images/footergamma.png) right top no-repeat;
+      // background-size: cover;
       font-size: 0.55em;
       color: #fff;
       text-align: left;
       @include media($mobile) {
-        background-size: 100px;
-        padding-top: 3em;
+        // background-size: 70%;
+        padding-top: 5em;
+        font-size: 0.5em;
       }
     }
 
@@ -94,7 +101,6 @@
       .alpha, .beta, .gamma {
         @include span-columns(4);
         margin: 0;
-        font-size: 0.6em;
         text-align: center;
       }
       .gamma .logo {
@@ -107,7 +113,6 @@
       .alpha, .beta, .gamma {
         @include span-columns(8);
         margin: 0;
-        font-size: 0.6em;
         text-align: center;
       }
       .gamma .logo {
