@@ -9,8 +9,7 @@
   'neat-settings',
   'neat/neat',
   'fonts',
-  'vars',
-  'responsive';
+  'colors';
 
 // initiative specific
 $init-color: $rm-color; // initiative color
@@ -34,10 +33,9 @@ body {
 .m-toplink {
   a {
     color: #fff;
-
-    &:hover {
-      color: saturate(lighten($main-color, 25%), 50%);
-    }
+  }
+  a:hover {
+    color: saturate(lighten($main-color, 25%), 50%);
   }
 }
 
@@ -58,7 +56,7 @@ body {
     line-height: 0.8em;
     color: $main-color;
     letter-spacing: -5px;
-    text-shadow: 1px 1px 20px rgba(#000, 0.4);
+    text-shadow: 0 0 20px rgba(#000, 0.5);
 
     span {
       display: inline-block;
@@ -76,7 +74,7 @@ body {
       width: auto;
       color: saturate(lighten($main-color, 40%), 40%);
       padding: 0 1em;
-      text-shadow: 1px 1px 4px rgba(#000, 0.3);
+      text-shadow: 0 0 4px rgba(#000, 0.8);
 
       > span {
         color: saturate(lighten($main-color, 20%), 20%);
@@ -181,7 +179,7 @@ body {
       background: url(../images/rm/betabg.jpg) center center no-repeat;
       background-size: cover;
       animation: fadeInUp 1s 0.5s forwards;
-      padding: 3em 1.5em 1.5em;
+      padding: 1.5em 1.5em;
     }
     .gamma .word {
       // padding: 1.5em 0.75em;
@@ -192,7 +190,7 @@ body {
       line-height: 1em;
       animation: fadeInRight 1s 0.5s forwards;
       text-align: right;
-      padding: 1em 1em 4em;
+      padding: 0.8em 0.8em 4em;
       em {
         font-size: 1em;
       }

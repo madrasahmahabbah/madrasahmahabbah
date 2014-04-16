@@ -27,6 +27,10 @@
       .text {
         a {
           color: $text-color;
+          transition: color 0.2s;
+        }
+        a:hover {
+          color: darken($text-color, 10%);
         }
         p {
           margin: 0 0 1em;
@@ -49,17 +53,17 @@
     }
     .beta {
       @include span-columns(4);
-      margin-top: 1em;
-      background: rgba(desaturate(darken($main-color, 10%), 2%), 0.95) url(../images/footerbeta.png);
+      margin-top: 2rem;
+      background: desaturate(darken($main-color, 12%), 2%) url(../images/footerbeta.png);
       color: #fff;
       .text {
+        display: none;
         margin: 0;
         padding: 2em 1.5em;
-        font-size: 1em;
         text-align: center;
         font-style: italic;
         line-height: 0.85em;
-        text-shadow: 0 0 5px rgba(#000, 0.5);
+        text-shadow: 0 0 3px rgba(#000, 0.4);
         b {
           // line-height: 0.8em;
           font-size: 1.15em;
@@ -82,16 +86,16 @@
     }
     .gamma {
       @include span-columns(4);
-      margin-top: 7em;
+      margin-top: 4rem;
       padding-top: 6em;
-      background: rgba($init-color, 0.9) url(../images/footergamma.png) right top no-repeat;
+      background: $init-color url(../images/footergamma.png) right top no-repeat;
       // background-size: cover;
       font-size: 0.55em;
       color: #fff;
-      text-align: left;
+      text-align: left !important;
+      // text-shadow: 0 0 3px rgba(#000, 0.4);
       @include media($mobile) {
         // background-size: 70%;
-        padding-top: 5em;
         font-size: 0.5em;
       }
     }
@@ -103,9 +107,6 @@
         margin: 0;
         text-align: center;
       }
-      .gamma .logo {
-        display: none;
-      }
     }
 
     @include media($tablet) {
@@ -114,9 +115,6 @@
         @include span-columns(8);
         margin: 0;
         text-align: center;
-      }
-      .gamma .logo {
-        display: none;
       }
     }
   }

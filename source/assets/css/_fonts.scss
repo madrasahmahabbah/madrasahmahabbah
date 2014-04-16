@@ -1,6 +1,15 @@
-@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-// @import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,400italic,700);
-@import url(../fonts/ff-enzo-web-lite.css);
+// FONT FAMILIES
+$main-font: 'ff-enzo-web', Arial, sans-serif;
+$avant-font: 'AvantGardeBold', $main-font;
+$texgyre-font: 'texgyreadventorregular', $main-font;
+$texgyrebold-font: 'texgyreadventorbold', $main-font;
+$hn-font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, $texgyre-font;
+$hnul-font: 'helvetica-neue-ultralight', $main-font;
+$hnl-font: 'helvetica-neue-light', $main-font;
+$hnb-font: 'helvetica-neue-bold', $main-font;
+
+@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+@import "../fonts/ff-enzo-web-lite.css";
 
 // AVANT GARDE
 @font-face {

@@ -20,15 +20,15 @@ body {
   }
 }
 
-// basic grid system
 .wrapper {
   width: 100%;
 }
 
 .row {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
+  @include outer-container;
+  // width: 100%;
+  // max-width: 1024px;
+  // margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,7 +59,6 @@ a:hover, a:focus {
 section.row {
   position: relative;
   padding: 2em 1em;
-  // background: #fff;
   text-align: center;
 
   @include media($mobile) {
@@ -69,7 +68,6 @@ section.row {
 }
 
 section p {
-  // max-width: 700px;
   margin: 0 auto;
   padding: 1.2em 0;
 
@@ -79,8 +77,6 @@ section p {
 }
 
 // some animation
-
 .m-header h1 {
   animation: fadeInDown 1s;
 }
-

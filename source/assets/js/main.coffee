@@ -4,7 +4,7 @@
 $ ->
 
   # Ayat randomizer
-  verses = $(".m-quran blockquote")
+  verses = $(".m-ayat")
   verses.eq(Math.floor(Math.random() * verses.length)).show "medium"
   verses.click ->
     verses.hide("medium").eq(Math.floor(Math.random() * verses.length)).show "medium"

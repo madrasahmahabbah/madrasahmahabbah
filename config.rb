@@ -23,9 +23,9 @@ set :build_dir, '../madrasahmahabbah.github.io'
 proxy '/README.md', '/README.txt', :layout => false
 ignore '/README.txt'
 # 2. initiative pages
-proxy '/raudhatul-muhibbain/index.html', '/beta/raudhatul-muhibbain.html'
-proxy '/mabkhoor-music/index.html',      '/beta/mabkhoor-music.html'
-proxy '/mahabbah-fashion/index.html',    '/beta/mahabbah-fashion.html'
+proxy '/raudhatul-muhibbain/index.html', '/inits/rm.html'
+proxy '/mabkhoor-music/index.html',      '/inits/mm.html'
+proxy '/mahabbah-fashion/index.html',    '/inits/mf.html'
 
 # Build-specific configuration
 configure :build do

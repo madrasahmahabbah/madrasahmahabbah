@@ -9,8 +9,7 @@
   'neat-settings',
   'neat/neat',
   'fonts',
-  'vars',
-  'responsive';
+  'colors';
 
 // initiative specific
 $init-color: $mm-color; // initiative color
@@ -38,10 +37,9 @@ body {
 .m-toplink {
   a {
     color: #fff;
-
-    &:hover {
-      color: $main-color;
-    }
+  }
+  a:hover {
+    color: $main-color;
   }
 }
 
@@ -62,7 +60,7 @@ body {
     line-height: 0.8em;
     color: $main-color;
     letter-spacing: -5px;
-    text-shadow: 1px 1px 10px rgba(#000, 0.15);
+    text-shadow: 0 0 15px rgba(#000, 0.2);
 
     span {
       display: inline-block;
@@ -81,7 +79,7 @@ body {
     color: #fff;
     // padding: 0.3em 1em;
     margin: 0 0.5em;
-    text-shadow: 1px 1px 4px rgba(#000, 0.3);
+    text-shadow: 0 0 4px rgba(#000, 0.5);
 
     > em {
       color: lighten($main-color, 5%);

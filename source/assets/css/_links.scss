@@ -1,5 +1,7 @@
 .m-links {
-  background: rgba($init-color, 0.9) url(../images/starbg.png);
+  $hover-color: saturate(lighten($bgcolor, 15%), 20%);
+
+  background: rgba($init-color, 0.9) url(../images/starbg.png) fixed;
   margin-top: 3em;
 
   @include media($mobile) {
@@ -23,13 +25,19 @@
     span {
       font-family: $texgyrebold-font;
     }
+    a {
+      color: #fff;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: $hover-color;
+    }
   }
 
   nav {
     .btn {
       font-size: 0.6em;
-      // font-family: $main-font;
-      // font-weight: 600;
 
       padding: 0.4em 0.8em 0.5em;
       margin-right: -2px;
@@ -38,8 +46,7 @@
       text-transform: none;
       letter-spacing: 0;
 
-
-      background: transparent;
+      background: rgba($init-color, 0.5);
       border-color: #fff;
       color: #fff;
       opacity: 1;
@@ -49,8 +56,8 @@
 
     a.btn:hover,
     a.btn:focus {
-      color: saturate(lighten($bgcolor, 20%), 30%);
-      border-color: saturate(lighten($bgcolor, 20%), 30%);
+      color: $hover-color;
+      border-color: $hover-color;
       // opacity: 0.8;
     }
 
