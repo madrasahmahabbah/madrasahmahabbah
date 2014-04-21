@@ -3,6 +3,7 @@ $main-font: 'ff-enzo-web', Arial, sans-serif;
 $avant-font: 'AvantGardeBold', $main-font;
 $texgyre-font: 'texgyreadventorregular', $main-font;
 $texgyrebold-font: 'texgyreadventorbold', $main-font;
+// $skolar-font: 'skolar', $main-font;
 $hn-font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, $texgyre-font;
 $hnul-font: 'helvetica-neue-ultralight', $main-font;
 $hnl-font: 'helvetica-neue-light', $main-font;
@@ -10,6 +11,7 @@ $hnb-font: 'helvetica-neue-bold', $main-font;
 
 @import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
 @import "../fonts/ff-enzo-web-lite.css";
+// @import "../fonts/skolar.css";
 
 // AVANT GARDE
 @font-face {

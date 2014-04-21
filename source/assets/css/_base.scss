@@ -10,7 +10,7 @@ body {
   background: $bgcolor url(../images/naal-bg.jpg) center center no-repeat fixed;
   color: $text-color;
   font-weight: 100;
-  font-size: 26px; //28px
+  font-size: 26px;
   line-height: 1.25;
   font-family: $main-font;
   -webkit-font-smoothing: antialiased;
@@ -26,9 +26,6 @@ body {
 
 .row {
   @include outer-container;
-  // width: 100%;
-  // max-width: 1024px;
-  // margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,7 +55,7 @@ a:hover, a:focus {
 // sections
 section.row {
   position: relative;
-  padding: 2em 1em;
+  padding: 3em 0.5em;
   text-align: center;
 
   @include media($mobile) {
@@ -67,7 +64,7 @@ section.row {
   }
 }
 
-section p {
+section.row p {
   margin: 0 auto;
   padding: 1.2em 0;
 

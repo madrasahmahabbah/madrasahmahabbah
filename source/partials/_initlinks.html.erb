@@ -1,0 +1,16 @@
+    <!-- Initiative links -->
+    <div class="overlay-init">
+      <div class="overlay-init-bg"></div>
+      <button type="button" class="overlay-init-close">Close</button>
+      <nav>
+        <ul>
+<%
+data.site.init_codes.each do |code|
+  link = data.site.init_links[code]
+  title = data.site.init_titles[code].split(' ', 2)
+%>
+          <li><a class="i-<%= code %>" href="<%= link %>"><span><%= title[0] %></span> <%= title[1] %></a></li>
+<% end %>
+        </ul>
+      </nav>
+    </div>

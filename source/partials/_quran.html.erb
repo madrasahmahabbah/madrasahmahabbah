@@ -1,18 +1,20 @@
       <!-- Quran verses -->
       <div class="wrapper m-quran">
-        <section class="row">
+        <section class="quran">
+          <div class="alpha">
 <%
 data.quotes.ayats.each do |line|
   line = line.split('|')
   ayat = line[0]
   cite = line[1]
 %>
-          <blockquote class="m-ayat">
-            <p><%= ayat %></p>
-            <p class="cite"><%= cite %></p>
-          </blockquote>
+            <blockquote class="m-ayat">
+              <p><%= ayat %></p>
+              <div class="cite"><%= cite %></div>
+            </blockquote>
 <%
 end
 %>
+          </div>
         </section>
       </div>

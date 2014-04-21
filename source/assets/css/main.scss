@@ -21,7 +21,7 @@ $bgcolor: #e2decc;
   'base',
   'topnav',
   'footer',
-  'overlay-init',
+  'overlay-inits',
   'overlay-about',
   'overlay-modal';
 
@@ -93,18 +93,24 @@ a:hover, a:focus {
 
 // sections
 section h2 {
-  background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
-  background-size: auto 50%;
-  padding-top: 0.6em;
-  margin-top: 0;
-  font-family: $avant-font;
-  letter-spacing: -3px;
-  line-height: 0.8em;
   display: inline-block;
+  width: auto;
+  margin: 1em auto;
+  padding: 10px 30px;
+  font-family: $texgyre-font;
+  font-size: 1.2em;
+  letter-spacing: 8px;
+  font-weight: 300;
+  line-height: 0.8em;
+  border: none;
+  text-transform: uppercase;
   border-bottom: 2px solid rgba($text-color, 0.5);
+  span {
+    font-family: $texgyrebold-font;
+  }
 }
 
-section button {
+section button, section a.button {
   border: none;
   display: inline-block;
   background: $text-color;
@@ -133,10 +139,11 @@ section button {
   }
 
   &.trigger-about {
-    background: lighten($alt-color, 10%);
+    // background: lighten($alt-color, 10%);
   }
 
   &.trigger-init {
+    // display: none;
     background: $main-color;
   }
 
@@ -148,8 +155,9 @@ section button {
 
 .m-welcome {
   z-index: 10;
-  background: transparent;
-  background: url(../images/herobg.jpg) fixed;
+  background: #fff url(../images/herobg.jpg);
+  font-size: 1.2em;
+  line-height: 1.1em;
 
   p {
     padding-top: 0;
@@ -157,11 +165,13 @@ section button {
 
   p strong.mm {
     background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
-    background-size: auto 38%;
+    background-size: auto 43%;
 
     font-family: $avant-font;
+    font-size: 1.1em;
     letter-spacing: -3px;
-    padding: 0.6em 0.1em 0 0;
+    padding: 0.7em 0.1em 0 0;
+    line-height: 0.85em;
 
     span {
       color: lighten(saturate($text-color, 10%), 15%);
@@ -170,12 +180,244 @@ section button {
 
   p em {
     // color: lighten(saturate($text-color, 10%), 15%);
-    font-weight: 600;
-    // font-style: normal;
+    color: darken($text-color, 20%);
+    // font-weight: 600;
+    font-style: normal;
+    // letter-spacing: -1px;
+  }
+
+  .x404 & {
+    background: #fff;
+    h2 {
+      margin-bottom: 2em;
+    }
   }
 
   .error {
     color: lighten($alt-color, 10%);
+  }
+}
+
+.m-separator {
+  background: #fff;
+  .row {
+    padding: 2em 0;
+  }
+}
+
+.m-init {
+  background: #fff;
+  padding: 0 0 4em;
+  color: #fff;
+  // text-shadow: 1px 2px 1px rgba(#000, 0.3);
+  text-align: right;
+  position: relative;
+
+  .row {
+    padding: 0;
+  }
+
+  .init {
+    transform: translateY(-3000px);
+    padding: 2px;
+  }
+
+  a {
+    display: block;
+    height: 200px;
+    padding: 25px;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+    background: #fff url(../images/bg-rm-500.jpg) center no-repeat;
+    // background-size: 100% auto;
+
+    h3 {
+      display: block;
+      margin: 0 0 5px;
+      padding: 8px;
+      background: rgba(#000, 0.6);
+      line-height: 0.9em;
+      letter-spacing: -1px;
+      font-weight: 700;
+      font-size: 1.3em;
+
+      position: relative;
+      transition: all 0.2s;
+
+      em {
+        font-style: normal;
+      }
+    }
+
+    span.text {
+      display: block;
+      padding: 8px;
+      background: rgba(#000, 0.6);
+      font-size: 0.9em;
+      font-style: italic;
+      line-height: 0.9em;
+
+      transform: translateX(120%);
+      transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+      em {
+        letter-spacing: -1px;
+        font-weight: 700;
+      }
+    }
+
+    span.logo {
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: #fff url(../images/rm/logo.png) center no-repeat;
+      background-size: 80%;
+      margin-top: 25px;
+      float: right;
+
+      transform: translateX(150px);
+      transition: all 0.5s 0.15s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    }
+
+    &:hover {
+      height: 350px;
+      h3 {
+        top: 0;
+      }
+      span.text {
+        transform: translateX(0);
+      }
+      span.logo {
+        transform: translateX(25px);
+      }
+    }
+  }
+
+  .alpha, .beta, .gamma {
+    @include span-columns(4);
+    font-size: 0.8em;
+  }
+
+  .alpha {
+    margin-top: 0;
+  }
+  .beta {
+    margin-top: 3em;
+  }
+  .gamma {
+    margin-top: 8em;
+  }
+
+  .m-rm {
+    animation: bounceInDown 1s 0.5s forwards;
+    a {
+      background-image: url(../images/bg-rm-500.jpg);
+      height: 350px;
+    }
+  }
+  .m-mm {
+    animation: bounceInDown 1s 0.7s forwards;
+    a {
+      background-image: url(../images/bg-mm-500.jpg);
+      height: 350px;
+      span.logo {
+        background-image: url(../images/mm/logo.png);
+      }
+    }
+  }
+  .m-mf {
+    animation: bounceInDown 1s 0.9s forwards;
+    a {
+      background-image: url(../images/bg-mf-500.jpg);
+      height: 350px;
+      span.logo {
+        background-image: url(../images/mf/logo.png);
+      }
+    }
+  }
+  .m-mfb {
+    animation: bounceInDown 1s 1s forwards;
+    a {
+      background-image: url(../images/bg-mfb-500.jpg);
+      span.logo {
+        background-image: url(../images/mfb/logo.png);
+      }
+    }
+  }
+  .m-mtc {
+    animation: bounceInDown 1s 1.2s forwards;
+    a {
+      background-image: url(../images/bg-mtc-500.jpg);
+      span.logo {
+        background-image: url(../images/mtc/logo.png);
+      }
+    }
+  }
+  .m-mtt {
+    animation: bounceInDown 1s 1.4s forwards;
+    a {
+      background-image: url(../images/bg-mtt-500.jpg);
+      span.logo {
+        background-image: url(../images/mtt/logo.png);
+      }
+    }
+  }
+  .m-mb {
+    animation: bounceInDown 1s 1.6s forwards;
+    a {
+      background-image: url(../images/bg-mb-500.jpg);
+      span.logo {
+        background-image: url(../images/mb/logo.png);
+      }
+    }
+  }
+  .m-mt {
+    animation: bounceInDown 1s 1.8s forwards;
+    a {
+      background-image: url(../images/bg-mt-500.jpg);
+      span.logo {
+        background-image: url(../images/mt/logo.png);
+      }
+    }
+  }
+
+  &.m-init-desktop {
+    display: block;
+  }
+  &.m-init-mobile {
+    display: none;
+  }
+
+  @include media($tablet) {
+    &.m-init-desktop {
+      display: none;
+    }
+    &.m-init-mobile {
+      display: block;
+    }
+    .init {
+      text-align: center;
+      animation: none;
+      transform: translateY(0);
+      padding: 0;
+      a {
+        background-size: cover;
+        height: auto;
+        padding: 5px;
+        h3 {
+          margin-bottom: 2px;
+          font-size: 1.2em;
+        }
+        span {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  @include media($mobile) {
+    font-size: 0.8em;
   }
 }
 
@@ -185,17 +427,32 @@ section button {
   background: url(../images/quranbg.jpg) center center no-repeat;
   background-size: cover;
 
+  .quran {
+    @include outer-container;
+    .alpha {
+      @include span-columns(7);
+      @include shift(5);
+
+      @include media($mobile) {
+        @include span-columns(4);
+        @include shift(0);
+      }
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(0);
+      }
+    }
+  }
+
   blockquote {
     display: none;
-    margin: 0;
+    margin: 4em 1em;
     font-style: italic;
     background: transparent url(../images/bismillah-white.png) center top no-repeat;
     padding-top: 1.5em;
-    // font-size: 0.9em;
-    color: saturate(lighten($text-color, 40%), 25%);
-    font-size: 1em;
+    color: #fff;
     line-height: 0.98em;
-    text-shadow: 0 0 5px rgba(#000, 1);
+    text-align: center;
 
     p {
       padding: 0.6em 0;
@@ -208,19 +465,15 @@ section button {
       font-size: 0.8em;
       font-weight: 700;
       padding-bottom: 0;
-      color: saturate(lighten($text-color, 30%), 15%);
+      color: saturate(lighten($text-color, 20%), 10%);
       letter-spacing: -1px;
-
-      // &:before {
-      //   content: '\2014';
-      // }
     }
 
     @include media($mobile) {
-      background-size: 80% auto;
-      font-size: 0.95em;
+      background-size: 90% auto;
+      font-size: 0.7em;
       padding: 1.5em 1em 0;
-      margin: 0;
+      margin: 2em 0.5em;
     }
   }
 }
@@ -231,21 +484,7 @@ section button {
   background: #fff;
 
   h2 {
-    background: none;
     margin-top: 0;
-    font-family: $avant-font;
-    color: $main-color;
-    letter-spacing: -3px;
-    line-height: 0.8em;
-    border: none;
-
-    span {
-      display: inline-block;
-      background: transparent url(../images/arabdots-green.svg) center top no-repeat;
-      background-size: auto 45%;
-      padding-top: 0.5em;
-      color: lighten($main-color, 10%);
-    }
   }
 
   nav {
@@ -257,12 +496,12 @@ section button {
       outline: none;
       color: #fff;
       text-decoration: none;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 400;
       font-size: 1em;
 
-      line-height: 1.5em;
+      line-height: 1.3em;
       @include perspective(1000px);
 
       &:hover,
@@ -278,11 +517,12 @@ section button {
 
     a span {
       color: $text-color;
-      font-size: 0.8em;
+      font-size: 0.7em;
       position: relative;
       display: block;
-      padding: 0 14px;
+      padding: 0 1em;
       background: saturate(lighten($text-color, 40%), 25%);
+      background: #fff;
       @include transition(all 0.3s);
       @include transform-origin(50% 0);
       @include transform-style(preserve-3d);
@@ -296,8 +536,10 @@ section button {
       height: 100%;
       background: $text-color;
       color: #fff;
-      font-size: 0.8em;
-      letter-spacing: 3px;
+      font-size: 0.7em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       opacity: 1;
       content: attr(data-hover);
       @include transition(background 0.3s);

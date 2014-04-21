@@ -1,6 +1,4 @@
-    <div class="container">
-
-<%= partial 'topnav' %>
+    <div class="container main">
 
       <!-- Header -->
       <div class="wrapper m-header">
@@ -22,11 +20,246 @@
             <button id="trigger-overlay-about" type="button" class="trigger-about">
               <i class="fa fa-group"></i>
               About <span>Us</span></button>
-            <button id="trigger-overlay-init" type="button" class="trigger-init">
+<!--             <button id="trigger-overlay-init" type="button" class="trigger-init">
               <i class="fa fa-road"></i>
               Our <span>Initiatives</span></button>
-          </nav>
+ -->          </nav>
         </section>
+      </div>
+
+      <!-- Separator -->
+      <div class="wrapper m-separator">
+        <section class="row">
+          <h2>Our <span>Initiatives</span></h2>
+        </section>
+      </div>
+
+      <!-- Initiatives: Desktop -->
+      <div class="wrapper m-init m-init-desktop">
+        <div class="row">
+
+          <div class="alpha">
+
+            <!-- Raudhatul Muhibbain -->
+            <div class="init m-rm">
+              <a href="<%= data.site.init_links.rm %>">
+                <h3>
+                  <em>Raudhatul</em> Muhibbain
+                </h3>
+                <span class="text">
+                  A garden from <em>the gardens of paradise, InsyaAllah.</em>
+                </span>
+                <span class="logo"></span>
+              </a>
+            </div>
+
+            <!-- Mahabbah Food & Beverages -->
+            <div class="init m-mfb">
+              <a href="<%= data.site.init_links.mfb %>">
+                <h3>
+                  <em>Mahabbah</em> Food &amp; Beverages
+                </h3>
+                <span class="text">
+                  [Allah said], &ldquo;O messengers, eat from the <em>good foods and work righteousness.&rdquo;</em>
+                </span>
+                <span class="logo"></span>
+              </a>
+            </div>
+
+            <!-- Mahabbah Books -->
+            <div class="init m-mb">
+              <a href="<%= data.site.init_links.mb %>">
+                <h3>
+                  <em>Mahabbah</em> Books
+                </h3>
+                <span class="text">
+                  &ldquo;The seeking of knowledge is <em>obligatory for every Muslim.&rdquo;</em>
+                </span>
+                <span class="logo"></span>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="beta">
+
+            <!-- Mabkhoor Music -->
+            <div class="init m-mm">
+              <a href="<%= data.site.init_links.mm %>">
+                <h3>
+                  <em>Mabkhoor</em> Music
+                </h3>
+                <span class="text">
+                  We want to send <em>messages</em> through <em>melody and music.</em>
+                  <!-- Erwan composes songs, Zafri produces things, Adib sings a beautiful voice. We call ourselves The Muhibbains. Along comes Syed &amp; Luqman, as does Shahrul. Syeikh Radzi plucks his oud from Yemen with Deen lyrical from Singapore. Wan makes the music and there goes our family&mdash;Mabkhoor Music. -->
+                </span>
+                <span class="logo"></span>
+              </a>
+            </div>
+
+            <!-- Mahabbah Training -->
+            <div class="init m-mtc">
+              <a href="<%= data.site.init_links.mtc %>">
+                <h3>
+                  <em>Mahabbah</em> Training &amp; Consultancy
+                </h3>
+<!--                 <span class="text">
+                  A garden from <em>the gardens of paradise, InsyaAllah.</em>
+                </span>
+ -->                <span class="logo"></span>
+              </a>
+            </div>
+
+            <!-- Mahabbah Technologies -->
+            <div class="init m-mt">
+              <a href="<%= data.site.init_links.mt %>">
+                <h3>
+                  <em>Mahabbah</em> Technologies
+                </h3>
+                <!-- <span class="text">
+                  A garden from <em>the gardens of paradise, InsyaAllah.</em>
+                </span> -->
+                <span class="logo"></span>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="gamma">
+
+            <!-- Mahabbah Fashion -->
+            <div class="init m-mf">
+              <a href="<%= data.site.init_links.mf %>">
+                <h3>
+                  <em>Mahabbah</em> Fashion
+                </h3>
+                <span class="text">
+                  <em>Akhlaq</em> of Rasulullah <em>is the best attire</em> one can wear.
+                </span>
+                <span class="logo"></span>
+              </a>
+            </div>
+
+            <!-- Mahabbah Travel -->
+            <div class="init m-mtt">
+              <a href="<%= data.site.init_links.mtt %>">
+                <h3>
+                  <em>Mahabbah</em> Travel &amp; Tours
+                </h3>
+                <span class="text">
+                  Rasulullah (SAW) said, &ldquo;When three persons set out on a journey, they should appoint <em>one of them as their leader.&rdquo;</em>
+                </span>
+                <span class="logo"></span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Initiatives: Mobile & Tablet -->
+      <div class="wrapper m-init m-init-mobile">
+        <div class="row">
+
+          <!-- Raudhatul Muhibbain -->
+          <div class="init m-rm">
+            <a href="<%= data.site.init_links.rm %>">
+              <h3>
+                <em>Raudhatul</em> Muhibbain
+              </h3>
+              <span class="text">
+                A garden from <em>the gardens of paradise, InsyaAllah.</em>
+              </span>
+            </a>
+          </div>
+
+          <!-- Mabkhoor Music -->
+          <div class="init m-mm">
+            <a href="<%= data.site.init_links.mm %>">
+              <h3>
+                <em>Mabkhoor</em> Music
+              </h3>
+              <span class="text">
+                We want to send <em>messages</em> through <em>melody and music.</em>
+                <!-- Erwan composes songs, Zafri produces things, Adib sings a beautiful voice. We call ourselves The Muhibbains. Along comes Syed &amp; Luqman, as does Shahrul. Syeikh Radzi plucks his oud from Yemen with Deen lyrical from Singapore. Wan makes the music and there goes our family&mdash;Mabkhoor Music. -->
+              </span>
+            </a>
+          </div>
+
+          <!-- Mahabbah Fashion -->
+          <div class="init m-mf">
+            <a href="<%= data.site.init_links.mf %>">
+              <h3>
+                <em>Mahabbah</em> Fashion
+              </h3>
+              <span class="text">
+                <em>Akhlaq</em> of Rasulullah <em>is the best attire</em> one can wear.
+              </span>
+            </a>
+          </div>
+
+          <!-- Mahabbah Food & Beverages -->
+          <div class="init m-mfb">
+            <a href="<%= data.site.init_links.mfb %>">
+              <h3>
+                <em>Mahabbah</em> Food &amp; Beverages
+              </h3>
+              <span class="text">
+                [Allah said], &ldquo;O messengers, eat from the <em>good foods and work righteousness.&rdquo;</em>
+              </span>
+            </a>
+          </div>
+
+          <!-- Mahabbah Training -->
+          <div class="init m-mtc">
+            <a href="<%= data.site.init_links.mtc %>">
+              <h3>
+                <em>Mahabbah</em> Training &amp; Consultancy
+              </h3>
+<!--                 <span class="text">
+                A garden from <em>the gardens of paradise, InsyaAllah.</em>
+              </span>
+-->              </a>
+          </div>
+
+          <!-- Mahabbah Books -->
+          <div class="init m-mb">
+            <a href="<%= data.site.init_links.mb %>">
+              <h3>
+                <em>Mahabbah</em> Books
+              </h3>
+              <span class="text">
+                &ldquo;The seeking of knowledge is <em>obligatory for every Muslim.&rdquo;</em>
+              </span>
+            </a>
+          </div>
+
+          <!-- Mahabbah Travel -->
+          <div class="init m-mtt">
+            <a href="<%= data.site.init_links.mtt %>">
+              <h3>
+                <em>Mahabbah</em> Travel &amp; Tours
+              </h3>
+              <span class="text">
+                Rasulullah (SAW) said, &ldquo;When three persons set out on a journey, they should appoint <em>one of them as their leader.&rdquo;</em>
+              </span>
+            </a>
+          </div>
+
+          <!-- Mahabbah Technologies -->
+          <div class="init m-mt">
+            <a href="<%= data.site.init_links.mt %>">
+              <h3>
+                <em>Mahabbah</em> Technologies
+              </h3>
+              <!-- <span class="text">
+                A garden from <em>the gardens of paradise, InsyaAllah.</em>
+              </span> -->
+            </a>
+          </div>
+
+        </div>
       </div>
 
 <%= partial 'quran' %>
@@ -34,7 +267,7 @@
       <!-- Related -->
       <div class="wrapper m-related">
         <section class="row">
-          <h2>Our Gardens of <span>Paradise</span></h2>
+          <h2>Our <span>Gardens of Paradise</span></h2>
           <nav>
             <a href="http://www.darulmurtadza.com/">
               <%= image_tag 'MT_Darul_Murtadza_edit.png' %>
