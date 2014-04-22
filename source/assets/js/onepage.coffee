@@ -3,7 +3,7 @@ do ->
   do ->
     $(".main").onepage_scroll
       sectionContainer: "section"
-      responsiveFallback: 600
+      responsiveFallback: 768
       beforeMove: (index) ->
         if index > 1
           $(".m-toplink").addClass("not-front")
@@ -12,9 +12,6 @@ do ->
 
         if index is 3
           random_hadith()
-          $(".m-hadith blockquote").addClass("animate")
-        else
-          $(".m-hadith blockquote").removeClass("animate")
 
     $("a.toplink-home").click ->
       $(".main").moveTo(1)

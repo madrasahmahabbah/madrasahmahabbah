@@ -7,7 +7,7 @@
   'fonts',
   'colors';
 
-*, *:after, *:before { @include box-sizing(border-box); }
+*, *:after, *:before { box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
@@ -16,7 +16,6 @@ html, body {
 }
 
 body {
-  background: #fff;
   color: #555;
   font-weight: 100;
   font-size: 26px;
@@ -29,6 +28,10 @@ body {
 
   @include media($mobile) {
     background-size: 150% auto;
+  }
+
+  @include media($short) {
+    font-size: 22px;
   }
 }
 
@@ -98,15 +101,15 @@ a {
   h2 {
     display: inline-block;
     width: auto;
-    margin: 2em auto;
+    margin: 0 auto 1em;
     padding: 10px 30px;
-    font-size: 2em;
+    font-size: 1.6em;
     letter-spacing: 8px;
     font-weight: 300;
     line-height: 0.8em;
     border: none;
     // text-transform: uppercase;
-    border-bottom: 2px solid rgba(#fff, 0.5);
+    border-bottom: 2px solid #fff;
     span {
       font-weight: 700;
       // font-family: $texgyrebold-font;
@@ -123,7 +126,6 @@ a {
   background: #fff url(../images/onepage-bg2.jpg) center left no-repeat;
   background-size: cover;
   text-align: center;
-  position: relative;
   text-shadow: 0 0 6px rgba(#000, 0.3);
 
   .header-wrapper {
@@ -137,6 +139,7 @@ a {
       width: 100%;
       background: transparent url(../images/arabdots-white.svg) center top no-repeat;
       padding-top: 0.8em;
+      margin: 0 0 30px;
       font-weight: 800;
       font-size: 2.5em;
       font-family: $avant-font;
@@ -158,18 +161,20 @@ a {
       span.sub {
         display: block;
         padding: 0;
-        font-size: 0.65em;
+        font-size: 0.6em;
         font-weight: 400;
         font-family: $texgyre-font;
         letter-spacing: 0;
         width: auto;
         color: #fff;
+        margin-top: -0.3em;
 
         > span {
           color: #b6eaca;
         }
       }
     }
+
     @include media($mobile) {
       font-size: 0.8em;
       span.sub {
@@ -224,7 +229,7 @@ a {
 
 // SECTION: INTRO
 .m-intro {
-  background: #fff url(../images/onepage-bg1.jpg) no-repeat;
+  background: #fff url(../images/onepage-bg7.jpg) center no-repeat;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -233,35 +238,49 @@ a {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    background: rgba(#000, 0.6);
+  }
+
+  .title h2 {
+    // color: #555;
+    border-color: #fff;
+    margin-top: 50px;
   }
 
   .row {
     @include outer-container;
 
-    font-size: 0.8em;
+    font-size: 0.85em;
     line-height: 0.95em;
+    color: #fff;
+    // padding: 70px 0;
+
+    .wrap .trans {
+      // text-shadow: 0 1px 0 rgba(#000, 0.2);
+      // min-height: 280px;
+    }
 
     p {
       font-style: italic;
     }
 
     p em {
-      // font-style: normal;
       font-weight: 700;
       letter-spacing: -1px;
     }
 
     h3 {
-      margin: 0;
-      padding: 25px 20px;
-      // background: rgba(#000, 0.5);
-      font-size: 1.6em;
-      text-shadow: 0 0 5px rgba(#000, 0.5);
+      display: inline-block;
+      margin: 0 0 30px;
+      padding: 10px 30px;
+      font-size: 1em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 2px solid #fff;
+      border-radius: 2em;
     }
     .text {
-      background: rgba(#000, 0.5);
-      padding: 1em;
-      height: 100%;
+      padding: 0 0.8em 60px;
       p {
         margin: 0 0 0.8em;
       }
@@ -270,34 +289,48 @@ a {
       }
     }
 
-    .alpha, .beta, .gamma {
-      @include pad(10px);
+    .alpha {
+      @include span-columns(4);
+      h3 {
+        color: #28c7ff;
+        border-color: #28c7ff;
+      }
     }
-    .alpha, .beta {
-      @include span-columns(6);
+    .beta {
+      @include span-columns(4);
+      h3 {
+        color: #fd5fbc;
+        border-color: #fd5fbc;
+      }
     }
     .gamma {
-      @include span-columns(8);
-      @include shift(2);
+      @include span-columns(4);
+      h3 {
+        color: #84ff58;
+        border-color: #84ff58;
+      }
     }
-    .alpha .wrap {
-      background: url(../images/bg-learn-600.jpg) center no-repeat;
-      background-size: cover;
+    .alpha, .beta, .gamma {
+      @include pad(0 0);
     }
-    .beta .wrap {
-      background: url(../images/bg-love-600.jpg) center no-repeat;
-      background-size: cover;
-    }
-    .gamma .wrap {
-      background: url(../images/bg-live-600.jpg) center no-repeat;
-      background-size: cover;
-    }
+    // .alpha .wrap {
+    //   background: url(../images/bg-learn-600.jpg) center no-repeat;
+    //   background-size: cover;
+    // }
+    // .beta .wrap {
+    //   background: url(../images/bg-love-600.jpg) center no-repeat;
+    //   background-size: cover;
+    // }
+    // .gamma .wrap {
+    //   background: url(../images/bg-live-600.jpg) center no-repeat;
+    //   background-size: cover;
+    // }
 
     @include media($tablet) {
       font-size: 0.7em;
       .alpha, .beta, .gamma {
         @include span-columns(8);
-        @include pad(0);
+        // @include pad(20px 0);
         @include shift(0);
         .wrap {
           margin: 0 10px;
@@ -311,18 +344,21 @@ a {
 .m-hadith {
   background: #fff url(../images/onepage-bg4.jpg) center no-repeat;
   background-size: cover;
+
   .hadith-wrapper {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     @include outer-container;
   }
+
   blockquote.hadith {
-    background: rgba(#fff, 0.7);
+    background: rgba(#fff, 0.8);
+    border-radius: 20px;
     margin: 0;
     padding: 50px;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     font-style: italic;
     line-height: 0.8em;
     letter-spacing: -1px;
@@ -342,17 +378,21 @@ a {
       font-style: normal;
     }
 
-    &.animate {
-      animation: fadeInDownBig 1s ease forwards;
-    }
-
     @include media($tablet) {
       font-size: 1.3em;
       .cite {
         letter-spacing: 8px;
       }
     }
+
+    @include media($short) {
+      font-size: 1.8em;
+    }
   }
+}
+
+.ops-section.active blockquote.hadith {
+  animation: fadeInDownBig 1s ease forwards;
 }
 
 // SECTION: INITIATIVES
@@ -570,12 +610,15 @@ a {
   background: #fff url(../images/M-bnw.jpg) center no-repeat;
   text-align: center;
   font-size: 0.8em;
-  line-height: 1em;
+  // line-height: 1em;
 
   .muhibbains-wrapper {
     position: relative;
     top: 55%;
     // transform: translateY(-50%);
+  }
+
+  .bio-wrapper {
     background: rgba(#000, 0.7);
     padding: 30px 0;
     color: #fff;
@@ -603,6 +646,12 @@ a {
       }
 
     }
+  }
+
+  .copy-wrapper {
+    background: rgba(#fff, 0.7);
+    padding: 20px 0;
+    font-size: 0.8em;
   }
 
   @include media($mobile) {

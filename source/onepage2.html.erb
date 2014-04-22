@@ -16,27 +16,146 @@ layout: false
 
     <link rel="shortcut icon" href="/images/favicon.png">
 
+    <%= stylesheet_link_tag "normalize.min" %>
+    <%= stylesheet_link_tag "animate.min" %>
     <%= stylesheet_link_tag "onepage-scroll" %>
+    <%= stylesheet_link_tag "onepage" %>
+    <%= javascript_include_tag "modernizr" %>
   </head>
 
   <body class="home <%= page_classes %>">
 
+<%= partial 'topnav', :locals => { :home => true }%>
+
     <div class="main">
-      <section>asasassas1</section>
-      <section>asasassas2</section>
-      <section>asasassas3</section>
+
+      <!-- SECTION: HEADER -->
+      <section class="m-header">
+        <div class="header-wrapper">
+
+          <div class="title">
+            <h1>
+              Madrasah<span>Mahabbah</span>
+              <span class="sub">Learn. <span>Love.</span> Live.</span>
+            </h1>
+          </div>
+
+          <div class="welcome">
+            <div class="alpha">
+              <p>
+                <strong class="mm">Madrasah<span>Mahabbah</span></strong> is many things. But it is nothing if it is not a <em>family</em>. Because the smallest and biggest part of our ummah is <em>family</em>. It is when we are a <em>family</em> that we truly <em>learn,</em> <em>love</em> and <em>live.</em>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION: INTRO -->
+      <section class="m-intro">
+        <div class="intro-wrapper">
+
+          <div class="title">
+            <h2>Our <span>Pillars</span></h2>
+          </div>
+
+          <div class="row">
+            <div class="alpha">
+              <div class="wrap">
+                <h3>Learn.</h3>
+                <div class="text">
+                  <p>We met at a <em>Madrasah</em> of knowledge.</p>
+                  <p>A garden from the gardens of paradise that our Prophet Muhammad (SAW) <em>reminded us to frequent.</em></p>
+                </div>
+              </div>
+            </div>
+            <div class="beta">
+              <div class="wrap">
+                <h3>Love.</h3>
+                <div class="text">
+                  <p>We experienced something really special.</p>
+                  <p>We experienced <em>Mahabbah</em> &mdash; That can be perfectly summed up in the <em>greatest testimony of love.</em></p>
+                  <p><span>La ilaha illallah Muhammadur Rasulullah!</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="gamma">
+              <div class="wrap">
+                <h3>Live.</h3>
+                <div class="text">
+                  <p>And now we aspire to become <em>The Muhibbains</em>, an aspiration that requires continually <em>learning to love, loving to live</em> and <em>living to learn and love</em> by the best example of Al Mustafa (SAW).</p>
+                  <p>Until we return to <em>Dar Al Akhirah</em>, to and with the rahmat of Allah SWT and the syafaat of His Beloved, Saiyidina Rasulullah (SAW), InsyaAllah.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION: HADITH -->
+      <section class="m-hadith">
+        <div class="hadith-wrapper">
+          <blockquote class="hadith">
+<%
+data.quotes.hadiths.each do |line|
+  line = line.split('|')
+  hadith = line[0]
+  cite = line[1]
+%>
+            <div class="random">
+              <%= hadith %>
+              <span class="cite"><%= cite %></span>
+            </div>
+<%
+end
+%>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- SECTION: INITIATIVES -->
+      <section class="m-init">
+        <div class="init-wrapper">
+          <div class="title">
+            <h2>Our <span>Initiatives</span></h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: MUHIBBAINS -->
+      <section class="m-muhibbains">
+        <div class="muhibbains-wrapper">
+
+          <div class="bio">
+            <div class="col">
+              <div class="name">Erwan b. Taib</div>
+              <div class="phone">+6012&nbsp;9162597</div>
+              <div class="twitter"><a href="https://twitter.com/erwanmuhibbain">@erwanmuhibbain</a></div>
+            </div>
+            <div class="col">
+              <div class="name">Zafri b. Nazaruddin</div>
+              <div class="phone">+6011&nbsp;37663796</div>
+              <div class="twitter"><a href="https://twitter.com/zafmuhibbain">@zafmuhibbain</a></div>
+            </div>
+            <div class="col">
+              <div class="name">Abdul Mutalib b. Nahar</div>
+              <div class="phone">+6018&nbsp;7886697</div>
+              <div class="twitter"><a href="https://twitter.com/adeepnahar_">@adeepnahar_</a></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </div>
 
-    <%= javascript_include_tag "//code.jquery.com/jquery-1.9.1.min.js" %>
+    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" %>
     <%= javascript_include_tag "jquery.onepage-scroll" %>
+    <%= javascript_include_tag "onepage" %>
     <script>
-        $(document).ready(function(){
-          $(".main").onepage_scroll({
-            sectionContainer: "section",
-            loop: true,
-            responsiveFallback: 600
-          });
-        });
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

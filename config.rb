@@ -26,6 +26,8 @@ ignore '/README.txt'
 proxy '/raudhatul-muhibbain/index.html', '/inits/rm.html'
 proxy '/mabkhoor-music/index.html',      '/inits/mm.html'
 proxy '/mahabbah-fashion/index.html',    '/inits/mf.html'
+# 3. others
+proxy '/o/index.html',    '/onepage.html'
 
 # Build-specific configuration
 configure :build do

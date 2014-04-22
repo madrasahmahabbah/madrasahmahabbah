@@ -106,7 +106,6 @@
         "transform": "translate3d(0, " + pos + "%, 0)",
         "transition": "transform " + settings.animationTime + "ms " + settings.easing
       });
-      console.log($(this).attr('style'))
       $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
         if (typeof settings.afterMove == 'function') settings.afterMove(index, next_el);
       });
