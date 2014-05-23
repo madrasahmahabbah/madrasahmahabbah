@@ -1,21 +1,33 @@
 do ->
+  do ->
+    # disable tab key
+    $(document).keydown (e) ->
+      e.preventDefault()  if e.keyCode is 9
+      return
+
 
   do ->
-    $(".main").onepage_scroll
+    $(".container").onepage_scroll
       sectionContainer: "section"
       responsiveFallback: 768
+      updateURL: true
+      # loop: true
       beforeMove: (index) ->
-        if index > 1
-          $(".m-toplink").addClass("not-front")
-        else
-          $(".m-toplink").removeClass("not-front")
-
-        if index is 3
-          random_hadith()
+        random_hadith() if index is 3
 
     $("a.toplink-home").click ->
-      $(".main").moveTo(1)
+      $(".container").moveTo(1)
       false
+
+  # initiative section
+  do ->
+    initbg = $(".m-init")
+    initbg.find(".init").hover (->
+      initbg.addClass "bg-#{$(this).data("init")}"
+    ), (->
+      initbg.removeClass "bg-#{$(this).data("init")}"
+    )
+
 
   # Ayat randomizer
   verses = $(".m-ayat")

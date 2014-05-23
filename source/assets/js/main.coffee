@@ -27,3 +27,17 @@ do ->
   #   $quran.css backgroundPosition: "0 " + (bodyY - ($quran.offset().top/2)) + "px"
 
   #   return
+
+  initbg = $(".m-initiatives")
+  initbg.find(".init").hover (->
+    initbg.addClass "bg-#{$(this).data("init")}"
+  ), (->
+    initbg.removeClass "bg-#{$(this).data("init")}"
+  )
+
+
+  $('.m-cover').click (ev) ->
+    $('.m-cover').addClass('hide')
+    $('body').scrollTop(0)
+    ev.preventDefault()
+    false

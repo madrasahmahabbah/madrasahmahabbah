@@ -1,0 +1,12 @@
+{
+  "name": "madrasahmahabbah",
+  "description": "The official Madrasah Mahabbah website.",
+  "version": "0.0.1",
+  "homepage": "http://madrasahmahabbah.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "latest",
+    "velocity": "~0.0.13"
+  }
+}

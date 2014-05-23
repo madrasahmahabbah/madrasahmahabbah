@@ -12,6 +12,7 @@ activate :livereload
 # Enable cache buster
 # activate :asset_hash
 
+# Paths
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/images'
@@ -21,13 +22,15 @@ set :build_dir, '../madrasahmahabbah.github.io'
 # Proxies
 # 1. readme
 proxy '/README.md', '/README.txt', :layout => false
-ignore '/README.txt'
 # 2. initiative pages
 proxy '/raudhatul-muhibbain/index.html', '/inits/rm.html'
 proxy '/mabkhoor-music/index.html',      '/inits/mm.html'
 proxy '/mahabbah-fashion/index.html',    '/inits/mf.html'
 # 3. others
 proxy '/o/index.html',    '/onepage.html'
+
+# Ignores
+ignore '/README.txt'
 
 # Build-specific configuration
 configure :build do

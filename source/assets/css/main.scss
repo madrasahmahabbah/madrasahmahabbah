@@ -5,11 +5,15 @@
 @charset "utf-8";
 
 @import
-  'bourbon/bourbon',
-  'neat-settings',
-  'neat/neat',
-  'fonts',
-  'colors';
+  "scut",
+  "color-schemer",
+  "ceaser-easing",
+  "inc/bourbon/bourbon",
+  "inc/neat-settings",
+  "inc/neat/neat",
+  "inc/color-me-sass",
+  "inc/fonts",
+  "inc/colors";
 
 $main-color: #85b91e;
 $alt-color: #ad3629;
@@ -18,12 +22,31 @@ $text-color: #868375;
 $bgcolor: #e2decc;
 
 @import
-  'base',
-  'topnav',
-  'footer',
-  'overlay-inits',
-  'overlay-about',
-  'overlay-modal';
+  "inc/base",
+  "inc/topnav",
+  "inc/footer";
+  // "inc/overlay-inits",
+  // "inc/overlay-about",
+  // "inc/overlay-modal";
+
+// =============================================================================
+// MIXINS & FUNCTIONS
+
+@mixin center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin no-center-vertical {
+  position: static;
+  top: 0;
+  transform: translateY(0);
+}
+
+@function image($image) {
+  @return url(../images/#{$image});
+}
 
 a {
   color: $main-color;
@@ -31,6 +54,29 @@ a {
 
 a:hover, a:focus {
   color: darken($main-color, 10%);
+}
+
+.m-cover {
+  background: rgba(#fff, .95);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2000;
+  transition: all .5s ease;
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .row {
+    height: 100%;
+
+    img {
+      // min-width: 100%;
+      min-height: 80%;
+      max-height: 80%;
+    }
+  }
 }
 
 .m-header {
@@ -98,13 +144,13 @@ section h2 {
   margin: 1em auto;
   padding: 10px 30px;
   font-family: $texgyre-font;
-  font-size: 1.2em;
-  letter-spacing: 8px;
+  font-size: 1.6em;
+  letter-spacing: 4px;
   font-weight: 300;
   line-height: 0.8em;
   border: none;
   text-transform: uppercase;
-  border-bottom: 2px solid rgba($text-color, 0.5);
+  // border-bottom: 2px solid rgba($text-color, 0.5);
   span {
     font-family: $texgyrebold-font;
   }
@@ -155,7 +201,7 @@ section button, section a.button {
 
 .m-welcome {
   z-index: 10;
-  background: #fff url(../images/herobg.jpg);
+  background: #fff url(../images/herobg.jpg) fixed;
   font-size: 1.2em;
   line-height: 1.1em;
 
@@ -198,226 +244,311 @@ section button, section a.button {
   }
 }
 
-.m-separator {
+.m-pillars {
   background: #fff;
-  .row {
-    padding: 2em 0;
-  }
-}
 
-.m-init {
-  background: #fff;
-  padding: 0 0 4em;
-  color: #fff;
-  // text-shadow: 1px 2px 1px rgba(#000, 0.3);
-  text-align: right;
-  position: relative;
-
-  .row {
-    padding: 0;
+  .title {
+    margin-bottom: 2em;
   }
 
-  .init {
-    transform: translateY(-3000px);
-    padding: 2px;
-  }
-
-  a {
-    display: block;
-    height: 200px;
-    padding: 25px;
+  h3 {
+    display: inline-block;
+    margin: 0 0 1.5em;
+    padding: 12px 30px 14px;
     color: #fff;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-
-    background: #fff url(../images/bg-rm-500.jpg) center no-repeat;
-    // background-size: 100% auto;
-
-    h3 {
-      display: block;
-      margin: 0 0 5px;
-      padding: 8px;
-      background: rgba(#000, 0.6);
-      line-height: 0.9em;
-      letter-spacing: -1px;
-      font-weight: 700;
-      font-size: 1.3em;
-
-      position: relative;
-      transition: all 0.2s;
-
-      em {
-        font-style: normal;
-      }
-    }
-
-    span.text {
-      display: block;
-      padding: 8px;
-      background: rgba(#000, 0.6);
-      font-size: 0.9em;
-      font-style: italic;
-      line-height: 0.9em;
-
-      transform: translateX(120%);
-      transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-
-      em {
-        letter-spacing: -1px;
-        font-weight: 700;
-      }
-    }
-
-    span.logo {
-      display: block;
-      width: 100px;
-      height: 100px;
-      background: #fff url(../images/rm/logo.png) center no-repeat;
-      background-size: 80%;
-      margin-top: 25px;
-      float: right;
-
-      transform: translateX(150px);
-      transition: all 0.5s 0.15s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-    }
-
-    &:hover {
-      height: 350px;
-      h3 {
-        top: 0;
-      }
-      span.text {
-        transform: translateX(0);
-      }
-      span.logo {
-        transform: translateX(25px);
-      }
-    }
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .9em;
+    line-height: .8;
+    box-shadow: inset 0 -4px 0 rgba(#000, 0.15);
   }
 
-  .alpha, .beta, .gamma {
-    @include span-columns(4);
-    font-size: 0.8em;
+  .text {
+    padding: 0 .8em;
+    font-size: .9em;
+    line-height: 1;
+
+    p {
+      margin: 0 0 .8em;
+      font-style: italic;
+    }
+
+    p em {
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
   }
 
   .alpha {
-    margin-top: 0;
+    @include span-columns(4);
+
+    h3 {
+      background: #44a3de;
+    }
   }
+
   .beta {
-    margin-top: 3em;
+    @include span-columns(4);
+
+    h3 {
+      background: #ec548c;
+    }
   }
+
   .gamma {
-    margin-top: 8em;
-  }
+    @include span-columns(4);
 
-  .m-rm {
-    animation: bounceInDown 1s 0.5s forwards;
-    a {
-      background-image: url(../images/bg-rm-500.jpg);
-      height: 350px;
+    h3 {
+      background: #74af17;
     }
-  }
-  .m-mm {
-    animation: bounceInDown 1s 0.7s forwards;
-    a {
-      background-image: url(../images/bg-mm-500.jpg);
-      height: 350px;
-      span.logo {
-        background-image: url(../images/mm/logo.png);
-      }
-    }
-  }
-  .m-mf {
-    animation: bounceInDown 1s 0.9s forwards;
-    a {
-      background-image: url(../images/bg-mf-500.jpg);
-      height: 350px;
-      span.logo {
-        background-image: url(../images/mf/logo.png);
-      }
-    }
-  }
-  .m-mfb {
-    animation: bounceInDown 1s 1s forwards;
-    a {
-      background-image: url(../images/bg-mfb-500.jpg);
-      span.logo {
-        background-image: url(../images/mfb/logo.png);
-      }
-    }
-  }
-  .m-mtc {
-    animation: bounceInDown 1s 1.2s forwards;
-    a {
-      background-image: url(../images/bg-mtc-500.jpg);
-      span.logo {
-        background-image: url(../images/mtc/logo.png);
-      }
-    }
-  }
-  .m-mtt {
-    animation: bounceInDown 1s 1.4s forwards;
-    a {
-      background-image: url(../images/bg-mtt-500.jpg);
-      span.logo {
-        background-image: url(../images/mtt/logo.png);
-      }
-    }
-  }
-  .m-mb {
-    animation: bounceInDown 1s 1.6s forwards;
-    a {
-      background-image: url(../images/bg-mb-500.jpg);
-      span.logo {
-        background-image: url(../images/mb/logo.png);
-      }
-    }
-  }
-  .m-mt {
-    animation: bounceInDown 1s 1.8s forwards;
-    a {
-      background-image: url(../images/bg-mt-500.jpg);
-      span.logo {
-        background-image: url(../images/mt/logo.png);
-      }
-    }
-  }
-
-  &.m-init-desktop {
-    display: block;
-  }
-  &.m-init-mobile {
-    display: none;
   }
 
   @include media($tablet) {
-    &.m-init-desktop {
-      display: none;
-    }
-    &.m-init-mobile {
-      display: block;
-    }
-    .init {
-      text-align: center;
-      animation: none;
-      transform: translateY(0);
-      padding: 0;
-      a {
-        background-size: cover;
-        height: auto;
-        padding: 5px;
-        h3 {
-          margin-bottom: 2px;
-          font-size: 1.2em;
-        }
-        span {
-          transform: translateX(0);
-        }
+    font-size: 1em;
+
+    .alpha, .beta, .gamma {
+      @include span-columns(8);
+      @include shift(0);
+
+      .wrap {
+        margin: 0 10px;
       }
     }
   }
-  @include media($mobile) {
+}
+
+
+$colors: $rm-color $mm-color $mf-color $mfb-color $mtc-color $mtt-color $mb-color $mt-color;
+$inits: rm mm mf mfb mtc mtt mb mt;
+
+$len: length($colors);
+$keyd: (100 / $len);
+
+@keyframes bgrotate {
+  $cur: 0%;
+  @each $color in $colors {
+    #{$cur} { background-color: $color; }
+    $cur: $cur + $keyd;
+  }
+  100% { background-color: nth($colors, 1); }
+}
+
+@keyframes colorrotate {
+  $cur: 0%;
+  @each $color in $colors {
+    #{$cur} { color: $color; }
+    $cur: $cur + $keyd;
+  }
+  100% { color: nth($colors, 1); }
+}
+
+$s3-color: tint(desaturate($main-color, 0), 20);
+// $s3-color: $blueHoliday;
+
+.m-initiatives {
+  background: $s3-color image("starbg.png") fixed;
+  // animation: bgrotate 20s infinite linear;
+  padding: 4em 0;
+  color: #fff;
+  text-align: center;
+
+  transition: background-color 2s ease;
+
+  button, a.btn {
+    $pad-y: 8px;
+    $pad-x: 20px;
+    $bevel: 3px;
+
+    border: none;
+    display: inline-block;
+    padding: #{$pad-y} #{$pad-x} #{$pad-y+$bevel};
+    background: #888;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: .6em;
+    line-height: 1;
+    box-shadow: inset 0 #{-$bevel} 0 rgba(#000, .2);
+
+    &:active, .m-init .init a:active .overlay & {
+      box-shadow: none;
+      transform: translateY(#{$bevel});
+      padding: #{$pad-y} #{$pad-x} #{$pad-y};
+      box-shadow: inset 0 -1px 0 rgba(#000, .2);
+    }
+  }
+
+  .title h2 {
+    border: none;
+  }
+
+  .init-wrapper {
+    // @include center-vertical;
+
+    // .disabled-onepage-scroll & {
+    //   @include no-center-vertical;
+    // }
+  }
+
+  .title {
+    text-shadow: 0 3px 0 rgba(#000, .1);
+  }
+
+  .row {
+    @include outer-container;
     font-size: 0.8em;
+    line-height: 1.1;
+  }
+
+  .col {
+    @include span-columns(3);
+    @include pad(10px);
+
+    @include media($tablet) {
+      @include span-columns(4);
+      @include pad(7px);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+      @include pad(5px);
+    }
+  }
+
+  .init {
+    a {
+      display: block;
+      position: relative;
+      height: 230px;
+      background: #fff;
+      box-shadow: 0 4px 0 rgba(#000, .15);
+      overflow: hidden;
+
+      @include media($short) {
+        height: 210px;
+      }
+      @include media($tablet) {
+        height: 200px;
+      }
+      @include media($mobile) {
+        height: 160px;
+      }
+
+    }
+
+    .wrap {
+      @include center-vertical;
+
+      padding: 1em;
+
+      h3 {
+        // animation: colorrotate 20s infinite linear;
+        margin: 0 0 .6em;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1em;
+        letter-spacing: 2px;
+        line-height: .9;
+        color: $s3-color;
+        transition: color 1s;
+      }
+
+      .text {
+        margin: 0;
+        color: #888;
+        font-size: .9em;
+        font-style: italic;
+        line-height: 1;
+
+        em {
+          font-weight: 400;
+          font-size: 1.1em;
+          letter-spacing: -1px;
+        }
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(150%);
+      transition: all .3s ease;
+
+      .wrap-ol {
+        @include center-vertical;
+      }
+
+      .logo {
+        background: image("rm/logo.png") center no-repeat;
+        background-size: 100%;
+        height: 120px;
+        width: 120px;
+        margin: 0 auto 8px;
+      }
+
+      button {
+        position: relative;
+        top: 65%;
+        // width: 150px;
+        background: $rm-color;
+      }
+
+      @include media($mobile) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .overlay {
+        transform: translateY(0);
+      }
+    }
+
+    &:active {
+      // .overlay button {
+      //   box-shadow: none;
+      //   margin-top: 3px;
+      //   padding: 4px 15px 4px;
+      //   box-shadow: inset 0 -1px 0 rgba(#000, .2);
+      // }
+    }
+  }
+
+  @each $init in $inits {
+    $clr: nth($colors, index($inits, $init));
+
+    &.bg-#{$init} {
+
+      @if saturation($clr) > 50 {
+        background-color: desaturate($clr, 20);
+      } @else {
+        background-color: saturate($clr, 10);
+      }
+
+      .init .wrap {
+        h3 {
+          color: desaturate($clr, 10);
+        }
+      }
+    }
+
+    .m-#{$init} .overlay {
+      background: rgba(saturate(tint($clr, 15), 15), .9);
+
+      .logo {
+        background-image: image("logo_#{$init}.png");
+      }
+
+      button {
+        background: $clr;
+      }
+    }
   }
 }
 

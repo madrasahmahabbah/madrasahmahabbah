@@ -96,15 +96,24 @@
 
     $.fn.transformPage = function(settings, pos, index, next_el) {
       if (typeof settings.beforeMove == 'function') settings.beforeMove(index, next_el);
+      // $(this).transition({
+      //   y: pos + "%",
+      //   duration: settings.animationTime,
+      //   easing: settings.easing,
+      //   complete: function() {
+      //     if (typeof settings.afterMove == 'function') settings.afterMove(index, next_el);
+      //   }
+      // });
+
       $(this).css({
+        "transform": "translate3d(0, " + pos + "%, 0)",
+        "transition": "transform " + settings.animationTime + "ms " + settings.easing,
         "-webkit-transform": "translate3d(0, " + pos + "%, 0)",
         "-webkit-transition": "-webkit-transform " + settings.animationTime + "ms " + settings.easing,
         "-moz-transform": "translate3d(0, " + pos + "%, 0)",
         "-moz-transition": "-moz-transform " + settings.animationTime + "ms " + settings.easing,
         "-ms-transform": "translate3d(0, " + pos + "%, 0)",
-        "-ms-transition": "-ms-transform " + settings.animationTime + "ms " + settings.easing,
-        "transform": "translate3d(0, " + pos + "%, 0)",
-        "transition": "transform " + settings.animationTime + "ms " + settings.easing
+        "-ms-transition": "-ms-transform " + settings.animationTime + "ms " + settings.easing
       });
       $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
         if (typeof settings.afterMove == 'function') settings.afterMove(index, next_el);
@@ -134,7 +143,12 @@
         $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
       }
 
-      $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+      // $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+      // CHANGE TO:
+      $("body").removeClass (function (index, css) {
+        return (css.match(/\bviewing-page-\d+/g) || []).join(' ');
+      });
+
       $("body").addClass("viewing-page-"+next.data("index"))
 
       if (history.replaceState && settings.updateURL == true) {
@@ -167,7 +181,12 @@
         $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
         $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
       }
-      $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+      // $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+      // CHANGE TO:
+      $("body").removeClass (function (index, css) {
+        return (css.match(/\bviewing-page-\d+/g) || []).join(' ');
+      });
+
       $("body").addClass("viewing-page-"+next.data("index"))
 
       if (history.replaceState && settings.updateURL == true) {
@@ -324,10 +343,12 @@
 
         if (!$("body").hasClass("disabled-onepage-scroll")) {
           switch(e.which) {
+            case 33: // ADDED: pageup
             case 38:
               if (tag != 'input' && tag != 'textarea') el.moveUp()
             break;
             case 32: // ADDED: spacebar
+            case 34: // ADDED: pagedown
             case 40:
               if (tag != 'input' && tag != 'textarea') el.moveDown()
             break;

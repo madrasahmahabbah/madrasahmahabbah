@@ -1,0 +1,236 @@
+//
+// MABKHOOR MUSIC
+//
+
+@charset "utf-8";
+
+@import
+  "inc/bourbon/bourbon",
+  "inc/neat-settings",
+  "inc/neat/neat",
+  "inc/fonts",
+  "inc/colors";
+
+// initiative specific
+$init-color: $mm-color; // initiative color
+$main-color: saturate(lighten($init-color, 30%), 60%);
+$text-color: $init-color;
+$bgcolor: saturate(lighten($init-color, 20%), 10%);
+
+@import
+  "inc/base",
+  "inc/topnav",
+  "inc/button",
+  "inc/footer",
+  "inc/links";
+
+body {
+  background: #fff url(../images/mm/hero.jpg) center top no-repeat fixed;
+  background-size: cover;
+
+  @include media($mobile) {
+    background-position: -400px center;
+  }
+}
+
+// Top Navigation Style
+.m-toplink {
+  a {
+    color: #fff;
+  }
+  a:hover {
+    color: $main-color;
+  }
+}
+
+.m-header {
+  // background: $init-color url(../images/mm/headerbg.jpg) center bottom no-repeat;
+  margin: 0 auto;
+  padding: 3em 0 2em;
+  text-align: center;
+
+  h1 {
+    background: transparent url(../images/mm/arabdots.svg) center top no-repeat;
+    margin: 0;
+    padding-top: 0.6em;
+    margin-top: 0.2em;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: $avant-font;
+    line-height: 0.8em;
+    color: $main-color;
+    letter-spacing: -5px;
+    text-shadow: 0 0 15px rgba(#000, 0.2);
+
+    span {
+      display: inline-block;
+      color: #fff;
+    }
+  }
+
+  span.sub {
+    display: block;
+    font-size: 0.45em;
+    font-weight: 400;
+    font-family: $texgyre-font;
+    letter-spacing: -1px;
+    line-height: 1em;
+    width: auto;
+    color: #fff;
+    // padding: 0.3em 1em;
+    margin: 0 0.5em;
+    text-shadow: 0 0 4px rgba(#000, 0.5);
+
+    > em {
+      color: lighten($main-color, 5%);
+      font-style: normal;
+    }
+  }
+
+  nav {
+    padding-top: 1em;
+  }
+
+  @include media($mobile) {
+    padding: 2em 0;
+    h1 {
+      font-size: 2em;
+    }
+  }
+}
+
+.m-hero {
+  // background: rgba($bgcolor, 0.8);
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+
+  .hero {
+    @include outer-container;
+
+    h4 {
+      margin: 0 0 1em;
+      font-family: $hnul-font;
+      font-weight: 100;
+      font-size: 1.2em;
+
+      span {
+        display: inline-block;
+        line-height: 1em;
+        background: #fff;
+        color: $init-color;
+        border: 2px solid $init-color;
+        padding: 5px 10px;
+      }
+      span.alt {
+        background: $init-color;
+        color: #fff;
+        padding: 5px 12px;
+      }
+    }
+
+    .word {
+      padding: 2em 1.5em;
+      font-style: italic;
+      text-shadow: 0 0 6px rgba(#000, 0.3);
+      opacity: 0;
+    }
+    .logo {
+      padding: 1em 0;
+      opacity: 0;
+    }
+
+    .alpha, .beta, .gamma {
+      @include span-columns(4);
+      font-size: 0.9em;
+      line-height: 1em;
+      em {
+        // color: $init-color;
+        font-weight: 700;
+        letter-spacing: -1px;
+        font-size: 1.1em;
+      }
+    }
+    .alpha {
+      margin-top: 0;
+    }
+    .beta {
+      margin-top: 2em;
+    }
+    .gamma {
+      margin-top: 4em;
+    }
+
+    .logo {
+      height: 300px;
+      background: #fff url(../images/logo_mm.png) center no-repeat;
+      background-size: 80%;
+      animation: fadeInLeft 1s 0.5s forwards;
+    }
+    .beta .word {
+      background: desaturate(darken(adjust-hue($main-color, -10), 30%), 20%);
+      background: url(../images/mm/betabg.jpg) center center no-repeat;
+      background-size: cover;
+      font-size: 1.5em;
+      font-style: italic;
+      line-height: 1em;
+      animation: fadeInLeft 1s 1s forwards;
+      padding: 1em 1em 2em;
+      text-align: left;
+      em {
+        font-size: 1em;
+      }
+    }
+    .gamma .word {
+      background: rgba(desaturate(lighten(adjust-hue($init-color, 10), 10%), 20%), 0.9);
+      background: url(../images/mm/gammabg4.jpg) center center no-repeat;
+      background-size: cover;
+      animation: fadeInLeft 1s 1.5s forwards;
+      text-shadow: 0 0 3px rgba(#000, 0.8);
+      padding: 4em 1.5em 1.5em;
+      text-align: right;
+    }
+
+    @include media($mobile) {
+      .logo, .word {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .alpha, .beta, .gamma {
+        @include span-columns(4);
+        font-size: 0.7em;
+        margin: 0;
+      }
+    }
+
+    @include media($tablet) {
+      .logo, .word {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .alpha, .beta, .gamma {
+        @include span-columns(8);
+        margin: 0;
+      }
+    }
+  }
+}
+
+.m-aside {
+  z-index: 10;
+  background: transparent;
+
+  p em {
+    color: lighten(saturate($text-color, 10%), 15%);
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.m-links {
+  // background: rgba($bgcolor, 0.75);
+}
+
+.m-footer .footer .alpha {
+  background-image: url(../images/mm/silh.svg);
+}

@@ -1,0 +1,79 @@
+*, *:after, *:before { @include box-sizing(border-box); }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: $bgcolor url(../images/naal-bg.jpg) center center no-repeat fixed;
+  color: $text-color;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.25;
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+
+  @include media($mobile) {
+    background-size: 150% auto;
+  }
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.row {
+  @include outer-container;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, button {
+  outline: none;
+}
+
+a {
+  color: $init-color;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover, a:focus {
+  color: $init-color;
+}
+
+// helpers
+.hidden {
+  display: none;
+}
+
+// sections
+section.row {
+  position: relative;
+  padding: 3em 0.5em;
+  text-align: center;
+
+  @include media($mobile) {
+    padding: 1.5em 0.5em;
+    font-size: 0.8em;
+  }
+}
+
+section.row p {
+  margin: 0 auto;
+  padding: 0.5em 0;
+
+  @include media($mobile) {
+    padding: 0.5em 0 1em;
+  }
+}
+
+// some animation
+.m-header h1 {
+  animation: fadeInDown 1s;
+}

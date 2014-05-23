@@ -1,0 +1,899 @@
+//
+// MAIN SITE
+//
+
+@charset "utf-8";
+
+@import
+  "scut",
+  "color-schemer",
+  "ceaser-easing",
+  "inc/bourbon/bourbon",
+  "inc/neat-settings",
+  "inc/neat/neat",
+  "inc/color-me-sass",
+  "inc/fonts",
+  "inc/colors";
+
+$main-color: #85b91e;
+$alt-color: #ad3629;
+$init-color: $main-color;
+$text-color: #868375;
+$bgcolor: #e2decc;
+
+@import
+  "inc/base",
+  "inc/topnav",
+  "inc/footer",
+  "inc/overlay-inits",
+  "inc/overlay-about",
+  "inc/overlay-modal";
+
+// =============================================================================
+// MIXINS & FUNCTIONS
+
+@mixin center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin no-center-vertical {
+  position: static;
+  top: 0;
+  transform: translateY(0);
+}
+
+@function image($image) {
+  @return url(../images/#{$image});
+}
+
+
+a {
+  color: $main-color;
+}
+
+a:hover, a:focus {
+  color: darken($main-color, 10%);
+}
+
+.m-header {
+  background: #fff;
+  margin: 0 auto;
+  padding: 4em 0;
+  text-align: center;
+
+  h1 {
+    background: transparent url(../images/arabdots-green.svg) center top no-repeat;
+    margin: 0;
+    padding-top: 0.8em;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: $avant-font;
+    line-height: 0.8em;
+    color: $main-color;
+    letter-spacing: -5px;
+    -webkit-text-stroke: 0.8px rgba(#000, 0.001);
+
+    a {
+      display: block;
+      @include transition(color 0.2s);
+    }
+
+    span {
+      display: inline-block;
+      color: lighten($main-color, 10%);
+    }
+
+    span.sub {
+      display: block;
+      padding: 0;
+      font-size: 0.65em;
+      font-weight: 400;
+      font-family: $texgyre-font;
+      letter-spacing: 0;
+      width: auto;
+      color: saturate(lighten($text-color, 5%), 10%);
+
+      > span {
+        color: saturate(lighten($text-color, 20%), 20%);
+      }
+    }
+  }
+
+  @include media($mobile) {
+    padding: 2em 0;
+
+    h1 {
+      font-size: 2em;
+      span.sub {
+        font-size: 0.5em;
+        letter-spacing: 1px;
+        word-spacing: normal;
+      }
+    }
+  }
+}
+
+// sections
+section h2 {
+  display: inline-block;
+  width: auto;
+  margin: 1em auto;
+  padding: 10px 30px;
+  font-family: $texgyre-font;
+  font-size: 1.2em;
+  letter-spacing: 8px;
+  font-weight: 300;
+  line-height: 0.8em;
+  border: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba($text-color, 0.5);
+  span {
+    font-family: $texgyrebold-font;
+  }
+}
+
+section button, section a.button {
+  border: none;
+  display: inline-block;
+  background: $text-color;
+  color: #fff;
+  // color: rgba(#000,0.4);
+  font-weight: 400;
+  font-family: $texgyre-font;
+  padding: 15px 30px;
+  margin: 5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  letter-spacing: 3px;
+  opacity: 1;
+  @include transition(opacity 0.5s);
+
+  span {
+    font-family: $texgyrebold-font;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+
+  @include media($mobile) {
+    padding: 5px 8px;
+  }
+
+  &.trigger-about {
+    // background: lighten($alt-color, 10%);
+  }
+
+  &.trigger-init {
+    // display: none;
+    background: $main-color;
+  }
+
+  &.facebook {
+    background: #3b5999;
+    color: rgba(#fff, 0.5);
+  }
+}
+
+.m-welcome {
+  z-index: 10;
+  background: #fff url(../images/herobg.jpg) fixed;
+  font-size: 1.2em;
+  line-height: 1.1em;
+
+  p {
+    padding-top: 0;
+  }
+
+  p strong.mm {
+    background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
+    background-size: auto 43%;
+
+    font-family: $avant-font;
+    font-size: 1.1em;
+    letter-spacing: -3px;
+    padding: 0.7em 0.1em 0 0;
+    line-height: 0.85em;
+
+    span {
+      color: lighten(saturate($text-color, 10%), 15%);
+    }
+  }
+
+  p em {
+    // color: lighten(saturate($text-color, 10%), 15%);
+    color: darken($text-color, 20%);
+    // font-weight: 600;
+    font-style: normal;
+    // letter-spacing: -1px;
+  }
+
+  .x404 & {
+    background: #fff;
+    h2 {
+      margin-bottom: 2em;
+    }
+  }
+
+  .error {
+    color: lighten($alt-color, 10%);
+  }
+}
+
+.m-pillars {
+  background: #fff;
+
+  .title {
+    margin-bottom: 2em;
+  }
+
+  h3 {
+    display: inline-block;
+    margin: 0 0 1.5em;
+    padding: 12px 30px 14px;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .9em;
+    line-height: .8;
+    box-shadow: inset 0 -4px 0 rgba(#000, 0.15);
+  }
+
+  .text {
+    padding: 0 .8em;
+    font-size: .9em;
+    line-height: 1;
+
+    p {
+      margin: 0 0 .8em;
+      font-style: italic;
+    }
+
+    p em {
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+  }
+
+  .alpha {
+    @include span-columns(4);
+
+    h3 {
+      background: #1ab2ff;
+    }
+  }
+
+  .beta {
+    @include span-columns(4);
+
+    h3 {
+      background: #fc2f75;
+    }
+  }
+
+  .gamma {
+    @include span-columns(4);
+
+    h3 {
+      background: #1fd91a;
+    }
+  }
+
+  @include media($tablet) {
+    font-size: 1em;
+
+    .alpha, .beta, .gamma {
+      @include span-columns(8);
+      @include shift(0);
+
+      .wrap {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.m-separator {
+  background: #fff;
+  .row {
+    padding: 2em 0;
+  }
+}
+
+
+$colors: $rm-color $mm-color $mf-color $mfb-color $mtc-color $mtt-color $mb-color $mt-color;
+$inits: rm mm mf mfb mtc mtt mb mt;
+
+$len: length($colors);
+$keyd: (100 / $len);
+
+@keyframes bgrotate {
+  $cur: 0%;
+  @each $color in $colors {
+    #{$cur} { background-color: $color; }
+    $cur: $cur + $keyd;
+  }
+  100% { background-color: nth($colors, 1); }
+}
+
+@keyframes colorrotate {
+  $cur: 0%;
+  @each $color in $colors {
+    #{$cur} { color: $color; }
+    $cur: $cur + $keyd;
+  }
+  100% { color: nth($colors, 1); }
+}
+
+$s3-color: tint(desaturate($main-color, 40), 20);
+// $s3-color: $blueHoliday;
+
+.m-initiatives {
+  background: $s3-color image("starbg.png") fixed;
+  // animation: bgrotate 20s infinite linear;
+  padding: 4em 0;
+  color: #fff;
+  text-align: center;
+
+  transition: background-color 2s ease;
+
+  .title h2 {
+    border: none;
+  }
+
+  .init-wrapper {
+    // @include center-vertical;
+
+    // .disabled-onepage-scroll & {
+    //   @include no-center-vertical;
+    // }
+  }
+
+  .title {
+    text-shadow: 0 3px 0 rgba(#000, .1);
+  }
+
+  .row {
+    @include outer-container;
+    font-size: 0.8em;
+    line-height: 1.1;
+  }
+
+  .col {
+    @include span-columns(3);
+    @include pad(10px);
+
+    @include media($tablet) {
+      @include span-columns(4);
+      @include pad(7px);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+      @include pad(5px);
+    }
+  }
+
+  .init {
+    a {
+      display: block;
+      position: relative;
+      height: 230px;
+      background: #fff;
+      box-shadow: 0 4px 0 rgba(#000, .15);
+      overflow: hidden;
+
+      @include media($short) {
+        height: 210px;
+      }
+      @include media($tablet) {
+        height: 200px;
+      }
+      @include media($mobile) {
+        height: 160px;
+      }
+
+    }
+
+    .wrap {
+      @include center-vertical;
+
+      padding: 1em;
+
+      h3 {
+        // animation: colorrotate 20s infinite linear;
+        margin: 0 0 .6em;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1em;
+        letter-spacing: 2px;
+        line-height: .9;
+        color: $s3-color;
+        transition: color 1s;
+      }
+
+      .text {
+        margin: 0;
+        color: #888;
+        font-size: .9em;
+        font-style: italic;
+        line-height: 1;
+
+        em {
+          font-weight: 400;
+          font-size: 1.1em;
+          letter-spacing: -1px;
+        }
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(150%);
+      transition: all .3s ease;
+
+      .wrap-ol {
+        @include center-vertical;
+      }
+
+      .logo {
+        background: image("rm/logo.png") center no-repeat;
+        background-size: 100%;
+        height: 120px;
+        width: 120px;
+        margin: 0 auto 8px;
+      }
+
+      button {
+        position: relative;
+        top: 65%;
+        // width: 150px;
+        background: $rm-color;
+      }
+
+      @include media($mobile) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .overlay {
+        transform: translateY(0);
+      }
+    }
+
+    &:active {
+      // .overlay button {
+      //   box-shadow: none;
+      //   margin-top: 3px;
+      //   padding: 4px 15px 4px;
+      //   box-shadow: inset 0 -1px 0 rgba(#000, .2);
+      // }
+    }
+  }
+
+  @each $init in $inits {
+    $clr: nth($colors, index($inits, $init));
+
+    &.bg-#{$init} {
+
+      @if saturation($clr) > 50 {
+        background-color: desaturate($clr, 20);
+      } @else {
+        background-color: saturate($clr, 10);
+      }
+
+      .init .wrap {
+        h3 {
+          color: desaturate($clr, 10);
+        }
+      }
+    }
+
+    .m-#{$init} .overlay {
+      background: rgba(saturate(tint($clr, 15), 15), .9);
+
+      .logo {
+        background-image: image("logo_#{$init}.png");
+      }
+
+      button {
+        background: $clr;
+      }
+    }
+  }
+}
+
+// .m-init {
+//   background: #fff;
+//   padding: 0 0 4em;
+//   color: #fff;
+//   // text-shadow: 1px 2px 1px rgba(#000, 0.3);
+//   text-align: right;
+//   position: relative;
+
+//   .row {
+//     padding: 0;
+//   }
+
+//   .init {
+//     transform: translateY(-3000px);
+//     padding: 2px;
+//   }
+
+//   a {
+//     display: block;
+//     height: 200px;
+//     padding: 25px;
+//     color: #fff;
+//     overflow: hidden;
+//     transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+//     background: #fff url(../images/bg-rm-500.jpg) center no-repeat;
+//     // background-size: 100% auto;
+
+//     h3 {
+//       display: block;
+//       margin: 0 0 5px;
+//       padding: 8px;
+//       background: rgba(#000, 0.6);
+//       line-height: 0.9em;
+//       letter-spacing: -1px;
+//       font-weight: 700;
+//       font-size: 1.3em;
+
+//       position: relative;
+//       transition: all 0.2s;
+
+//       em {
+//         font-style: normal;
+//       }
+//     }
+
+//     span.text {
+//       display: block;
+//       padding: 8px;
+//       background: rgba(#000, 0.6);
+//       font-size: 0.9em;
+//       font-style: italic;
+//       line-height: 0.9em;
+
+//       transform: translateX(120%);
+//       transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+//       em {
+//         letter-spacing: -1px;
+//         font-weight: 700;
+//       }
+//     }
+
+//     span.logo {
+//       display: block;
+//       width: 100px;
+//       height: 100px;
+//       background: #fff url(../images/rm/logo.png) center no-repeat;
+//       background-size: 80%;
+//       margin-top: 25px;
+//       float: right;
+
+//       transform: translateX(150px);
+//       transition: all 0.5s 0.15s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+//     }
+
+//     &:hover {
+//       height: 350px;
+//       h3 {
+//         top: 0;
+//       }
+//       span.text {
+//         transform: translateX(0);
+//       }
+//       span.logo {
+//         transform: translateX(25px);
+//       }
+//     }
+//   }
+
+//   .alpha, .beta, .gamma {
+//     @include span-columns(4);
+//     font-size: 0.8em;
+//   }
+
+//   .alpha {
+//     margin-top: 0;
+//   }
+//   .beta {
+//     margin-top: 3em;
+//   }
+//   .gamma {
+//     margin-top: 8em;
+//   }
+
+//   .m-rm {
+//     animation: bounceInDown 1s 0.5s forwards;
+//     a {
+//       background-image: url(../images/bg-rm-500.jpg);
+//       height: 350px;
+//       span.logo {
+//         background-image: url(../images/logo_rm.png);
+//       }
+//     }
+//   }
+//   .m-mm {
+//     animation: bounceInDown 1s 0.7s forwards;
+//     a {
+//       background-image: url(../images/bg-mm-500.jpg);
+//       height: 350px;
+//       span.logo {
+//         background-image: url(../images/logo_mm.png);
+//       }
+//     }
+//   }
+//   .m-mf {
+//     animation: bounceInDown 1s 0.9s forwards;
+//     a {
+//       background-image: url(../images/bg-mf-500.jpg);
+//       height: 350px;
+//       span.logo {
+//         background-image: url(../images/logo_mf.png);
+//       }
+//     }
+//   }
+//   .m-mfb {
+//     animation: bounceInDown 1s 1s forwards;
+//     a {
+//       background-image: url(../images/bg-mfb-500.jpg);
+//       span.logo {
+//         background-image: url(../images/logo_mfb.png);
+//       }
+//     }
+//   }
+//   .m-mtc {
+//     animation: bounceInDown 1s 1.2s forwards;
+//     a {
+//       background-image: url(../images/bg-mtc-500.jpg);
+//       span.logo {
+//         background-image: url(../images/logo_mtc.png);
+//       }
+//     }
+//   }
+//   .m-mtt {
+//     animation: bounceInDown 1s 1.4s forwards;
+//     a {
+//       background-image: url(../images/bg-mtt-500.jpg);
+//       span.logo {
+//         background-image: url(../images/logo_mtt.png);
+//       }
+//     }
+//   }
+//   .m-mb {
+//     animation: bounceInDown 1s 1.6s forwards;
+//     a {
+//       background-image: url(../images/bg-mb-500.jpg);
+//       span.logo {
+//         background-image: url(../images/logo_mb.png);
+//       }
+//     }
+//   }
+//   .m-mt {
+//     animation: bounceInDown 1s 1.8s forwards;
+//     a {
+//       background-image: url(../images/bg-mt-500.jpg);
+//       span.logo {
+//         background-image: url(../images/logo_mt.png);
+//       }
+//     }
+//   }
+
+//   &.m-init-desktop {
+//     display: block;
+//   }
+//   &.m-init-mobile {
+//     display: none;
+//   }
+
+//   @include media($tablet) {
+//     &.m-init-desktop {
+//       display: none;
+//     }
+//     &.m-init-mobile {
+//       display: block;
+//     }
+//     .init {
+//       text-align: center;
+//       animation: none;
+//       transform: translateY(0);
+//       padding: 0;
+//       a {
+//         background-size: cover;
+//         height: auto;
+//         padding: 5px;
+//         h3 {
+//           margin-bottom: 2px;
+//           font-size: 1.2em;
+//         }
+//         span {
+//           transform: translateX(0);
+//         }
+//       }
+//     }
+//   }
+//   @include media($mobile) {
+//     font-size: 0.8em;
+//   }
+// }
+
+.m-quran {
+  z-index: 10;
+  background: rgba($text-color, 0.7);
+  background: url(../images/quranbg.jpg) center center no-repeat;
+  background-size: cover;
+
+  .quran {
+    @include outer-container;
+    .alpha {
+      @include span-columns(7);
+      @include shift(5);
+
+      @include media($mobile) {
+        @include span-columns(4);
+        @include shift(0);
+      }
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(0);
+      }
+    }
+  }
+
+  blockquote {
+    display: none;
+    margin: 4em 1em;
+    font-style: italic;
+    background: transparent url(../images/bismillah-white.png) center top no-repeat;
+    padding-top: 1.5em;
+    color: #fff;
+    line-height: 0.98em;
+    text-align: center;
+
+    p {
+      padding: 0.6em 0;
+      b {
+        letter-spacing: -1px;
+      }
+    }
+
+    .cite {
+      font-size: 0.8em;
+      font-weight: 700;
+      padding-bottom: 0;
+      color: saturate(lighten($text-color, 20%), 10%);
+      letter-spacing: -1px;
+    }
+
+    @include media($mobile) {
+      background-size: 90% auto;
+      font-size: 0.7em;
+      padding: 1.5em 1em 0;
+      margin: 2em 0.5em;
+    }
+  }
+}
+
+.m-related {
+  z-index: 10;
+  // padding-top: 2em;
+  background: #fff;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  nav {
+    /* Effect: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+    a {
+      position: relative;
+      display: inline-block;
+      margin: 0.5em 0.3em;
+      outline: none;
+      color: #fff;
+      text-decoration: none;
+      // text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      font-size: 1em;
+
+      line-height: 1.3em;
+      @include perspective(1000px);
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+    }
+
+    a img {
+      display: block;
+      margin: 0 auto 0.5em;
+    }
+
+    a span {
+      color: $text-color;
+      font-size: 0.7em;
+      position: relative;
+      display: block;
+      padding: 0 1em;
+      background: saturate(lighten($text-color, 40%), 25%);
+      background: #fff;
+      @include transition(all 0.3s);
+      @include transform-origin(50% 0);
+      @include transform-style(preserve-3d);
+    }
+
+    .csstransforms3d & a span::before {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $text-color;
+      color: #fff;
+      font-size: 0.7em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 1;
+      content: attr(data-hover);
+      @include transition(background 0.3s);
+      @include transform(rotateX(-90deg));
+      @include transform-origin(50% 0);
+    }
+
+    a:hover span,
+    a:focus span {
+      @include transform(rotateX(92deg) translateY(-33px));
+    }
+
+    .csstransforms3d & a:hover span::before,
+    .csstransforms3d & a:focus span::before {
+      // background: saturate(lighten($text-color, 40%), 25%);
+    }
+
+    @include media($mobile) {
+      a {
+        display: block;
+        width: 100%;
+        margin: 0.5em 0;
+      }
+      a span {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.m-footer .footer {
+  .alpha {
+    // background: #fff;
+    .text, .text a {
+      color: saturate(lighten($text-color, 10%), 5%);
+    }
+  }
+}
+
+.md-modal .lailahaillallah {
+  min-height: 126px;
+  margin: 10px 0 0;
+  background: transparent url(../images/lailahaillallah.png) center center no-repeat;
+
+  @include media($mobile) {
+    background-size: 100%;
+  }
+}

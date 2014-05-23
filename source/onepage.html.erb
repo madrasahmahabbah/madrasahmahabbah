@@ -2,7 +2,10 @@
 layout: false
 ---
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -16,69 +19,77 @@ layout: false
 
     <link rel="shortcut icon" href="/images/favicon.png">
 
-    <%= stylesheet_link_tag "normalize.min" %>
-    <%= stylesheet_link_tag "animate.min" %>
-    <%= stylesheet_link_tag "onepage-scroll" %>
-    <%= stylesheet_link_tag "onepage" %>
-    <%= javascript_include_tag "modernizr" %>
+    <link href="/assets/css/normalize.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/onepage-scroll.css" rel="stylesheet">
+    <link href="/assets/css/onepage.css" rel="stylesheet">
+
+    <script src="/assets/js/modernizr.js"></script>
   </head>
 
   <body class="home <%= page_classes %>">
 
-<%= partial 'topnav', :locals => { :home => true }%>
+<%= partial 'topnav', :locals => { :home => true } %>
 
-    <div class="main">
+    <div class="container">
 
       <!-- SECTION: HEADER -->
       <section class="m-header">
+
         <div class="header-wrapper">
 
-          <div class="title">
-            <h1>
-              Madrasah<span>Mahabbah</span>
-              <span class="sub">Learn. <span>Love.</span> Live.</span>
-            </h1>
-          </div>
+          <div class="inner">
 
-          <div class="welcome">
-            <div class="alpha">
-              <p>
-                <strong class="mm">Madrasah<span>Mahabbah</span></strong> is many things. But it is nothing if it is not a <em>family</em>. Because the smallest and biggest part of our ummah is <em>family</em>. It is when we are a <em>family</em> that we truly <em>learn,</em> <em>love</em> and <em>live.</em>
-              </p>
+            <div class="title">
+              <h1>
+                Madrasah<span>Mahabbah</span>
+                <span class="sub">Learn. <span>Love.</span> Live.</span>
+              </h1>
+            </div>
+
+            <div class="welcome">
+              <div class="alpha">
+                <p>
+                  <strong class="mm">Madrasah<span>Mahabbah</span></strong> is many things. But it is nothing if it is not a <em>family</em>. Because the smallest and biggest part of our ummah is <em>family</em>. It is when we are a <em>family</em> that we truly <em>learn,</em> <em>love</em> and <em>live.</em>
+                </p>
+              </div>
             </div>
           </div>
 
         </div>
+
       </section>
 
-      <!-- SECTION: INTRO -->
-      <section class="m-intro">
-        <div class="intro-wrapper">
+      <!-- SECTION: PILLARS -->
+      <section class="m-pillars">
 
-          <div class="title">
-            <h2>Our <span>Pillars</span></h2>
-          </div>
+        <div class="pillars-wrapper">
 
-          <div class="row">
-            <div class="alpha">
-              <div class="wrap">
-                <div class="trans">
+          <div class="inner">
+
+            <div class="title">
+              <h2>Our <span>Pillars</span></h2>
+            </div>
+
+            <div class="row">
+              <div class="alpha">
+                <div class="wrap">
                   <h3>
                     <i class="fa fa-book"></i>
-                    Learn</h3>
+                    Learn
+                  </h3>
                   <div class="text">
                     <p>We met at a <em>Madrasah</em> of knowledge.</p>
                     <p>A garden from the gardens of paradise that our Prophet Muhammad (SAW) <em>reminded us to frequent.</em></p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="beta">
-              <div class="wrap">
-                <div class="trans">
+              <div class="beta">
+                <div class="wrap">
                   <h3>
                     <i class="fa fa-heart"></i>
-                    Love</h3>
+                    Love
+                  </h3>
                   <div class="text">
                     <p>We experienced something really special.</p>
                     <p>We experienced <em>Mahabbah</em> &mdash; That can be perfectly summed up in the <em>greatest testimony of love.</em></p>
@@ -86,20 +97,235 @@ layout: false
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="gamma">
-              <div class="wrap">
-                <div class="trans">
+              <div class="gamma">
+                <div class="wrap">
                   <h3>
                     <i class="fa fa-umbrella"></i>
-                    Live</h3>
+                    Live
+                  </h3>
                   <div class="text">
                     <p>And now we aspire to become <em>The Muhibbains</em>, an aspiration that requires continually <em>learning to love, loving to live</em> and <em>living to learn and love</em> by the best example of Al Mustafa (SAW).</p>
-                    <!-- <p>Until we return to <em>Dar Al Akhirah</em>, to and with the rahmat of Allah SWT and the syafaat of His Beloved, Saiyidina Rasulullah (SAW), InsyaAllah.</p> -->
+                    <p>Until we return to <em>Dar Al Akhirah</em>, to and with the rahmat of Allah SWT and the syafaat of His Beloved, Saiyidina Rasulullah (SAW), InsyaAllah.</p>
                   </div>
                 </div>
               </div>
             </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION: INITIATIVES -->
+      <section class="m-init">
+
+        <div class="init-wrapper">
+
+          <div class="inner">
+
+            <div class="title">
+              <h2>Our <span>Initiatives</span></h2>
+            </div>
+
+            <div class="row">
+              <div class="col">
+
+                <!-- Raudhatul Muhibbain -->
+                <div class="init m-rm" data-init="rm">
+                  <a href="<%= data.site.init_links.rm %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.rm %>
+                      </h3>
+                      <p class="text">
+                        A garden from <em>the gardens of paradise, InsyaAllah.</em>
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+              <div class="col">
+
+                <!-- Mabkhoor Music -->
+                <div class="init m-mm" data-init="mm">
+                  <a href="<%= data.site.init_links.mm %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.mm %>
+                      </h3>
+                      <p class="text">
+                        <em>Message</em> through <em>melody and music.</em>
+                        <!-- Erwan composes songs, Zafri produces things, Adib sings a beautiful voice. We call ourselves The Muhibbains. Along comes Syed &amp; Luqman, as does Shahrul. Syeikh Radzi plucks his oud from Yemen with Deen lyrical from Singapore. Wan makes the music and there goes our family&mdash;Mabkhoor Music. -->
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+              <div class="col">
+
+                <!-- Mahabbah Fashion -->
+                <div class="init m-mf" data-init="mf">
+                  <a href="<%= data.site.init_links.mf %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.mf %>
+                      </h3>
+                      <p class="text">
+                        <em>Akhlaq</em> of Rasulullah <em>is the best attire</em> one can wear.
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+
+
+              <div class="col">
+
+                <!-- Mahabbah Food & Beverages -->
+                <div class="init m-mfb" data-init="mfb">
+                  <a href="<%= data.site.init_links.mfb %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.mfb %>
+                      </h3>
+                      <p class="text">
+                        For the <em>body, mind</em> and <em>soul.</em>
+                        <!-- [Allah said], &ldquo;O messengers, eat from the <em>good foods and work righteousness.&rdquo;</em> -->
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- second row -->
+            <div class="row">
+              <div class="col">
+
+                <!-- Mahabbah Training -->
+                <div class="init m-mtc" data-init="mtc">
+                  <a href="<%= data.site.init_links.mtc %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.mtc %>
+                      </h3>
+                      <p class="text">
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+              <div class="col">
+
+                <!-- Mahabbah Travels -->
+                <div class="init m-mtt" data-init="mtt">
+                  <a href="<%= data.site.init_links.mtt %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.mtt %>
+                      </h3>
+                      <p class="text">
+                        Rasulullah (SAW) said: "When three set out on a journey, they should choose <em>one of them</em> to be their leader"
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+              <div class="col">
+
+                <!-- Mahabbah Books -->
+                <div class="init m-mb" data-init="mb">
+                  <a href="<%= data.site.init_links.mb %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.mb %>
+                      </h3>
+                      <p class="text">
+                        The Prophet (SAW) said, “Seek knowledge <em>even in China.”</em>
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+
+
+              <div class="col">
+
+                <!-- Mahabbah Technologies -->
+                <div class="init m-mt" data-init="mt">
+                  <a href="<%= data.site.init_links.mt %>">
+                    <div class="wrap">
+                      <h3>
+                        <%= data.site.init_titles.mt %>
+                      </h3>
+                      <p class="text">
+                        Using Technology as <em>tool for taqwa.</em>
+                      </p>
+                    </div>
+                    <div class="overlay">
+                      <div class="wrap-ol">
+                        <div class="logo"></div>
+                        <button>Visit site</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
 
         </div>
@@ -107,73 +333,119 @@ layout: false
 
       <!-- SECTION: HADITH -->
       <section class="m-hadith">
+
         <div class="hadith-wrapper">
-          <blockquote class="hadith">
+
+          <div class="inner">
+
+            <blockquote class="hadith">
 <%
 (data.quotes.hadiths + data.quotes.ayats).each do |line|
   line = line.split('|')
   hadith = line[0]
   cite = line[1]
 %>
-            <div class="random">
-              <%= hadith %>
-              <span class="cite"><%= cite %></span>
-            </div>
-<%
-end
-%>
-          </blockquote>
+              <div class="random">
+                <%= hadith %>
+                <span class="cite"><%= cite %></span>
+              </div>
+<% end %>
+            </blockquote>
+          </div>
         </div>
       </section>
 
-      <!-- SECTION: INITIATIVES -->
-      <section class="m-init">
-        <div class="init-wrapper">
-          <div class="title">
-            <h2>Our <span>Initiatives</span></h2>
+      <!-- SECTION: RELATED -->
+      <section class="m-related">
+
+        <div class="related-wrapper">
+
+          <div class="inner">
+
+            <div class="title">
+              <h2>Our Gardens of <span>Paradise</span></h2>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="wrap">
+                  <h3>Majlis Ta'lim Darul Murtadza</h3>
+                  <div>Habib Ali Zaenal Abidin</div>
+                  <a class="btn" href="http://www.darulmurtadza.com/">Visit site</a>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="wrap">
+                  <h3>Majlis Ta'lim Darul Muhibbin</h3>
+                  <div>Ustaz Ahmad bin Shadan</div>
+                  <a class="btn" href="http://www.dmuhibbin.com/">Visit site</a>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="wrap">
+                  <h3>Madrasah At-Tazkiyah</h3>
+                  <div>Habib Najmuddin</div>
+                  <a class="btn" href="http://www.madrasahattazkiyah.com/">Visit site</a>
+                </div>
+              </div>
+            </div>
+
           </div>
+
         </div>
+
       </section>
 
       <!-- SECTION: MUHIBBAINS -->
       <section class="m-muhibbains">
+
         <div class="muhibbains-wrapper">
 
-          <div class="bio-wrapper">
+          <div class="inner">
+
             <div class="bio">
               <div class="col">
                 <div class="name">Erwan b. Taib</div>
                 <div class="phone">+6012&nbsp;9162597</div>
-                <div class="twitter"><a href="https://twitter.com/erwanmuhibbain">@erwanmuhibbain</a></div>
+                <div class="social">
+                  <a href="https://instagram.com/erwanmuhibbain">
+                    <i class="fa fa-instagram"></i>
+                    erwanmuhibbain</a>
+                </div>
               </div>
               <div class="col">
                 <div class="name">Zafri b. Nazaruddin</div>
                 <div class="phone">+6011&nbsp;37663796</div>
-                <div class="twitter"><a href="https://twitter.com/zafmuhibbain">@zafmuhibbain</a></div>
+                <div class="social">
+                  <a href="https://instagram.com/zafmuhibbain">
+                    <i class="fa fa-instagram"></i>
+                    zafmuhibbain</a>
+                </div>
               </div>
               <div class="col">
                 <div class="name">Abdul Mutalib b. Nahar</div>
                 <div class="phone">+6018&nbsp;7886697</div>
-                <div class="twitter"><a href="https://twitter.com/adeepnahar_">@adeepnahar_</a></div>
+                <div class="social">
+                  <a href="https://instagram.com/adeepnahar_">
+                    <i class="fa fa-instagram"></i>
+                    adeepnahar_</a>
+                </div>
               </div>
             </div>
+
           </div>
 
-<!--           <div class="copy-wrapper">
-            <div class="copy">
-              <a href="mailto:madrasahmahabbah@gmail.com">Write to us.</a>
-              &copy; Copyright 2014. Crafted by Mahabbah Technologies.
-            </div>
-          </div>
- -->
         </div>
       </section>
 
     </div>
 
-    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" %>
-    <%= javascript_include_tag "jquery.onepage-scroll" %>
-    <%= javascript_include_tag "onepage" %>
+    <script src="/bower/jquery/dist/jquery.min.js"></script>
+    <script src="/bower/jquery.transit/jquery.transit.js"></script>
+    <script src="/assets/js/jquery.onepage-scroll.js"></script>
+    <script src="/assets/js/onepage.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

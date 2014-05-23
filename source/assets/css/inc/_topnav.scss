@@ -1,0 +1,44 @@
+// Top Navigation Style
+.m-toplink {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  float: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.5em;
+  line-height: 2.2;
+  background: transparent;
+
+  body.home & .toplink-home {
+    display: none;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 0.7em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: lighten($text-color, 20%);
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  span.right {
+    float: right;
+  }
+
+  span.right a {
+    display: block;
+    float: left;
+  }
+
+  @include media($tablet) {
+    .toplink span {
+      display: none;
+    }
+  }
+}
