@@ -1,0 +1,860 @@
+@charset "utf-8";
+
+@import
+  "scut",
+  "color-schemer",
+  "ceaser-easing",
+  "inc/bourbon/bourbon",
+  "inc/neat-settings",
+  "inc/neat/neat",
+  "inc/color-me-sass",
+  "inc/fonts",
+  "inc/colors";
+
+$text-color: #555;
+
+// =============================================================================
+// MIXINS & FUNCTIONS
+
+@mixin center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin no-center-vertical {
+  position: static;
+  top: 0;
+  transform: translateY(0);
+}
+
+@function image($image) {
+  @return url(../images/#{$image});
+}
+
+// =============================================================================
+// BASE
+
+@include scut-reset-border-box;
+
+.clearfix {
+  @include scut-clearfix;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: #fff image("onepage-bg2.jpg") center left no-repeat;
+  background-size: cover;
+
+  color: $text-color;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.25;
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+
+  @include media($mobile) {
+    background-size: 150% auto;
+  }
+
+  @include media($short) {
+    // font-size: 22px;
+  }
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+section[class^="m-"] {
+  overflow: hidden;
+}
+
+.title {
+  @include outer-container;
+
+  h2 {
+    display: inline-block;
+    width: auto;
+    margin: 0.5em auto 1.5em;
+    // padding: 10px 30px;
+    font-size: 1.6em;
+    letter-spacing: 8px;
+    font-weight: 300;
+    line-height: .8em;
+    border: none;
+    // border-bottom: 2px solid #fff;
+
+    span {
+      font-weight: 700;
+    }
+
+    @include media($mobile) {
+      font-size: 1.3em;
+    }
+  }
+}
+
+button, a.btn {
+  $pad-y: 8px;
+  $pad-x: 20px;
+  $bevel: 3px;
+
+  border: none;
+  display: inline-block;
+  padding: #{$pad-y} #{$pad-x} #{$pad-y+$bevel};
+  background: #888;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: .6em;
+  line-height: 1;
+  box-shadow: inset 0 #{-$bevel} 0 rgba(#000, .2);
+
+  &:active, .m-init .init a:active .overlay & {
+    box-shadow: none;
+    transform: translateY(#{$bevel});
+    padding: #{$pad-y} #{$pad-x} #{$pad-y};
+    box-shadow: inset 0 -1px 0 rgba(#000, .2);
+  }
+}
+
+
+// =============================================================================
+// Top Navigation Style
+
+.m-toplink {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  float: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.5em;
+  line-height: 2.2;
+  background: transparent;
+  transition: all 1s;
+
+  .toplink-home {
+    transition: all .3s, visibility .5s;
+    visibility: visible;
+    opacity: 1;
+
+    .viewing-page-1 & {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 .8em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: rgba(#000, .7);
+    transition: all .3s;
+
+    &:hover {
+      // color: #000;
+      box-shadow: inset 0 2px 0 $text-color;
+    }
+  }
+
+  span.right {
+    float: right;
+  }
+
+  span.right a {
+    display: block;
+    float: left;
+  }
+
+  @include media($tablet) {
+    .toplink span {
+      display: none;
+    }
+  }
+}
+
+// =============================================================================
+// SECTION 1: HEADER
+
+.m-header {
+  text-align: center;
+  text-shadow: 0 0 4px rgba(#000, .2);
+
+  .header-wrapper {
+    @include center-vertical;
+
+    padding: 4em 0;
+
+    .disabled-onepage-scroll & {
+      @include no-center-vertical;
+    }
+  }
+
+
+  .title {
+    h1 {
+      width: 100%;
+      background: transparent image("arabdots-white.svg") center top no-repeat;
+      padding-top: .8em;
+      margin: 0 0 30px;
+      font-weight: 800;
+      font-size: 2.5em;
+      font-family: $avant-font;
+      line-height: .8;
+      color: #fff;
+      letter-spacing: -5px;
+      -webkit-text-stroke: .8px rgba(#000, .001);
+
+      a {
+        display: block;
+        @include transition(color .2s);
+      }
+
+      span {
+        display: inline-block;
+        color: #6bd7a9;
+      }
+
+      span.sub {
+        display: block;
+        padding: 0;
+        font-size: .6em;
+        font-weight: 400;
+        font-family: $texgyre-font;
+        letter-spacing: 0;
+        width: auto;
+        color: #fff;
+        margin-top: -.3em;
+
+        > span {
+          color: #b6eaca;
+        }
+      }
+    }
+
+    @include media($mobile) {
+      font-size: .8em;
+
+      span.sub {
+        font-size: .5em;
+        letter-spacing: 1px;
+        word-spacing: normal;
+      }
+    }
+  }
+
+  .welcome {
+    @include outer-container;
+
+    .alpha {
+      @include span-columns(10);
+      @include shift(1);
+      @include pad(0 1em);
+
+      color: #fff;
+      background: rgba(#000, .3);
+      line-height: 1;
+
+      p {
+        font-style: italic;
+
+        strong.mm {
+          font-family: $avant-font;
+          font-size: 1.1em;
+          letter-spacing: -2px;
+          line-height: .8;
+          color: #fff;
+          font-style: normal;
+
+          span {
+            display: inline-block;
+            color: #6bd7a9;
+          }
+        }
+
+        em {
+          font-weight: 700;
+          letter-spacing: -1px;
+        }
+      }
+
+      @include media($mobile) {
+        @include span-columns(4);
+        @include shift(0);
+      }
+    }
+  }
+}
+
+.ops-section.active .header-wrapper .inner {
+  animation: fadeInDown 1s ease forwards;
+}
+
+// =============================================================================
+// SECTION 2: PILLARS
+
+.m-pillars {
+  background: #fff image("onepage-bg7.jpg") center no-repeat;
+  background-size: cover;
+
+  color: $text-color;
+  text-align: center;
+
+  .pillars-wrapper {
+    @include center-vertical;
+
+    background: rgba(#fff, .5);
+    padding: 2em 0;
+
+    .disabled-onepage-scroll & {
+      @include no-center-vertical;
+    }
+  }
+
+  .title {
+    text-shadow: 0 3px 0 rgba(#000, .1);
+  }
+
+  .row {
+    @include outer-container;
+
+    // font-size: .85em;
+    // line-height: .95;
+
+    h3 {
+      display: inline-block;
+      margin: 0 0 1.5em;
+      padding: 12px 30px 14px;
+      color: #fff;
+      border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: .9em;
+      line-height: .8;
+      box-shadow: inset 0 -4px 0 rgba(#000, 0.15);
+    }
+
+    .text {
+      padding: 0 .8em;
+      font-size: .9em;
+      line-height: 1;
+
+      p {
+        margin: 0 0 .8em;
+        font-style: italic;
+      }
+
+      p em {
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+
+    }
+
+    .alpha {
+      @include span-columns(4);
+
+      h3 {
+        background: #1ab2ff;
+      }
+    }
+
+    .beta {
+      @include span-columns(4);
+
+      h3 {
+        background: #fc2f75;
+      }
+    }
+
+    .gamma {
+      @include span-columns(4);
+
+      h3 {
+        background: #1fd91a;
+      }
+    }
+
+    @include media($tablet) {
+      font-size: .7em;
+
+      .alpha, .beta, .gamma {
+        @include span-columns(8);
+        @include shift(0);
+
+        .wrap {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+.ops-section.active .pillars-wrapper .inner {
+  animation: slideInRight 1s ease forwards;
+}
+
+// .viewing-page-2 .m-toplink {
+//   background: rgba(#fff, .5);
+// }
+
+// =============================================================================
+// SECTION 3: INITIATIVES
+
+$colors: $rm-color $mm-color $mf-color $mfb-color $mtc-color $mtt-color $mb-color $mt-color;
+$inits: rm mm mf mfb mtc mtt mb mt;
+
+$len: length($colors);
+$keyd: (100 / $len);
+
+@keyframes bgrotate {
+  $cur: 0%;
+  @each $color in $colors {
+    #{$cur} { background-color: $color; }
+    $cur: $cur + $keyd;
+  }
+  100% { background-color: nth($colors, 1); }
+}
+
+@keyframes colorrotate {
+  $cur: 0%;
+  @each $color in $colors {
+    #{$cur} { color: $color; }
+    $cur: $cur + $keyd;
+  }
+  100% { color: nth($colors, 1); }
+}
+
+$s3-color: #3086d0;
+$s3-color: $blueHoliday;
+
+.m-init {
+  background: $s3-color image("starbg.png");
+  // animation: bgrotate 20s infinite linear;
+  padding: 2em 0;
+  color: #fff;
+  text-align: center;
+
+  transition: background-color 2s ease;
+
+  .init-wrapper {
+    @include center-vertical;
+
+    .disabled-onepage-scroll & {
+      @include no-center-vertical;
+    }
+  }
+
+  .title {
+    text-shadow: 0 3px 0 rgba(#000, .1);
+  }
+
+  .row {
+    @include outer-container;
+    font-size: 0.8em;
+    line-height: 1.1;
+  }
+
+  .col {
+    @include span-columns(3);
+    @include pad(10px);
+
+    @include media($tablet) {
+      @include span-columns(4);
+      @include pad(7px);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+      @include pad(5px);
+    }
+  }
+
+  .init {
+    a {
+      display: block;
+      position: relative;
+      height: 230px;
+      background: #fff;
+      box-shadow: 0 4px 0 rgba(#000, .15);
+      overflow: hidden;
+
+      @include media($short) {
+        height: 210px;
+      }
+      @include media($tablet) {
+        height: 200px;
+      }
+      @include media($mobile) {
+        height: 160px;
+      }
+
+    }
+
+    .wrap {
+      @include center-vertical;
+
+      padding: 1em;
+
+      h3 {
+        // animation: colorrotate 20s infinite linear;
+        margin: 0 0 .6em;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1em;
+        letter-spacing: 2px;
+        line-height: .9;
+        color: $s3-color;
+        transition: color 1s;
+      }
+
+      .text {
+        margin: 0;
+        color: #888;
+        font-size: .9em;
+        font-style: italic;
+        line-height: 1;
+
+        em {
+          font-weight: 400;
+          font-size: 1.1em;
+          letter-spacing: -1px;
+        }
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(150%);
+      transition: all .3s ease;
+
+      .wrap-ol {
+        @include center-vertical;
+      }
+
+      .logo {
+        background: image("rm/logo.png") center no-repeat;
+        background-size: 100%;
+        height: 120px;
+        width: 120px;
+        margin: 0 auto 8px;
+      }
+
+      button {
+        position: relative;
+        top: 65%;
+        // width: 150px;
+        background: $rm-color;
+      }
+
+      @include media($mobile) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .overlay {
+        transform: translateY(0);
+      }
+    }
+
+    &:active {
+      // .overlay button {
+      //   box-shadow: none;
+      //   margin-top: 3px;
+      //   padding: 4px 15px 4px;
+      //   box-shadow: inset 0 -1px 0 rgba(#000, .2);
+      // }
+    }
+  }
+
+  @each $init in $inits {
+    $clr: nth($colors, index($inits, $init));
+
+    &.bg-#{$init} {
+
+      @if saturation($clr) > 50 {
+        background-color: desaturate($clr, 20);
+      } @else {
+        background-color: saturate($clr, 10);
+      }
+
+      .init .wrap {
+        h3 {
+          color: desaturate($clr, 10);
+        }
+      }
+    }
+
+    .m-#{$init} .overlay {
+      background: rgba(saturate(tint($clr, 15), 15), .9);
+
+      .logo {
+        background-image: image("logo_#{$init}.png");
+      }
+
+      button {
+        background: $clr;
+      }
+    }
+  }
+}
+
+.ops-section.active .init-wrapper .inner {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.viewing-page-3 .m-toplink a {
+  color: #fff;
+
+  &:hover {
+    // color: saturate(tint($s3-color, 50), 60);
+    box-shadow: inset 0 2px 0 rgba(#fff, .8);
+  }
+}
+
+// =============================================================================
+// SECTION 4: HADITH
+
+.m-hadith {
+  background: #fff image("onepage-bg4.jpg") center no-repeat;
+  background-size: cover;
+
+  .hadith-wrapper {
+    @include center-vertical;
+    @include outer-container;
+
+    .disabled-onepage-scroll & {
+      @include no-center-vertical;
+    }
+  }
+
+  blockquote.hadith {
+    background: rgba(#fff, .85);
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.8em;
+    font-style: italic;
+    line-height: .8;
+    letter-spacing: -1px;
+    // opacity: 0;
+
+    b {
+      // font-size: 1.15em;
+      letter-spacing: -2px;
+    }
+
+    .cite {
+      display: block;
+      color: #888;
+      font-weight: 600;
+      font-size: .5em;
+      margin-top: 1em;
+      letter-spacing: 20px;
+      font-style: normal;
+    }
+
+    @include media($tablet) {
+      font-size: 1.3em;
+      .cite {
+        letter-spacing: 8px;
+      }
+    }
+
+    @include media($short) {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.ops-section.active blockquote.hadith {
+  animation: slideInDown 1s ease forwards;
+}
+
+// =============================================================================
+// SECTION 5: RELATED
+
+$s5-color: mix($orange, $peach, 10);
+
+.m-related {
+  background: #fff image("naal.jpg") center no-repeat;
+  padding: 2em 0;
+  text-align: center;
+
+  @include media($short) {
+    background-size: auto 95%;
+  }
+
+  .related-wrapper {
+    @include center-vertical;
+
+    .disabled-onepage-scroll & {
+      @include no-center-vertical;
+    }
+  }
+
+  .title {
+    text-shadow: 0 3px 0 rgba(#000, .1);
+  }
+
+  .row {
+    @include outer-container;
+    font-size: 0.8em;
+    line-height: 1.1;
+  }
+
+  .col {
+    @include span-columns(4);
+
+    @include media($tablet) {
+      @include span-columns(8);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+
+  .wrap {
+    a.btn {
+      background: $s5-color;
+      margin: 10px auto;
+    }
+
+    h3 {
+      height: 2.5em;
+      color: $s5-color;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 300;
+      font-size: 1em;
+      margin: 0;
+    }
+
+    div {
+      height: 2em;
+      text-transform: uppercase;
+      font-size: .75em;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+// =============================================================================
+// SECTION 6: MUHIBBAINS
+
+.m-muhibbains {
+  background: #fff image("M-bnw.jpg") center no-repeat;
+  text-align: center;
+  font-size: .8em;
+  // line-height: 1;
+
+  .muhibbains-wrapper {
+    @include center-vertical;
+    top: 55%;
+    transform: none;
+    .disabled-onepage-scroll & {
+      @include no-center-vertical;
+    }
+  }
+
+  .inner {
+    background: rgba(#000, .7) image("blackmaze.png");
+    // padding: 30px 0;
+    height: 150px;
+    color: #fff;
+  }
+
+  @include media($tablet) {
+    background-size: cover;
+    background-position: center top 40%;
+    .inner {
+      height: 200px;
+    }
+  }
+
+  .bio {
+    @include outer-container;
+    @include center-vertical;
+
+    .col {
+      @include span-columns(4);
+
+      .name {
+        font-weight: 700;
+      }
+      .phone {
+        font-size: .7em;
+        letter-spacing: -1px;
+      }
+      .social {
+        font-weight: 700;
+        font-size: .7em;
+
+        a {
+          color: $peach;
+        }
+      }
+    }
+  }
+
+  @include media($mobile) {
+    font-size: .6em;
+  }
+}
+
+// =============================================================================
+// ONEPAGE SCROLL
+.onepage-wrapper {
+  backface-visibility: hidden;
+}
+
+.onepage-pagination {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.disabled-onepage-scroll .onepage-wrapper {
+  height: auto;
+}
+
+// onepage nav colors
+.onepage-pagination li a:before {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transition: background .5s;
+}
+
+.onepage-pagination li a.active:before {
+  background: transparent !important;
+  border: 1px solid #fff;
+  margin-top: -3px;
+  transition: border-color .5s;
+}
+
+.viewing-page-2, .viewing-page-4, .viewing-page-5, .viewing-page-6 {
+  .onepage-pagination li {
+    a:before {
+      background: $text-color;
+    }
+    a.active:before {
+      border-color: $text-color;
+    }
+  }
+}
