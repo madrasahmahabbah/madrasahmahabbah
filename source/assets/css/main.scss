@@ -57,24 +57,36 @@ a:hover, a:focus {
 }
 
 .m-cover {
-  background: rgba(#fff, .95);
+  background: rgba(#fff, 0);
+  cursor: pointer;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 2000;
-  transition: all .5s ease;
+  transition: all .5s ease, visibility 0s .5s ease;
 
   &.hide {
-    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    // transform: translateY(-100%);
   }
 
-  .row {
+  .cover-container {
     height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
 
     img {
-      // min-width: 100%;
-      min-height: 80%;
-      max-height: 80%;
+      border: 10px solid $main-color;
+      box-shadow: 0 0 100px rgba($text-color, 1);
+      min-height: 95%;
+      max-height: 95%;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
@@ -247,6 +259,10 @@ section button, section a.button {
 .m-pillars {
   background: #fff;
 
+  .row {
+    padding: 2em .5em;
+  }
+
   .title {
     margin-bottom: 2em;
   }
@@ -350,7 +366,7 @@ $s3-color: tint(desaturate($main-color, 0), 20);
 .m-initiatives {
   background: $s3-color image("starbg.png") fixed;
   // animation: bgrotate 20s infinite linear;
-  padding: 4em 0;
+  padding: 1em 0 3em;
   color: #fff;
   text-align: center;
 

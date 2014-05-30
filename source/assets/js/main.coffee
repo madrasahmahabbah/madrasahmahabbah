@@ -35,9 +35,13 @@ do ->
     initbg.removeClass "bg-#{$(this).data("init")}"
   )
 
+  $('body').on 'mousewheel', (haltScroll = (ev) ->
+    ev.preventDefault()
+    ev.stopPropagation()
+  )
 
   $('.m-cover').click (ev) ->
-    $('.m-cover').addClass('hide')
-    $('body').scrollTop(0)
+    $('.m-cover').addClass('bounceOutLeft animated')
+    $('body').scrollTop(0).off 'mousewheel', haltScroll
     ev.preventDefault()
     false
