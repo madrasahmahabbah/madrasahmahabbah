@@ -1,7 +1,8 @@
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  # config.output_style = :compact
+  # config.add_import_path File.join root, 'bower/Bootflat/bootflat/scss'
+end
 
 # CSS Autoprefixer
 activate :autoprefixer
