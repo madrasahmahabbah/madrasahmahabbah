@@ -98,7 +98,7 @@ a:hover, a:focus {
   text-align: center;
 
   h1 {
-    background: transparent url(../images/arabdots-green.svg) center top no-repeat;
+    background: transparent image("arabdots-green.svg") center top no-repeat;
     margin: 0;
     padding-top: 0.8em;
     font-weight: 800;
@@ -213,7 +213,7 @@ section button, section a.button {
 
 .m-welcome {
   z-index: 10;
-  background: #fff url(../images/herobg.jpg) fixed;
+  background: #fff image("herobg.jpg") fixed;
   font-size: 1.2em;
   line-height: 1.1em;
 
@@ -222,7 +222,7 @@ section button, section a.button {
   }
 
   p strong.mm {
-    background: transparent url(../images/arabdots-brown.svg) center top no-repeat;
+    background: transparent image("arabdots-brown.svg") center top no-repeat;
     background-size: auto 43%;
 
     font-family: $avant-font;
@@ -257,14 +257,17 @@ section button, section a.button {
 }
 
 .m-pillars {
-  background: #fff;
+  background: #fff image("onepage-bg7.jpg") center no-repeat;
+  // background-size: cover;
 
   .row {
     padding: 2em .5em;
+    color: #777;
   }
 
   .title {
     margin-bottom: 2em;
+    text-shadow: 0 3px 0 rgba(#000, .2);
   }
 
   h3 {
@@ -297,25 +300,31 @@ section button, section a.button {
 
   }
 
-  .alpha {
+  .alpha, .beta, .gamma {
     @include span-columns(4);
 
+    .wrap {
+      padding: 1em .5em;
+      margin: 0 3px;
+      background: rgba(#fff, .8);
+      border-radius: 5px;
+      box-shadow: inset 0 -4px 0 rgba(#000, 0.15);
+    }
+  }
+
+  .alpha {
     h3 {
       background: #44a3de;
     }
   }
 
   .beta {
-    @include span-columns(4);
-
     h3 {
       background: #ec548c;
     }
   }
 
   .gamma {
-    @include span-columns(4);
-
     h3 {
       background: #74af17;
     }
@@ -571,7 +580,7 @@ $s3-color: tint(desaturate($main-color, 0), 20);
 .m-quran {
   z-index: 10;
   background: rgba($text-color, 0.7);
-  background: url(../images/quranbg.jpg) center center no-repeat;
+  background: image("quranbg.jpg") center center no-repeat;
   background-size: cover;
 
   .quran {
@@ -595,7 +604,7 @@ $s3-color: tint(desaturate($main-color, 0), 20);
     display: none;
     margin: 4em 1em;
     font-style: italic;
-    background: transparent url(../images/bismillah-white.png) center top no-repeat;
+    background: transparent image("bismillah-white.png") center top no-repeat;
     padding-top: 1.5em;
     color: #fff;
     line-height: 0.98em;
@@ -621,6 +630,40 @@ $s3-color: tint(desaturate($main-color, 0), 20);
       font-size: 0.7em;
       padding: 1.5em 1em 0;
       margin: 2em 0.5em;
+    }
+  }
+}
+
+.m-friends {
+  .friends-img {
+    width: 100%;
+    height: 594px;
+    background: transparent image("friendsRM.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+
+    .caption {
+      position: relative;
+      top: 80%;
+      transform: translateY(-50%);
+
+      width: 100%;
+
+      color: #fff;
+      // background: rgba(#333, .8) image("starbg.png");
+
+      .title {
+        text-shadow: 0 3px 10px rgba(#000, .9), 0 0 20px rgba($main-color, .5);
+        h2 {
+          font-size: 2.3em;
+          letter-spacing: 10px;
+        }
+        // color: #ec548c;
+        // span {
+        //   color: tint(#ec548c, 40);
+        // }
+      }
     }
   }
 }
@@ -729,7 +772,7 @@ $s3-color: tint(desaturate($main-color, 0), 20);
 .md-modal .lailahaillallah {
   min-height: 126px;
   margin: 10px 0 0;
-  background: transparent url(../images/lailahaillallah.png) center center no-repeat;
+  background: transparent image("lailahaillallah.png") center center no-repeat;
 
   @include media($mobile) {
     background-size: 100%;

@@ -20,8 +20,9 @@
       @include span-columns(4);
       margin-top: 0;
       padding-bottom: 3em;
-      background: #fff url(../images/silh.svg) bottom -40px right 10px no-repeat;
-      background-size: 150px auto;
+      // background: #fff url(../images/silh.svg) bottom -40px right 10px no-repeat;
+      // background-size: 150px auto;
+      background: #fff;
       font-size: 0.6em;
       color: $text-color;
       .text {
