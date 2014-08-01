@@ -4,7 +4,7 @@
 
 /*!
 * velocity.ui.js: UI effects pack for Velocity. Load this after Velocity.
-* @version 1.0.1
+* @version 1.1.1
 * @docs http://velocityjs.org/#uiPack
 * @support <=IE8: Callouts will have no effect, and transitions will simply fade in/out. IE9/Android 2.3: Most effects are fully supported, the rest fade in/out. All other browsers: Full support.
 * @license Copyright Julian Shapiro. MIT License: http://en.wikipedia.org/wiki/MIT_License
@@ -500,7 +500,9 @@
                         opts.delay = options.delay;
                         opts.begin = options.begin;
 
-                        if (/In$/.test(effectName)) {
+                        if (options.display) {
+                            opts.display = options.display;
+                        } else if (/In$/.test(effectName)) {
                             opts.display = Container.Velocity.CSS.Values.getDisplayType(element);
                         }
                     }

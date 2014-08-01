@@ -1,4 +1,6 @@
 .m-links {
+  display: none;
+
   $hover-color: saturate(lighten($bgcolor, 15%), 20%);
 
   background: rgba($init-color, 0.9) url(../images/starbg.png) fixed;

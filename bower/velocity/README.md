@@ -1,20 +1,25 @@
 ##Velocity
 
-**Docs:** http://VelocityJS.org
+**Docs**  
+http://VelocityJS.org
 
-**Bower:**
+**Bower**  
 Package name is *velocity*.
 
-**NPM:**
+**NPM**  
 Package name is *velocity-animate*.
+
+**Quickstart**  
+`<script src="//cdn.jsdelivr.net/jquery.velocity/0.0.22/jquery.velocity.min.js"></script>`
 
 ###**Updates**
 
+- *Coming soon: jQuery dependency removal and Zepto support.*
+- Velocity was awarded Stripe's Open Source grant: https://stripe.com/blog/open-source-retreat-grantees
 - UI Pack: http://velocityjs.org/#uiPack
 - Spring physics: http://velocityjs.org/#easing
 - Progress monitoring: http://velocityjs.org/#progress
-- Syntactic sugar: https://github.com/julianshapiro/velocity/issues/76 
-- *Coming soon: jQuery dependency removal.*
+- Syntactic sugar: https://github.com/julianshapiro/velocity/issues/76
 
 ###**Resources**
 
@@ -23,6 +28,8 @@ Package name is *velocity-animate*.
 - **Codecast:** https://www.youtube.com/watch?v=MDLiVB6g2NY&hd=1
 
 - **Workflow:** http://css-tricks.com/improving-ui-animation-workflow-velocity-js
+
+- **Stack Overflow (support):** http://stackoverflow.com/questions/tagged/velocity.js
 
 ###**Comparisons**
 

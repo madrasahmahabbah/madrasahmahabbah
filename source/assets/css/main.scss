@@ -19,6 +19,7 @@ $main-color: #85b91e;
 $alt-color: #ad3629;
 $init-color: $main-color;
 $text-color: #868375;
+$text-color: #73726e;
 $bgcolor: #e2decc;
 
 @import
@@ -57,7 +58,7 @@ a:hover, a:focus {
 }
 
 .m-cover {
-  background: rgba(#fff, 0);
+  background: rgba(#fff, .9);
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -260,6 +261,10 @@ section button, section a.button {
   background: #fff image("onepage-bg7.jpg") center no-repeat;
   // background-size: cover;
 
+  @include media(new-breakpoint(max-width 1000px 8)) {
+    background-size: auto 150%;
+  }
+
   .row {
     padding: 2em .5em;
     color: #777;
@@ -268,6 +273,14 @@ section button, section a.button {
   .title {
     margin-bottom: 2em;
     text-shadow: 0 3px 0 rgba(#000, .2);
+
+    h2 {
+      color: #fff;
+      padding: 20px 30px 24px;
+      background: rgba(#7c7c7c, .9);
+      box-shadow: inset 0 -4px 0 rgba(#000, 0.15);
+      border-radius: 4px;
+    }
   }
 
   h3 {
@@ -304,8 +317,8 @@ section button, section a.button {
     @include span-columns(4);
 
     .wrap {
-      padding: 1em .5em;
-      margin: 0 3px;
+      padding: 2em .5em 1em;
+      margin: 3px 3px;
       background: rgba(#fff, .8);
       border-radius: 5px;
       box-shadow: inset 0 -4px 0 rgba(#000, 0.15);
@@ -380,6 +393,7 @@ $s3-color: tint(desaturate($main-color, 0), 20);
   text-align: center;
 
   transition: background-color 2s ease;
+  box-shadow: inset 0 10px 0 rgba(#000, .15), inset 0 -10px 0 rgba(#000, .15);
 
   button, a.btn {
     $pad-y: 8px;
@@ -580,14 +594,21 @@ $s3-color: tint(desaturate($main-color, 0), 20);
 .m-quran {
   z-index: 10;
   background: rgba($text-color, 0.7);
-  background: image("quranbg.jpg") center center no-repeat;
+  background: image("quranbg.jpg") center no-repeat;
   background-size: cover;
+
+  @include media(new-breakpoint(max-width 1000px 8)) {
+    background-size: auto 200%;
+  }
 
   .quran {
     @include outer-container;
+
+    text-shadow: 1px 2px 3px rgba(#000, .5);
+
     .alpha {
-      @include span-columns(7);
-      @include shift(5);
+      @include span-columns(8);
+      @include shift(2);
 
       @include media($mobile) {
         @include span-columns(4);
@@ -638,10 +659,11 @@ $s3-color: tint(desaturate($main-color, 0), 20);
   .friends-img {
     width: 100%;
     height: 594px;
-    background: transparent image("friendsRM.jpg") center no-repeat;
+    background: transparent image("friendsRM.jpg") center top no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
+    box-shadow: inset 0 -200px 200px rgba(#111, .8), 0 10px 0 rgba(#000, .15);
 
     .caption {
       position: relative;
@@ -654,7 +676,7 @@ $s3-color: tint(desaturate($main-color, 0), 20);
       // background: rgba(#333, .8) image("starbg.png");
 
       .title {
-        text-shadow: 0 3px 10px rgba(#000, .9), 0 0 20px rgba($main-color, .5);
+        text-shadow: 0 3px 10px rgba(#000, .9), 0 0 20px rgba(#fff, .5);
         h2 {
           font-size: 2.3em;
           letter-spacing: 10px;

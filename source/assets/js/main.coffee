@@ -15,19 +15,19 @@ do ->
   hadiths.hide().eq(Math.floor(Math.random() * hadiths.length)).show()
 
   # # EXPERIMENTS: parallax scroll
-  # $window = $(window)
-  # $body = $("body")
-  # $welcome = $(".m-welcome")
-  # $quran = $(".m-quran")
+  $window = $(window)
+  $body = $("body")
+  $quran = $(".m-quran")
+  $pillars = $(".m-pillars")
 
-  # $window.scroll ->
-  #   # bodyY = ($window.scrollTop() / 5)
-  #   # $welcome.css backgroundPosition: "0 " + bodyY + "px"
-  #   bodyY = ($window.scrollTop() / 5)
-  #   $quran.css backgroundPosition: "0 " + (bodyY - ($quran.offset().top/2)) + "px"
+  $window.scroll ->
+    bodyY = ($window.scrollTop() / 5)
+    $quran.css backgroundPosition: "0 " + (bodyY - ($quran.offset().top/2)) + "px"
+    $pillars.css backgroundPosition: "0 " + (bodyY - ($pillars.offset().top/2)) + "px"
 
-  #   return
+    return
 
+  # initiatives
   initbg = $(".m-initiatives")
   initbg.find(".init").hover (->
     initbg.addClass "bg-#{$(this).data("init")}"
@@ -35,13 +35,14 @@ do ->
     initbg.removeClass "bg-#{$(this).data("init")}"
   )
 
+  # advert cover
   $('body').on 'mousewheel', (haltScroll = (ev) ->
     ev.preventDefault()
     ev.stopPropagation()
   )
 
   $('.m-cover').click (ev) ->
-    $('.m-cover').addClass('bounceOutLeft animated')
+    $('.m-cover').addClass('slideOutUp animated')
     $('body').scrollTop(0).off 'mousewheel', haltScroll
     ev.preventDefault()
     false
