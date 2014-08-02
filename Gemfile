@@ -13,7 +13,7 @@ gem "middleman-imageoptim"
 
 gem "coffee-script"
 
-gem "compass", "~> 1.0.0.alpha.19"
+gem "compass", "~> 1.0.0.rc.0"
 gem "scut"
 gem "color-schemer"
 gem "ceaser-easing"
