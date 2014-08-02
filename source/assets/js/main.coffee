@@ -16,6 +16,7 @@ do ->
 
   # # EXPERIMENTS: parallax scroll
   $.stellar()
+
   # $window = $(window)
   # $body = $("body")
   # $welcome = $(".m-welcome")

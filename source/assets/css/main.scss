@@ -156,16 +156,20 @@ section h2 {
   width: auto;
   margin: 1em auto;
   padding: 10px 30px;
-  font-family: $texgyre-font;
+  // font-family: $texgyre-font;
+  font-family: $raleway-font;
   font-size: 1.6em;
-  letter-spacing: 4px;
+  // letter-spacing: 4px;
+  letter-spacing: 0;
+  word-spacing: -.25em;
   font-weight: 300;
   line-height: 0.8em;
   border: none;
   text-transform: uppercase;
   // border-bottom: 2px solid rgba($text-color, 0.5);
   span {
-    font-family: $texgyrebold-font;
+    // font-family: $texgyrebold-font;
+    font-weight: 800;
   }
 }
 
@@ -257,6 +261,71 @@ section button, section a.button {
   }
 }
 
+.m-quran {
+  z-index: 10;
+  background: rgba($text-color, 0.7);
+  background: image("quranbg.jpg") no-repeat fixed;
+  background-size: cover;
+
+  @include media(new-breakpoint(max-width 1000px 8)) {
+    background-size: auto 200%;
+  }
+
+  .quran {
+    @include outer-container;
+
+    text-shadow: 1px 2px 3px rgba(#000, .5);
+
+    .alpha {
+      @include span-columns(8);
+      @include shift(2);
+
+      @include media($mobile) {
+        @include span-columns(4);
+        @include shift(0);
+      }
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(0);
+      }
+    }
+  }
+
+  blockquote {
+    display: none;
+    margin: 3.5em 1em;
+    font-style: italic;
+    background: transparent image("bismillah-white.png") center top no-repeat;
+    padding-top: 1.5em;
+    color: #fff;
+    line-height: 0.98em;
+    text-align: center;
+
+    p {
+      padding: 0.6em 0;
+      b {
+        letter-spacing: -1px;
+      }
+    }
+
+    .cite {
+      font-size: 0.8em;
+      font-weight: 700;
+      padding-bottom: 0;
+      // color: saturate(lighten($text-color, 20%), 10%);
+      color: #b6b1ac;
+      letter-spacing: -1px;
+    }
+
+    @include media($mobile) {
+      background-size: 90% auto;
+      font-size: 0.7em;
+      padding: 1.5em 1em 0;
+      margin: 2em 0.5em;
+    }
+  }
+}
+
 .m-pillars {
   background: #fff image("onepage-bg7.jpg") no-repeat fixed;
   // background-size: cover;
@@ -285,14 +354,15 @@ section button, section a.button {
 
   h3 {
     display: inline-block;
-    margin: 0 0 1.5em;
+    margin: 0 0 1em;
     padding: 12px 30px 14px;
     color: #fff;
     border-radius: 5px;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: .9em;
-    line-height: .8;
+    font-family: $raleway-font;
+    // letter-spacing: 0;
+    // font-size: .9em;
+    // line-height: .8;
     box-shadow: inset 0 -4px 0 rgba(#000, 0.15);
   }
 
@@ -592,104 +662,84 @@ $s3-color: shade(saturate($main-color, 0), 10);
   }
 }
 
-.m-quran {
-  z-index: 10;
-  background: rgba($text-color, 0.7);
-  background: image("quranbg.jpg") no-repeat fixed;
-  background-size: cover;
-
-  @include media(new-breakpoint(max-width 1000px 8)) {
-    background-size: auto 200%;
-  }
-
-  .quran {
-    @include outer-container;
-
-    text-shadow: 1px 2px 3px rgba(#000, .5);
-
-    .alpha {
-      @include span-columns(8);
-      @include shift(2);
-
-      @include media($mobile) {
-        @include span-columns(4);
-        @include shift(0);
-      }
-      @include media($tablet) {
-        @include span-columns(8);
-        @include shift(0);
-      }
-    }
-  }
-
-  blockquote {
-    display: none;
-    margin: 3.5em 1em;
-    font-style: italic;
-    background: transparent image("bismillah-white.png") center top no-repeat;
-    padding-top: 1.5em;
-    color: #fff;
-    line-height: 0.98em;
-    text-align: center;
-
-    p {
-      padding: 0.6em 0;
-      b {
-        letter-spacing: -1px;
-      }
-    }
-
-    .cite {
-      font-size: 0.8em;
-      font-weight: 700;
-      padding-bottom: 0;
-      // color: saturate(lighten($text-color, 20%), 10%);
-      color: #b6b1ac;
-      letter-spacing: -1px;
-    }
-
-    @include media($mobile) {
-      background-size: 90% auto;
-      font-size: 0.7em;
-      padding: 1.5em 1em 0;
-      margin: 2em 0.5em;
-    }
-  }
-}
-
 .m-friends {
-  background: transparent image("friendsRM2.jpg") no-repeat;
-  background-size: cover;
+  // background: transparent image("friendsRM2.jpg") no-repeat;
+  // background-size: cover;
   width: 100%;
   height: 450px;
-  box-shadow: inset 0 -200px 100px rgba(#111, .6), 0 10px 0 rgba(#000, .15);
+  // box-shadow: inset 0 -200px 100px rgba(#111, .6), 0 10px 0 rgba(#000, .15);
+  box-shadow: 0 10px 0 rgba(#000, .15);
 
-  .row {
+  overflow: hidden;
+
+  .row-friends {
     position: relative;
     text-align: center;
     height: 100%;
 
-    .caption {
-      position: relative;
-      top: 95%;
-      transform: translateY(-50%);
+    figure, figcaption {
+      margin: 0;
+      padding: 0;
+    }
 
+    figure {
       width: 100%;
+      height: 100%;
+      position: relative;
 
-      color: #fff;
-      // background: rgba(#333, .8) image("starbg.png");
+      background: #2b3559;
 
-      .title {
-        text-shadow: 0 3px 10px rgba(#000, .9), 0 0 40px rgba(#fff, .5);
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: .7;
+        transition: all .3s;
+      }
+
+      figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        color: #fff;
+
+        text-shadow: 0 3px 0 rgba(#000, .15);
+
+        // text-shadow: 0 0 10px rgba(#000, 1), 0 0 2px rgba(#000, .3), 0 0 40px rgba(#fff, .5);
         h2 {
-          font-size: 2em;
-          letter-spacing: 10px;
+          position: absolute;
+          top: auto;
+          bottom: 10%;
+          left: 0;
+          width: 100%;
           margin: 0;
+          padding: 0;
+
+          font-size: 2.5em;
+          color: #fff;
+          margin: 0;
+          letter-spacing: 8px;
+
+          transition: transform .3s;
         }
-        // color: #ec548c;
-        // span {
-        //   color: tint(#ec548c, 40);
-        // }
+      }
+
+      &:hover {
+        img {
+          opacity: .4;
+          transform: translateY(-20px);
+
+        }
+
+        figcaption h2 {
+          transform: translateY(-60px);
+        }
       }
     }
   }

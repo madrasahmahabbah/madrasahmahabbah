@@ -34,7 +34,26 @@
         </section>
       </div>
 
-<%= partial 'quran' %>
+      <!-- Quran verses -->
+      <div class="wrapper m-quran" data-stellar-background-ratio="0.5">
+        <section class="quran">
+          <div class="alpha">
+<%
+data.quotes.ayats.each do |line|
+  line = line.split('|')
+  ayat = line[0]
+  cite = line[1]
+%>
+            <blockquote class="m-ayat">
+              <p><%= ayat %></p>
+              <div class="cite"><%= cite %></div>
+            </blockquote>
+<%
+end
+%>
+          </div>
+        </section>
+      </div>
 
       <div class="wrapper m-pillars" data-stellar-background-ratio="0.3">
         <section class="row">
@@ -297,13 +316,15 @@
       </section>
 
       <!-- Friends -->
-      <div class="wrapper m-friends" data-stellar-background-ratio="0.85">
-        <section class="row">
-          <div class="caption">
-            <div class="title">
+      <div class="wrapper m-friends">
+        <section class="row-friends">
+          <figure>
+            <img src="/assets/images/friendsRM2.jpg" alt="">
+
+            <figcaption>
               <h2>Our <span>Ukhuwwah</span></h2>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </section>
       </div>
 
