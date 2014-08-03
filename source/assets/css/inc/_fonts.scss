@@ -7,13 +7,13 @@ $texgyrebold-font: 'texgyreadventorbold', $main-font;
 
 $raleway-font: 'Raleway', $main-font;
 
-// $hn-font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, $main-font;
-// $hnul-font: 'helvetica-neue-ultralight', $main-font;
-// $hnl-font: 'helvetica-neue-light', $main-font;
-// $hnb-font: 'helvetica-neue-bold', $main-font;
+$hn-font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, $main-font;
+$hnul-font: 'helvetica-neue-ultralight', $main-font;
+$hnl-font: 'helvetica-neue-light', $main-font;
+$hnb-font: 'helvetica-neue-bold', $main-font;
 
 @import "http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic";
-@import "http://fonts.googleapis.com/css?family=Raleway:300,800,400";
+@import "http://fonts.googleapis.com/css?family=Raleway:900,800,400,500";
 @import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
 // @import "../fonts/ff-enzo-web-lite.css";
 // @import "../fonts/skolar.css";
@@ -27,37 +27,37 @@ $raleway-font: 'Raleway', $main-font;
        url('../fonts/huge_agb_v5-webfont.svg#svgFontName') format('svg')
 }
 
-// // HELVETICA NEUE
-// @font-face {
-//   font-family: 'helvetica-neue-ultralight';
-//   src: url('../fonts/helveticaneueultralight.eot'); /* IE9 Compat Modes */
-//   src: url('../fonts/helveticaneueultralight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//        url('../fonts/helveticaneueultralight.woff') format('woff'), /* Modern Browsers */
-//        url('../fonts/helveticaneueultralight.ttf')  format('truetype'), /* Safari, Android, iOS */
-//        url('../fonts/helveticaneueultralight.svg#9453ea8da727d260bcdbfa605bdbb5d2') format('svg'); /* Legacy iOS */
-//   font-style:   normal;
-//   font-weight:  200;
-// }
-// @font-face {
-//   font-family: 'helvetica-neue-light';
-//   src: url('../fonts/helveticaneuelight.eot'); /* IE9 Compat Modes */
-//   src: url('../fonts/helveticaneuelight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//        url('../fonts/helveticaneuelight.woff') format('woff'), /* Modern Browsers */
-//        url('../fonts/helveticaneuelight.ttf')  format('truetype'), /* Safari, Android, iOS */
-//        url('../fonts/helveticaneuelight.svg#7384ecabcada72f0e077cd45d8e1c705') format('svg'); /* Legacy iOS */
-//   font-style:   normal;
-//   font-weight:  200;
-// }
-// @font-face {
-//   font-family: 'helvetica-neue-bold';
-//   src: url('../fonts/helveticaneuebold.eot'); /* IE9 Compat Modes */
-//   src: url('../fonts/helveticaneuebold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//        url('../fonts/helveticaneuebold.woff') format('woff'), /* Modern Browsers */
-//        url('../fonts/helveticaneuebold.ttf')  format('truetype'), /* Safari, Android, iOS */
-//        url('../fonts/helveticaneuebold.svg#b0b230b12ba14b2f0690df366df880c5') format('svg'); /* Legacy iOS */
-//   font-style:   normal;
-//   font-weight:  700;
-// }
+// HELVETICA NEUE
+@font-face {
+  font-family: 'helvetica-neue-ultralight';
+  src: url('../fonts/helveticaneueultralight.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/helveticaneueultralight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/helveticaneueultralight.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/helveticaneueultralight.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/helveticaneueultralight.svg#9453ea8da727d260bcdbfa605bdbb5d2') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  200;
+}
+@font-face {
+  font-family: 'helvetica-neue-light';
+  src: url('../fonts/helveticaneuelight.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/helveticaneuelight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/helveticaneuelight.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/helveticaneuelight.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/helveticaneuelight.svg#7384ecabcada72f0e077cd45d8e1c705') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  200;
+}
+@font-face {
+  font-family: 'helvetica-neue-bold';
+  src: url('../fonts/helveticaneuebold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/helveticaneuebold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/helveticaneuebold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/helveticaneuebold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/helveticaneuebold.svg#b0b230b12ba14b2f0690df366df880c5') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  700;
+}
 
 // TEXGY ADVENTOR
 @font-face {

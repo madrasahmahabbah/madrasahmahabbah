@@ -3,6 +3,8 @@
 
 do ->
 
+  $window = $(window)
+
   # Ayat randomizer
   verses = $(".m-ayat")
   verses.eq(Math.floor(Math.random() * verses.length)).show()
@@ -15,9 +17,11 @@ do ->
   hadiths.hide().eq(Math.floor(Math.random() * hadiths.length)).show()
 
   # # EXPERIMENTS: parallax scroll
-  $.stellar()
+  $.stellar
+    horizontalScrolling: false
+    # positionProperty: 'transform'
+    hideDistantElements: false
 
-  # $window = $(window)
   # $body = $("body")
   # $welcome = $(".m-welcome")
   # $quran = $(".m-quran")
@@ -44,13 +48,18 @@ do ->
       )
 
   # advert cover
-  $('body').on 'mousewheel', (haltScroll = (ev) ->
-    ev.preventDefault()
-    ev.stopPropagation()
-    )
+  # $('body').on 'mousewheel', (haltScroll = (ev) ->
+  #   ev.preventDefault()
+  #   ev.stopPropagation()
+  #   )
 
   $('.m-cover').click (ev) ->
-    $('.m-cover').addClass('slideOutUp animated')
-    $('body').scrollTop(0).off 'mousewheel', haltScroll
+    $('.m-cover').addClass('fadeOutUpBig animated')
+    $('body').scrollTop(0) #.off 'mousewheel', haltScroll
     ev.preventDefault()
     false
+
+  # m-friends section
+  $friends = $(".m-friends")
+  $window.resize $.throttle 250, ->
+    $friends.css height: $window.width() * 500 / 1280

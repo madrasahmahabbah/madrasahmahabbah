@@ -162,14 +162,14 @@ section h2 {
   // letter-spacing: 4px;
   letter-spacing: 0;
   word-spacing: -.25em;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 0.8em;
   border: none;
   text-transform: uppercase;
   // border-bottom: 2px solid rgba($text-color, 0.5);
   span {
     // font-family: $texgyrebold-font;
-    font-weight: 800;
+    font-weight: 900;
   }
 }
 
@@ -330,16 +330,23 @@ section button, section a.button {
   background: #fff image("onepage-bg7.jpg") no-repeat fixed;
   // background-size: cover;
 
+  overflow: hidden;
+  position: relative;
+
   @include media(new-breakpoint(max-width 1000px 8)) {
     background-size: auto 150%;
   }
 
   .row {
+    position: relative;
+
     padding: 2em .5em;
     color: #777;
   }
 
   .title {
+    position: relative;
+
     margin-bottom: 2em;
     text-shadow: 0 3px 0 rgba(#000, .2);
 
@@ -386,7 +393,10 @@ section button, section a.button {
   .alpha, .beta, .gamma {
     @include span-columns(4);
 
+    position: relative;
+
     .wrap {
+      position: relative;
       padding: 2em .5em 1em;
       margin: 3px 3px;
       background: rgba(#fff, .8);
@@ -666,7 +676,7 @@ $s3-color: shade(saturate($main-color, 0), 10);
   // background: transparent image("friendsRM2.jpg") no-repeat;
   // background-size: cover;
   width: 100%;
-  height: 450px;
+  height: 500px;
   // box-shadow: inset 0 -200px 100px rgba(#111, .6), 0 10px 0 rgba(#000, .15);
   box-shadow: 0 10px 0 rgba(#000, .15);
 
@@ -691,151 +701,163 @@ $s3-color: shade(saturate($main-color, 0), 10);
 
       img {
         position: absolute;
-        top: 0;
+        top: -60px;
         left: 0;
         width: 100%;
         height: auto;
-        opacity: .7;
-        transition: all .3s;
+        opacity: .8;
+        transition: opacity .5s ease, transform .5s ease;
       }
 
       figcaption {
         position: absolute;
-        top: 0;
+        top: 70%;
         left: 0;
-
         width: 100%;
-        height: 100%;
-
         color: #fff;
-
         text-shadow: 0 3px 0 rgba(#000, .15);
+        transition: all .2s ease-in-out;
 
-        // text-shadow: 0 0 10px rgba(#000, 1), 0 0 2px rgba(#000, .3), 0 0 40px rgba(#fff, .5);
         h2 {
-          position: absolute;
-          top: auto;
-          bottom: 10%;
-          left: 0;
-          width: 100%;
-          margin: 0;
-          padding: 0;
+          margin: 0 0 10px;
+          padding: 5px 0;
 
           font-size: 2.5em;
           color: #fff;
-          margin: 0;
-          letter-spacing: 8px;
 
-          transition: transform .3s;
+          // letter-spacing: 8px;
+
+          transition: all .3s ease;
+        }
+
+        .sub {
+          display: block;
+          font-size: 1em;
+          font-family: $raleway-font;
+          font-weight: 500;
+          // word-spacing: .15em;
+          color: #b3b8de;
+          // letter-spacing: 0;
+          line-height: 1em;
+          text-transform: uppercase;
+          transform: translateY(20px);
+          opacity: 0;
+          transition: all .2s ease-out;
         }
       }
 
       &:hover {
         img {
           opacity: .4;
-          transform: translateY(-20px);
-
+          transform: rotate(-1.5deg) scale(1.15) translateY(-10px);
         }
 
-        figcaption h2 {
-          transform: translateY(-60px);
+        figcaption {
+          h2 {
+            transform: translateY(-60px);
+          }
+
+          .sub {
+            transform: translateY(-60px);
+            opacity: 1;
+          }
         }
       }
     }
   }
 }
 
-.m-related {
-  z-index: 10;
-  // padding-top: 2em;
-  background: #fff;
+// .m-related {
+//   z-index: 10;
+//   // padding-top: 2em;
+//   background: #fff;
 
-  h2 {
-    margin-top: 0;
-  }
+//   h2 {
+//     margin-top: 0;
+//   }
 
-  nav {
-    /* Effect: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
-    a {
-      position: relative;
-      display: inline-block;
-      margin: 0.5em 0.3em;
-      outline: none;
-      color: #fff;
-      text-decoration: none;
-      // text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 400;
-      font-size: 1em;
+//   nav {
+//     /* Effect: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+//     a {
+//       position: relative;
+//       display: inline-block;
+//       margin: 0.5em 0.3em;
+//       outline: none;
+//       color: #fff;
+//       text-decoration: none;
+//       // text-transform: uppercase;
+//       letter-spacing: 1px;
+//       font-weight: 400;
+//       font-size: 1em;
 
-      line-height: 1.3em;
-      @include perspective(1000px);
+//       line-height: 1.3em;
+//       @include perspective(1000px);
 
-      &:hover,
-      &:focus {
-        outline: none;
-      }
-    }
+//       &:hover,
+//       &:focus {
+//         outline: none;
+//       }
+//     }
 
-    a img {
-      display: block;
-      margin: 0 auto 0.5em;
-    }
+//     a img {
+//       display: block;
+//       margin: 0 auto 0.5em;
+//     }
 
-    a span {
-      color: $text-color;
-      font-size: 0.7em;
-      position: relative;
-      display: block;
-      padding: 0 1em;
-      background: saturate(lighten($text-color, 40%), 25%);
-      background: #fff;
-      @include transition(all 0.3s);
-      @include transform-origin(50% 0);
-      @include transform-style(preserve-3d);
-    }
+//     a span {
+//       color: $text-color;
+//       font-size: 0.7em;
+//       position: relative;
+//       display: block;
+//       padding: 0 1em;
+//       background: saturate(lighten($text-color, 40%), 25%);
+//       background: #fff;
+//       @include transition(all 0.3s);
+//       @include transform-origin(50% 0);
+//       @include transform-style(preserve-3d);
+//     }
 
-    .csstransforms3d & a span::before {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $text-color;
-      color: #fff;
-      font-size: 0.7em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      opacity: 1;
-      content: attr(data-hover);
-      @include transition(background 0.3s);
-      @include transform(rotateX(-90deg));
-      @include transform-origin(50% 0);
-    }
+//     .csstransforms3d & a span::before {
+//       position: absolute;
+//       top: 100%;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       background: $text-color;
+//       color: #fff;
+//       font-size: 0.7em;
+//       font-weight: 700;
+//       text-transform: uppercase;
+//       letter-spacing: 2px;
+//       opacity: 1;
+//       content: attr(data-hover);
+//       @include transition(background 0.3s);
+//       @include transform(rotateX(-90deg));
+//       @include transform-origin(50% 0);
+//     }
 
-    a:hover span,
-    a:focus span {
-      @include transform(rotateX(92deg) translateY(-33px));
-    }
+//     a:hover span,
+//     a:focus span {
+//       @include transform(rotateX(92deg) translateY(-33px));
+//     }
 
-    .csstransforms3d & a:hover span::before,
-    .csstransforms3d & a:focus span::before {
-      // background: saturate(lighten($text-color, 40%), 25%);
-    }
+//     .csstransforms3d & a:hover span::before,
+//     .csstransforms3d & a:focus span::before {
+//       // background: saturate(lighten($text-color, 40%), 25%);
+//     }
 
-    @include media($mobile) {
-      a {
-        display: block;
-        width: 100%;
-        margin: 0.5em 0;
-      }
-      a span {
-        width: 100%;
-      }
-    }
-  }
-}
+//     @include media($mobile) {
+//       a {
+//         display: block;
+//         width: 100%;
+//         margin: 0.5em 0;
+//       }
+//       a span {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
 
 .m-footer .footer {
   .alpha {

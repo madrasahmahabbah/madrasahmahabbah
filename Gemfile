@@ -19,4 +19,6 @@ gem "color-schemer"
 gem "ceaser-easing"
 
 gem "bourbon"
-gem "neat", "1.6.0"
+gem "bourbon-compass"
+gem "neat"
+gem "neat-compass"
