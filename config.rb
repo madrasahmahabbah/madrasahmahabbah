@@ -25,6 +25,7 @@ set :build_dir, '../madrasahmahabbah.github.io'
 proxy '/README.md', '/README.txt', :layout => false
 # 2. initiative pages
 proxy '/raudhatul-muhibbain/index.html', '/inits/rm.html'
+proxy '/raudhah-mahabbah/index.html',    '/inits/rm.html'
 proxy '/mabkhoor-music/index.html',      '/inits/mm.html'
 proxy '/mahabbah-fashion/index.html',    '/inits/mf.html'
 # 3. others
