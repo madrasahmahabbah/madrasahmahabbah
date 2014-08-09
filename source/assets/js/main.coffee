@@ -61,5 +61,7 @@ do ->
 
   # m-friends section
   $friends = $(".m-friends")
-  $window.resize $.throttle 250, ->
+  $window.resize $.throttle 250, setHeight = ->
     $friends.css height: $window.width() * 500 / 1280
+
+  setHeight()
