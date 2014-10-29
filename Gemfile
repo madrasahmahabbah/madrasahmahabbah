@@ -1,4 +1,4 @@
-#ruby=ruby-2.1.2
+#ruby=ruby-2.1.3
 #ruby-gemset=middleman
 
 # If you have OpenSSL installed, we recommend updating
@@ -6,14 +6,14 @@
 source "http://rubygems.org"
 
 # the core: middleman
-gem "middleman", "~>3.3.2"
+gem "middleman"
 gem "middleman-autoprefixer"
 gem "middleman-livereload"
 gem "middleman-imageoptim"
 
 gem "coffee-script"
 
-gem "compass", "~> 1.0.0.rc.0"
+gem "compass"
 gem "scut"
 gem "color-schemer"
 gem "ceaser-easing"
