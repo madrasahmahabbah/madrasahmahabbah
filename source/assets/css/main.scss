@@ -93,7 +93,7 @@ a:hover, a:focus {
 }
 
 .m-header {
-  background: #fff;
+  // background: #fff;
   margin: 0 auto;
   padding: 4em 0;
   text-align: center;
@@ -218,7 +218,7 @@ section button, section a.button {
 
 .m-welcome {
   z-index: 10;
-  background: #fff image("herobg.jpg");
+  // background: #fff image("herobg.jpg");
   font-size: 1.2em;
   line-height: 1.1em;
 
@@ -278,7 +278,7 @@ section button, section a.button {
 
     .alpha {
       @include span-columns(8);
-      @include shift(2);
+      @include shift(4);
 
       @include media($mobile) {
         @include span-columns(4);
@@ -327,7 +327,7 @@ section button, section a.button {
 }
 
 .m-pillars {
-  background: #fff image("onepage-bg7.jpg") no-repeat fixed;
+  // background: #fff image("onepage-bg7.jpg") no-repeat fixed;
   // background-size: cover;
 
   overflow: hidden;

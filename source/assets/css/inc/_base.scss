@@ -8,7 +8,8 @@ html, body {
 
 body {
   background: $bgcolor url(../images/naal-bg.jpg) center center no-repeat fixed;
-  background: #fff;
+  background: #fff url(../images/naal.jpg) center 10% no-repeat fixed;
+  // background-size: 600px;
   color: $text-color;
   font-weight: 300;
   font-size: 24px;

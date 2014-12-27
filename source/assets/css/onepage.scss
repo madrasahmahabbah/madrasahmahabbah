@@ -758,14 +758,16 @@ $s5-color: mix($orange, $peach, 10);
 // SECTION 6: MUHIBBAINS
 
 .m-muhibbains {
-  background: #fff image("M-bnw.jpg") center no-repeat;
+  // background: #fff image("M-bnw.jpg") center no-repeat;
+  background: #fff image("themuhibbain-bw-860.jpg") center no-repeat;
   text-align: center;
   font-size: .8em;
+  // height: 100%;
   // line-height: 1;
 
   .muhibbains-wrapper {
     @include center-vertical;
-    top: 55%;
+    // top: 55%;
     transform: none;
     .disabled-onepage-scroll & {
       @include no-center-vertical;
@@ -773,9 +775,11 @@ $s5-color: mix($orange, $peach, 10);
   }
 
   .inner {
-    background: rgba(#000, .7) image("blackmaze.png");
+    // background: rgba(#000, .7) image("blackmaze.png");
+    background: rgba(#000, .7);
     // padding: 30px 0;
-    height: 150px;
+    height: 1000px;
+    height: 50vh;
     color: #fff;
   }
 
@@ -783,19 +787,32 @@ $s5-color: mix($orange, $peach, 10);
     background-size: cover;
     background-position: center top 40%;
     .inner {
-      height: 200px;
+      // height: 1000px;
     }
+  }
+
+  img {
+    width: 30%;
+    min-width: 300px;
+    margin: 2em auto;
   }
 
   .bio {
     @include outer-container;
-    @include center-vertical;
+    // @include center-vertical;
 
     .col {
       @include span-columns(4);
 
       .name {
         font-weight: 700;
+        // color: #666;
+        // background: rgba(#fff, .3);
+        // border-radius: 4px;
+        border: 2px solid #fff;
+        display: inline-block;
+        padding: .2em .5em .3em;
+        margin-bottom: .5em;
       }
       .phone {
         font-size: .7em;
@@ -808,6 +825,10 @@ $s5-color: mix($orange, $peach, 10);
         a {
           color: $peach;
         }
+      }
+
+      &:first-child {
+        @include shift(2);
       }
     }
   }

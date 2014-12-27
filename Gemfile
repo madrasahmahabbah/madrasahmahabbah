@@ -1,4 +1,4 @@
-#ruby=ruby-2.1.3
+#ruby=ruby-2.1.5
 #ruby-gemset=middleman
 
 # If you have OpenSSL installed, we recommend updating
