@@ -95,7 +95,7 @@ a:hover, a:focus {
 .m-header {
   // background: #fff;
   margin: 0 auto;
-  padding: 4em 0;
+  padding: 8em 0 2em;
   text-align: center;
 
   h1 {
@@ -181,11 +181,12 @@ section button, section a.button {
   // color: rgba(#000,0.4);
   font-weight: 400;
   font-family: $texgyre-font;
-  padding: 15px 30px;
+  font-size: .8em;
+  padding: .4em 1em;
   margin: 5px;
   text-transform: uppercase;
-  border-radius: 3px;
-  letter-spacing: 3px;
+  border-radius: 2px;
+  letter-spacing: 1px;
   opacity: 1;
   @include transition(opacity 0.5s);
 
@@ -194,11 +195,11 @@ section button, section a.button {
   }
 
   &:hover {
-    opacity: .7;
+    opacity: .8;
   }
 
   @include media($mobile) {
-    padding: 5px 8px;
+    // padding: 5px 8px;
   }
 
   &.trigger-about {
@@ -221,6 +222,11 @@ section button, section a.button {
   // background: #fff image("herobg.jpg");
   font-size: 1.2em;
   line-height: 1.1em;
+  padding: 4em 0 6em;
+
+  section.row {
+    padding: 0;
+  }
 
   p {
     padding-top: 0;

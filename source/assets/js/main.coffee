@@ -1,6 +1,3 @@
-#= require 'overlay'
-#= require 'modal'
-
 do ->
 
   $window = $(window)
@@ -22,23 +19,6 @@ do ->
     # positionProperty: 'transform'
     hideDistantElements: false
 
-  # $body = $("body")
-  # $welcome = $(".m-welcome")
-  # $quran = $(".m-quran")
-  # $pillars = $(".m-pillars")
-  # $inits = $(".m-initiatives")
-
-  # $window.scroll ->
-  #   origBodyY = $window.scrollTop()
-  #   bodyY = ($window.scrollTop() / 5)
-
-  #   $welcome.css backgroundPosition: "0 " + (origBodyY - ($welcome.offset().top/5)) + "px"
-  #   $quran.css backgroundPosition: "0 " + (bodyY - ($quran.offset().top/2)) + "px"
-  #   $pillars.css backgroundPosition: "0 " + (bodyY - ($pillars.offset().top/2)) + "px"
-  #   $inits.css backgroundPosition: "0 " + (bodyY - ($inits.offset().top/0.5)) + "px"
-
-  #   return
-
   # initiatives
   initbg = $(".m-initiatives")
   initbg.find(".init").hover (->
@@ -53,11 +33,11 @@ do ->
   #   ev.stopPropagation()
   #   )
 
-  $('.m-cover').click (ev) ->
-    $('.m-cover').addClass('fadeOutUpBig animated')
-    $('body').scrollTop(0) #.off 'mousewheel', haltScroll
-    ev.preventDefault()
-    false
+  # $('.m-cover').click (ev) ->
+  #   $('.m-cover').addClass('fadeOutUpBig animated')
+  #   $('body').scrollTop(0) #.off 'mousewheel', haltScroll
+  #   ev.preventDefault()
+  #   false
 
   # m-friends section
   $friends = $(".m-friends")
