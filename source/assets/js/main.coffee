@@ -45,3 +45,16 @@ do ->
     $friends.css height: $window.width() * 500 / 1280
 
   setHeight()
+
+  # scroll
+  $('button.trigger-about').on 'click', ->
+    $.smoothScroll
+      scrollTarget: '.m-pillars'
+      offset: 1
+    false
+
+  $('button.trigger-init').on 'click', ->
+    $.smoothScroll
+      scrollTarget: '.m-initiatives'
+      offset: 1
+    false
